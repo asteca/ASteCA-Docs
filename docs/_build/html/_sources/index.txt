@@ -18,6 +18,9 @@ This is the manual of operation for the **ASteCA** (**A**\ utomated **Ste**\ lla
 .. warning::
    This documentation is in the process of being written and is **not yet finished**.
 
+.. important::
+   A PDF version of this manual can be downloaded `here`__.
+
 Table of Contents
 -----------------
 
@@ -33,8 +36,6 @@ Table of Contents
    cmd_support
    int_mags
 
-.. important::
-   A PDF version of this manual can be downloaded `here`__.
 
 Indices and tables
 ==================
