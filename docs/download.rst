@@ -8,18 +8,6 @@ The latest packaged release (zip or tarball) can be downloaded from:
 
 After downloading, extract the compressed file wherever you want
 the code to exist.
-
-Alternatively you can checkout the entire project via `git`_. Simply
-locate yourself in the folder you want the code to be downloaded and
-run the following command in a terminal:
-
-.. code-block:: bash
-
-    $ git clone https://github.com/Gabriel-p/asteca.git
-
-This will create a new sub-folder named ``/asteca`` with all the code
-stored inside.
-
 No further installation is necessary with the exception of the
 requirements listed below.
 
@@ -123,6 +111,20 @@ needed:
 These extra packages are *not mandatory* and **ASteCA** will still run without
 them, just not the particular function mentioned above.
 
+
+Cloning the repository
+----------------------
+
+The entire project can be cloned via `git`_. Simply
+locate yourself in the folder you want the code to be downloaded and
+run the following command in a terminal:
+
+.. code-block:: bash
+
+    $ git clone https://github.com/Gabriel-p/asteca.git
+
+This will create a new sub-folder named ``/asteca`` with all the code
+stored inside.
 
 
 .. _.zip: https://github.com/Gabriel-p/asteca/releases

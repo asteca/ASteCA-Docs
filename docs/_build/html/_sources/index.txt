@@ -27,6 +27,7 @@ Table of Contents
 
    about
    download
+   input_data
    running
    synth_clust
    cmd_support
