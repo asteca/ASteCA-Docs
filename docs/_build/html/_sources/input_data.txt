@@ -11,5 +11,10 @@ their full photometric data must follow certain rules.
 4. All photometric values (either magnitudes or colors) outside the range
    `[-50., 50.]` will be considered as *bad photometry* and any star showing
    such a value for *any* of its magnitudes/colors will be discarded.
-5. At least *one* magnitude column **must** be defined.
+5. All photometric columns **must** have an associated error column. *The same
+   error column can be assigned to as many magnitudes/colors as needed*. If no
+   error column is present, a mock photometric error **must** be created and
+   added to the file. Errors are assigned to magnitudes/colors via the input
+   parameters file.
+6. At least *one* magnitude column **must** be defined.
 
