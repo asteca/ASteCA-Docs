@@ -33,6 +33,7 @@ Table of Contents
    input_data
    running
    rdp
+   radius
    synth_clust
    cmd_support
    int_mags
