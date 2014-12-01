@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. Adding CMD support &mdash; ASteCA v0.1.0 documentation</title>
+  <title>8. Adding CMD support &mdash; ASteCA v0.1.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.0 documentation" href="index.html"/>
+    <link rel="top" title="ASteCA v0.1.1 documentation" href="index.html"/>
         <link rel="next" title="9. Integrated magnitudes" href="int_mags.html"/>
         <link rel="prev" title="7. Synthetic clusters" href="synth_clust.html"/> 
 
@@ -121,11 +121,11 @@
 <p>In order to add support for a new CMD the following functions should be
 modified:</p>
 <ol class="arabic simple">
-<li><tt class="docutils literal"><span class="pre">get-in-params</span></tt>, add names of filters and positions needed to form
+<li><code class="docutils literal"><span class="pre">get-in-params</span></code>, add names of filters and positions needed to form
 the color.</li>
-<li><tt class="docutils literal"><span class="pre">get-isoch-params</span></tt>, add the columns in the theoretical isochrone
+<li><code class="docutils literal"><span class="pre">get-isoch-params</span></code>, add the columns in the theoretical isochrone
 where the code should look for the filters used.</li>
-<li><tt class="docutils literal"><span class="pre">move-isochrone</span></tt>, add the extinction equations that define how this
+<li><code class="docutils literal"><span class="pre">move-isochrone</span></code>, add the extinction equations that define how this
 effect along with the distance modulus affect the magnitude and color
 in the CMD.</li>
 </ol>
@@ -169,7 +169,7 @@ in the CMD.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.0',
+            VERSION:'v0.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

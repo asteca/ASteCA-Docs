@@ -45,9 +45,11 @@ Python dependencies
 
 The packages listed below are required to run **ASteCA**.
 
--  `Numpy - 1.8.2`_
--  `Matplotlib - 1.3.1`_ 
--  `SciPy - 0.14.0`_
+-  `numpy >= 1.8.2`_
+-  `matplotlib >= 1.3.1`_ 
+-  `sciPy >= 0.14.0`_
+-  `astroML >= 0.2`_
+-  `scikit-learn >= 0.14.1`_
 
 These versions are the ones I used, the code could work with older
 versions of the packages but I can't guarantee it.
@@ -59,6 +61,11 @@ use `pip`_ (see `the docs`_ for more information on this tool):
   $ pip install numpy
   $ pip install matplotlib
   $ pip install scipy
+  $ pip install astroml
+  $ pip install scikit-learn
+
+If you get a *Permission denied* error, append `sudo` before
+the above commands.
 
 If **pip** is not installed in your system, you can install it
 (assuming **python** is) via:
@@ -134,9 +141,11 @@ stored inside.
 .. _open a new issue: https://github.com/Gabriel-p/asteca/issues/new
 .. _pip: https://pypi.python.org/pypi/pip/
 .. _the docs: https://pip.pypa.io/en/latest/index.html
-.. _Numpy - 1.8.2: http://www.numpy.org/
-.. _Matplotlib - 1.3.1: http://matplotlib.org/
-.. _SciPy - 0.14.0: http://www.scipy.org/
+.. _numpy >= 1.8.2: http://www.numpy.org/
+.. _matplotlib >= 1.3.1: http://matplotlib.org/
+.. _sciPy >= 0.14.0: http://www.scipy.org/
+.. _astroML >= 0.2: http://www.astroml.org/
+.. _scikit-learn >= 0.14.1: http://scikit-learn.org/
 .. _Anaconda: https://store.continuum.io/cshop/anaconda/
 .. _Canopy: https://www.enthought.com/products/canopy/
 .. _pyenv: https://github.com/yyuu/pyenv

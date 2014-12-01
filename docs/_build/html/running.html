@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Running &mdash; ASteCA v0.1.0 documentation</title>
+  <title>4. Running &mdash; ASteCA v0.1.1 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.0 documentation" href="index.html"/>
-        <link rel="next" title="5. Synthetic clusters" href="synth_clust.html"/>
+    <link rel="top" title="ASteCA v0.1.1 documentation" href="index.html"/>
+        <link rel="next" title="5. Radial density profile" href="rdp.html"/>
         <link rel="prev" title="3. Input data file" href="input_data.html"/> 
 
   
@@ -66,6 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="download.html#python-dependencies">2.2. Python dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#python-distributions">2.3. Python distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#extra-packages">2.4. Extra packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#cloning-the-repository">2.5. Cloning the repository</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
@@ -73,12 +74,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#theoretical-isochrones">4.1. Theoretical isochrones</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">5. Synthetic clusters</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">5.1. IMF sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">5. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">6. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">7. Synthetic clusters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">7.1. IMF sampling</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="cmd_support.html">6. Adding CMD support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">7. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmd_support.html">8. Adding CMD support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
 </ul>
 
         
@@ -116,21 +119,21 @@
   <div class="section" id="running">
 <h1>4. Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h1>
 <p>To run the code simply position a cluster’s photometric data file in the
-<tt class="docutils literal"><span class="pre">/input</span></tt> folder, modify the <tt class="docutils literal"><span class="pre">params_input.dat</span></tt> file to both
+<code class="docutils literal"><span class="pre">/input</span></code> folder, modify the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file to both
 inform the code of the distribution of columns in your photometric file
 and set the values for each function within the code.
-Photometric files can also be stored in <tt class="docutils literal"><span class="pre">/input</span></tt> inside a
+Photometric files can also be stored in <code class="docutils literal"><span class="pre">/input</span></code> inside a
 sub-folder.</p>
-<p><strong>Every</strong> file inside the <tt class="docutils literal"><span class="pre">/input</span></tt> folder (inside or outside a
+<p><strong>Every</strong> file inside the <code class="docutils literal"><span class="pre">/input</span></code> folder (inside or outside a
 sub-folder) will be processed by <strong>ASteCA</strong>, with the exception of the
-membership probabilities files that end with a <tt class="docutils literal"><span class="pre">.memb.dat</span></tt> extension
+membership probabilities files that end with a <code class="docutils literal"><span class="pre">.memb.dat</span></code> extension
 (see XXX).</p>
-<p>Once file(s) are in place and the <tt class="docutils literal"><span class="pre">params_input.dat</span></tt> file correctly
+<p>Once file(s) are in place and the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file correctly
 modified, the code can be executed with the command:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python asteca.py
 </pre></div>
 </div>
-<p>The <tt class="docutils literal"><span class="pre">CLUSTER.DAT</span></tt> file located in the <tt class="docutils literal"><span class="pre">/input</span></tt> folder contains
+<p>The <code class="docutils literal"><span class="pre">CLUSTER.DAT</span></code> file located in the <code class="docutils literal"><span class="pre">/input</span></code> folder contains
 a synthetic open cluster generated via the <a class="reference external" href="http://www.physics.uc.edu/~bogdan/massclean/">MASSCLEAN</a> package with the
 following parameter values:</p>
 <div class="highlight-python"><div class="highlight"><pre>z=
@@ -143,7 +146,7 @@ E(B-V)=
 <div class="section" id="theoretical-isochrones">
 <h2>4.1. Theoretical isochrones<a class="headerlink" href="#theoretical-isochrones" title="Permalink to this headline">¶</a></h2>
 <p><strong>ASteCA</strong> needs at least one set of theoretical isochrones stored in a
-<tt class="docutils literal"><span class="pre">/asteca/isochrones</span></tt> folder to be able to apply the function that
+<code class="docutils literal"><span class="pre">/asteca/isochrones</span></code> folder to be able to apply the function that
 estimates the clusters’ parameters. <a class="reference external" href="http://stev.oapd.inaf.it/cgi-bin/cmd">Girardi isochrones</a> are currently
 the default but any set can in practice be used (with minor changes made
 to the code). Please <a class="reference external" href="mailto:gabrielperren&#37;&#52;&#48;gmail&#46;com">contact me</a> if you wish
@@ -159,7 +162,7 @@ can be used to automatically fetch them from the site.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="synth_clust.html" class="btn btn-neutral float-right" title="5. Synthetic clusters"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rdp.html" class="btn btn-neutral float-right" title="5. Radial density profile"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="input_data.html" class="btn btn-neutral" title="3. Input data file"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -191,7 +194,7 @@ can be used to automatically fetch them from the site.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.0',
+            VERSION:'v0.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
