@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Genetic algorithm &mdash; ASteCA v0.1.1 documentation</title>
+  <title>9. Genetic algorithm &mdash; ASteCA v0.1.1 documentation</title>
   
 
   
@@ -30,7 +30,8 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.1 documentation" href="index.html"/> 
+    <link rel="top" title="ASteCA v0.1.1 documentation" href="index.html"/>
+        <link rel="prev" title="8. Synthetic clusters" href="synth_clust.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -57,7 +58,7 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
-            <ul>
+            <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#requirements">2.1. Requirements</a></li>
@@ -74,12 +75,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rdp.html">5. Radial density profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="radius.html">6. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">7. Synthetic clusters</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">7.1. IMF sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">7. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">8. Synthetic clusters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">8.1. IMF sampling</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="cmd_support.html">8. Adding CMD support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">9. Genetic algorithm</a></li>
 </ul>
 
         
@@ -103,7 +104,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Genetic algorithm</li>
+    <li>9. Genetic algorithm</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="_sources/genet_algor.txt" rel="nofollow"> View page source</a>
@@ -115,7 +116,8 @@
           <div role="main">
             
   <div class="section" id="genetic-algorithm">
-<h1>Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
+<h1>9. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/ga-tree.png" src="_images/ga-tree.png" />
 <p>The implementation of the GA can be divided into several blocks composed of
 operators, as shown in Fig. ref{fig:ga-tree}. The first step consists in
 drawing a random initial population, that is a set of $N_{pop}$ random models
@@ -155,19 +157,18 @@ found for $A$, the observed SC, represented by $mathbf{L}_A(z^{star},
 a^{star}, d^{star}, e^{star})$.
 Every variable involved in the GA process (e.g.: $N_{gen}$, $N_{pop}$,
 $N_{ei}$, etc.) can be modified via texttt{ASteCA}&#8217;s input data file.</p>
-<p>% begin{figure}[t!]
-% begin{center}
-% includegraphics[width=0.84columnwidth]{figures/ga-tree.png}
-% caption{Flow chart showing the blocks that make up the genetic algorithm and
-% the operators applied in each part of the process.
-% label{fig:ga-tree}}
-% end{center}
-% end{figure}</p>
 </div>
 
 
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="synth_clust.html" class="btn btn-neutral" title="8. Synthetic clusters"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

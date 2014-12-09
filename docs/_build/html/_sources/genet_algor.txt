@@ -1,6 +1,8 @@
 Genetic algorithm
 =================
 
+.. image:: _static/ga-tree.png
+
 The implementation of the GA can be divided into several blocks composed of 
 operators, as shown in Fig. \ref{fig:ga-tree}. The first step consists in 
 drawing a random initial population, that is a set of $N_{pop}$ random models 
@@ -40,12 +42,3 @@ found for $A$, the observed SC, represented by $\mathbf{L}_A(z^{\star},
 a^{\star}, d^{\star}, e^{\star})$.
 Every variable involved in the GA process (e.g.: $N_{gen}$, $N_{pop}$, 
 $N_{ei}$, etc.) can be modified via \texttt{ASteCA}'s input data file.
-
-% \begin{figure}[t!]
-% \begin{center}
-% \includegraphics[width=0.84\columnwidth]{figures/ga-tree.png}
-% \caption{Flow chart showing the blocks that make up the genetic algorithm and
-% the operators applied in each part of the process.
-% \label{fig:ga-tree}}
-% \end{center}
-% \end{figure}

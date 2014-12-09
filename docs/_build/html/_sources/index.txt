@@ -34,9 +34,9 @@ Table of Contents
    running
    rdp
    radius
-   synth_clust
-   cmd_support
    int_mags
+   synth_clust
+   genet_algor
 
 
 Indices and tables
