@@ -16,7 +16,7 @@ This is the manual of operation for the **ASteCA** (**A**\ utomated **Ste**\ lla
 **C**\ luster **A**\ nalysis) package.
 
 .. warning::
-   This documentation is in the process of being written and is **not yet finished**.
+   This documentation is in the process of being written and is **not yet finished**. Updates will come in early February (ie, after my summer break :) 
 
 .. important::
    A PDF version of this manual can be downloaded `here`__.
