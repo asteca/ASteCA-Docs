@@ -1,4 +1,0 @@
-Genetic algorithm
-=================
-
-.. image:: _static/ga-tree.png

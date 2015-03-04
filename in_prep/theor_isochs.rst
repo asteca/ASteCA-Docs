@@ -11,7 +11,7 @@ present in the theoretical isochrones.
 METALLICITY FILES*
 Function: `get_met_age_values`.
 
-2- For each photometric system used we read all the magnitudes
+2- For each photometric system used, we read all the magnitudes
 defined by the input photometric data file. The initial and
 present day masses are read only for the first photometric
 system and assumed equal for the remaining (if any).

@@ -74,6 +74,7 @@ If **pip** is not installed in your system, you can install it
 
   $ python get-pip.py
 
+after downloading the ``get-pip.py`` file from `here`_.
 
 Python distributions
 --------------------
@@ -152,3 +153,4 @@ stored inside.
 .. _function: https://github.com/Gabriel-p/asteca/blob/master/functions/get_p_value.py
 .. _R - 3.0.1: http://www.r-project.org/
 .. _rpy2 -2.4.3: http://rpy.sourceforge.net/
+.. _here: https://pip.pypa.io/en/latest/installing.html

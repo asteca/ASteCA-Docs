@@ -81,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">8.1. IMF sampling</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ga_algor.html">9. Genetic algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="genet_algor.html">9. Genetic algorithm</a></li>
 </ul>
 
         
@@ -122,19 +122,19 @@
 field stars contamination, the following equations are used.</p>
 <p>First, assume:</p>
 <div class="math" id="equation-integ-cl-fl">
-<p><span class="eqno">(1)</span><img src="_images/math/e2b79145403df95bcdec66d309fdabd6640a42d2.png" alt="I_{cl+fl} = I_{cl} + I_{fl}"/></p>
+<p><span class="eqno">(1)</span><span class="math">I_{cl+fl} = I_{cl} + I_{fl}</span></p>
 </div><p>then:</p>
 <div class="math">
-<p><img src="_images/math/0fe6af2787babbf66ad55ed88f7351003cafc582.png" alt="V^*_{cl} - V^*_{cl+fl} = -2.5 \log(I_{cl}/I_{cl+fl})"/></p>
+<p><span class="math">V^*_{cl} - V^*_{cl+fl} = -2.5 \log(I_{cl}/I_{cl+fl})</span></p>
 </div><p>using Eq. <a href="#equation-integ-cl-fl">(1)</a> we have:</p>
 <div class="math" id="equation-integ-cl-fl2">
-<p><span class="eqno">(2)</span><img src="_images/math/68cd9fcbcb6b2a2cb964cfd91b3884c4a35c8bd9.png" alt="V^*_{cl} - V^*_{cl+fl} = -2.5 \log(1 - I_{fl}/I_{cl+fl})"/></p>
+<p><span class="eqno">(2)</span><span class="math">V^*_{cl} - V^*_{cl+fl} = -2.5 \log(1 - I_{fl}/I_{cl+fl})</span></p>
 </div><p>and given:</p>
 <div class="math" id="equation-integ-cl-fl3">
-<p><span class="eqno">(3)</span><img src="_images/math/7645591f899a658da14546dafb4451b8d6189f5a.png" alt="V^*_{fl} - V^*_{cl+fl} = -2.5 \log(I_{fl}/I_{cl+fl}) \Rightarrow \frac{I_{fl}}{I_{cl+fl}} = 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}"/></p>
+<p><span class="eqno">(3)</span><span class="math">V^*_{fl} - V^*_{cl+fl} = -2.5 \log(I_{fl}/I_{cl+fl}) \Rightarrow \frac{I_{fl}}{I_{cl+fl}} = 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}</span></p>
 </div><p>we can combine now Eqs. <a href="#equation-integ-cl-fl2">(2)</a> and <a href="#equation-integ-cl-fl3">(3)</a> to obtain:</p>
 <div class="math">
-<p><img src="_images/math/b4bb89eb17d4efc0c647c8d254a2eee1087d66cb.png" alt="V^*_{cl} = -2.5 \log(1 - 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}) + V^*_{cl+fl}"/></p>
+<p><span class="math">V^*_{cl} = -2.5 \log(1 - 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}) + V^*_{cl+fl}</span></p>
 </div></div>
 
 
