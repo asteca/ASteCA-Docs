@@ -59,7 +59,7 @@ possibilities below.
    The systems supported are:
 
    * UBVRIJHK (cf. Maiz-Apellaniz 2006 + Bessell 1990)
-   * 2MAS JHK_s
+   * 2MASS JHK_s
    * Washington CMT1T2
 
 
