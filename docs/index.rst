@@ -38,6 +38,7 @@ Table of Contents
    int_mags
    synth_clust
    genet_algor
+   performance
 
 
 Indices and tables
