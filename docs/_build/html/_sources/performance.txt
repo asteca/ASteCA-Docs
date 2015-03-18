@@ -28,7 +28,7 @@ This way the code will not run this function again, instead it will read the
 membership probability values already generated.
 
 .. warning::
-  This can only be done if the structural parameters (center and radius) and the number of field regions defined remains the same. Otherwise the values for the membership probabilities may change.
+  This can only be done if the structural parameters (center and radius), the error rejection function used, and the number of field regions defined remains the same. Otherwise the values for the membership probabilities may change.
 
 **3-** Lower the ``bootstrap`` number in the ``Best synthetic cluster fit``
 function.
