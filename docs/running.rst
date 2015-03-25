@@ -61,6 +61,7 @@ possibilities below.
    * UBVRIJHK (cf. Maiz-Apellaniz 2006 + Bessell 1990)
    * 2MASS JHK_s
    * Washington CMT1T2
+   * SDSS ugriz
 
 
 Manual download
