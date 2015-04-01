@@ -8,16 +8,18 @@ ASteCA
 
 .. image:: _static/centers.png
 
-:Web: `asteca.github.io <http://asteca.github.io/>`_
+:Article: `ASteCA: Automated Stellar Cluster Analysis (A&A, 2015)
+           <http://www.aanda.org/articles/aa/abs/2015/04/aa24946-14/aa24946-14.html>`_
+:Site: `asteca.github.io <http://asteca.github.io/>`_
 :Source: `github.com/asteca <https://github.com/asteca>`_
 :Documentation: `asteca.rtfd.org <http://asteca.readthedocs.org/en/latest/>`_
 
-This is the manual of operation for the **ASteCA** (**A**\ utomated **Ste**\ llar
-**C**\ luster **A**\ nalysis) package.
+This is the manual of operation for the Automated Stellar
+Cluster Analysis (**ASteCA**) package.
 
 .. warning::
    This documentation is in the process of being written and is **not yet finished**. Updates will
-   be made as versions are released. Last updated: March 25, 2015.
+   be made as versions are released. Last updated: April 1, 2015.
 
 .. important::
    A PDF version of this manual can be downloaded `here`__.
@@ -36,6 +38,7 @@ Table of Contents
    rdp
    radius
    int_mags
+   decont_algor
    synth_clust
    genet_algor
    performance
