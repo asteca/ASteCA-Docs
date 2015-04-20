@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10. Genetic algorithm &mdash; ASteCA v0.1.1 documentation</title>
+  <title>11. Genetic algorithm &mdash; ASteCA v0.1.8 documentation</title>
   
 
   
@@ -30,9 +30,9 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.1 documentation" href="index.html"/>
-        <link rel="next" title="11. Performance" href="performance.html"/>
-        <link rel="prev" title="9. Synthetic clusters" href="synth_clust.html"/> 
+    <link rel="top" title="ASteCA v0.1.8 documentation" href="index.html"/>
+        <link rel="next" title="12. Best fit model" href="likelihood.html"/>
+        <link rel="prev" title="10. Synthetic clusters" href="synth_clust.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -74,16 +74,25 @@
 <li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rdp.html">5. Radial density profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radius.html">6. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">7. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">8. Decontamination algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">9. Synthetic clusters</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">9.1. IMF sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="center.html#approximate-center-values">5.1. Approximate center values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="center.html#precise-center-value">5.2. Precise center value</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">10. Genetic algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">11. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">9. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">9.1. Reduced membership</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">10. Synthetic clusters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">10.1. IMF sampling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">11. Genetic algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood.html">12. Best fit model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
         
@@ -107,7 +116,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>10. Genetic algorithm</li>
+    <li>11. Genetic algorithm</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="_sources/genet_algor.txt" rel="nofollow"> View page source</a>
@@ -119,12 +128,12 @@
           <div role="main">
             
   <div class="section" id="genetic-algorithm">
-<h1>10. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
+<h1>11. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
 <p>The implementation of the GA can be divided into several blocks composed of
 operators, as shown in <strong>Fig. 1</strong>.</p>
-<div class="figure align-center">
+<div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/ga-tree.png"><img alt="_images/ga-tree.png" src="_images/ga-tree.png" style="width: 496.0px; height: 933.0px;" /></a>
-<p class="caption"><strong>Fig. 1</strong>: Genetic algorithm work tree.</p>
+<p class="caption"><span class="caption-text"><strong>Fig. 1</strong>: Genetic algorithm work tree.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The first step consists in drawing a random initial population, that is a set of
 <img class="math" src="_images/math/4e09a011d309ba5e451290f8bcc607ff1e0fc7ab.png" alt="N_{pop}"/> random models taken from <img class="math" src="_images/math/83956e92fcc80dee17fce864543216939a3c9da7.png" alt="B"/>. This set is evaluated to
@@ -170,10 +179,10 @@ variable involved in the GA process (e.g.: <img class="math" src="_images/math/e
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="performance.html" class="btn btn-neutral float-right" title="11. Performance"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="likelihood.html" class="btn btn-neutral float-right" title="12. Best fit model"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="synth_clust.html" class="btn btn-neutral" title="9. Synthetic clusters"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="synth_clust.html" class="btn btn-neutral" title="10. Synthetic clusters"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -202,7 +211,7 @@ variable involved in the GA process (e.g.: <img class="math" src="_images/math/e
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.1',
+            VERSION:'v0.1.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

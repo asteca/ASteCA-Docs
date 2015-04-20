@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Running &mdash; ASteCA v0.1.1 documentation</title>
+  <title>4. Running &mdash; ASteCA v0.1.8 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.1 documentation" href="index.html"/>
-        <link rel="next" title="5. Radial density profile" href="rdp.html"/>
+    <link rel="top" title="ASteCA v0.1.8 documentation" href="index.html"/>
+        <link rel="next" title="5. Center determination" href="center.html"/>
         <link rel="prev" title="3. Input data file" href="input_data.html"/> 
 
   
@@ -74,16 +74,25 @@
 <li class="toctree-l2"><a class="reference internal" href="#theoretical-isochrones">4.1. Theoretical isochrones</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rdp.html">5. Radial density profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radius.html">6. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">7. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">8. Decontamination algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">9. Synthetic clusters</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">9.1. IMF sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="center.html#approximate-center-values">5.1. Approximate center values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="center.html#precise-center-value">5.2. Precise center value</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="genet_algor.html">10. Genetic algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">11. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">9. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">9.1. Reduced membership</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">10. Synthetic clusters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">10.1. IMF sampling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="genet_algor.html">11. Genetic algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood.html">12. Best fit model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
         
@@ -121,21 +130,23 @@
   <div class="section" id="running">
 <h1>4. Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h1>
 <p>To run the code simply position a cluster’s photometric data file in the
-<tt class="docutils literal"><span class="pre">input/</span></tt> folder, modify the <tt class="docutils literal"><span class="pre">params_input.dat</span></tt> file to both
+<code class="docutils literal"><span class="pre">input/</span></code> folder, modify the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file to both
 inform the code of the distribution of columns in your photometric file
 and set the values for each function within the code.
-Photometric files can also be stored in <tt class="docutils literal"><span class="pre">input/</span></tt> inside a
+Photometric files can also be stored in <code class="docutils literal"><span class="pre">input/</span></code> inside a
 sub-folder.</p>
-<p><strong>Every</strong> file inside the <tt class="docutils literal"><span class="pre">input/</span></tt> folder (inside or outside a
+<p><strong>Every</strong> file inside the <code class="docutils literal"><span class="pre">input/</span></code> folder (inside or outside a
 sub-folder) will be processed by <strong>ASteCA</strong>, with the exception of the
-membership probabilities files that end with a <tt class="docutils literal"><span class="pre">.memb.dat</span></tt> extension
+membership probabilities files that end with a <code class="docutils literal"><span class="pre">.memb.dat</span></code> extension
 (see XXX).</p>
-<p>Once file(s) are in place and the <tt class="docutils literal"><span class="pre">params_input.dat</span></tt> file correctly
+<p>Once file(s) are in place and the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file correctly
 modified, the code can be executed with the command:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python asteca.py
 </pre></div>
 </div>
-<p>The <tt class="docutils literal"><span class="pre">CLUSTER.DAT</span></tt> file located in the <tt class="docutils literal"><span class="pre">input/</span></tt> folder contains
+<p>This should work both in Linux based systems and OS X (Mac), but I&#8217;ve
+only tested it with Linux (since that&#8217;s what I use).</p>
+<p>The <code class="docutils literal"><span class="pre">CLUSTER.DAT</span></code> file located in the <code class="docutils literal"><span class="pre">input/</span></code> folder contains
 a synthetic open cluster generated via the <a class="reference external" href="http://www.physics.uc.edu/~bogdan/massclean/">MASSCLEAN</a> package with the
 following parameter values:</p>
 <div class="highlight-python"><div class="highlight"><pre>M = 500 Mo
@@ -149,7 +160,7 @@ E(B-V) = 0.32 (Av = 1.0)
 <div class="section" id="theoretical-isochrones">
 <h2>4.1. Theoretical isochrones<a class="headerlink" href="#theoretical-isochrones" title="Permalink to this headline">¶</a></h2>
 <p><strong>ASteCA</strong> needs at least one set of theoretical isochrones stored in the
-<tt class="docutils literal"><span class="pre">isochrones/</span></tt> folder, to be able to apply the <em>best-fit</em> function that
+<code class="docutils literal"><span class="pre">isochrones/</span></code> folder, to be able to apply the <em>best-fit</em> function that
 estimates the clusters’ parameters.
 Currently, the only isochrone files supported are those obtained via the
 <a class="reference external" href="http://stev.oapd.inaf.it/cgi-bin/cmd">CMD service</a> (<a class="reference external" href="http://www.aanda.org/articles/aa/abs/2002/31/aah3268/aah3268.html">Girardi et al. 2002</a>), but any set can in theory be used
@@ -175,7 +186,7 @@ extend <strong>ASteCA</strong> to support all systems present in the CMD service
 <div class="section" id="manual-download">
 <h3>4.1.1. Manual download<a class="headerlink" href="#manual-download" title="Permalink to this headline">¶</a></h3>
 <p>They isochrone files must follow a naming convention and be stored in a
-sub-folder inside the  <tt class="docutils literal"><span class="pre">isohrones/</span></tt> folder, also named according to a
+sub-folder inside the  <code class="docutils literal"><span class="pre">isohrones/</span></code> folder, also named according to a
 convention that makes them readable and identifiable to the code.</p>
 <p>The steps to manually download and store the files are:</p>
 <p>1. The CMD isochrones files must be downloaded using the <em>Sequence of
@@ -183,8 +194,8 @@ isochrones of constant metallicity, Z</em> option. That is, isochrones of the sa
 metallicity must all be stored in the same file.</p>
 <p>2. Each file must have the name of the metallicity that characterizes it.
 For example, if you download a sequence of isochrones with metallicity
-<tt class="docutils literal"><span class="pre">z=0.019</span></tt>, then the file should be called <tt class="docutils literal"><span class="pre">0.019.dat</span></tt> or <tt class="docutils literal"><span class="pre">0.0190.dat</span></tt>
-or <tt class="docutils literal"><span class="pre">0.019000.dat</span></tt>, etc.</p>
+<code class="docutils literal"><span class="pre">z=0.019</span></code>, then the file should be called <code class="docutils literal"><span class="pre">0.019.dat</span></code> or <code class="docutils literal"><span class="pre">0.0190.dat</span></code>
+or <code class="docutils literal"><span class="pre">0.019000.dat</span></code>, etc.</p>
 <blockquote>
 <div>This means that the file name must respect the decimal point in the
 metallicity value, and that the number of zeros at the end of the value in
@@ -192,15 +203,15 @@ the name does not matter.
 This is necessary because the code takes the metallicity value directly from
 the file name (which I plan to <a class="reference external" href="https://github.com/asteca/asteca/issues/161">simplify</a> sometime).</div></blockquote>
 <p>3. The theoretical isochrones files must be stored in a sub-folder of
-<tt class="docutils literal"><span class="pre">isochrones/</span></tt>, with the naming convention: <tt class="docutils literal"><span class="pre">parsecXX_YYY</span></tt> (currently only
-PARSEC isochrones are supported). In this name, <tt class="docutils literal"><span class="pre">XX</span></tt> is 10, 11 or 12
+<code class="docutils literal"><span class="pre">isochrones/</span></code>, with the naming convention: <code class="docutils literal"><span class="pre">parsecXX_YYY</span></code> (currently only
+PARSEC isochrones are supported). In this name, <code class="docutils literal"><span class="pre">XX</span></code> is 10, 11 or 12
 depending on the version of PARSEC used (1.0, 1.1 or 1.2S, respectively) and
-&#8216;YYYY&#8217; is <tt class="docutils literal"><span class="pre">ubvi</span></tt>, <tt class="docutils literal"><span class="pre">wash</span></tt> or <tt class="docutils literal"><span class="pre">2MASS</span></tt>, depending on the system chosen to
+&#8216;YYYY&#8217; is <code class="docutils literal"><span class="pre">ubvi</span></code>, <code class="docutils literal"><span class="pre">wash</span></code> or <code class="docutils literal"><span class="pre">2MASS</span></code>, depending on the system chosen to
 generate the isochrones.</p>
 <blockquote>
 <div>For example, if the PARSEC v1.2S tracks and the <em>UBVRIJHK (cf. Maiz-Apellaniz
 2006 + Bessell 1990)</em> system is selected, the name of the sub-folder where
-the isochrones must be stored would be: <tt class="docutils literal"><span class="pre">parsec12_ubvi</span></tt>.</div></blockquote>
+the isochrones must be stored would be: <code class="docutils literal"><span class="pre">parsec12_ubvi</span></code>.</div></blockquote>
 </div>
 <div class="section" id="automatic-download">
 <h3>4.1.2. Automatic download<a class="headerlink" href="#automatic-download" title="Permalink to this headline">¶</a></h3>
@@ -212,7 +223,7 @@ ezPADOVA-2 code <a class="footnote-reference" href="#id2" id="id1">[1]</a> which
 metallicities, storing them in files named following the above mentioned
 naming convention, and place them inside a folder also with the correct name.</p>
 <p>This way, once this code finishes you can just cut the generated folder and
-paste it inside the <tt class="docutils literal"><span class="pre">isochrones/</span></tt> folder in <strong>ASteCA</strong>.</p>
+paste it inside the <code class="docutils literal"><span class="pre">isochrones/</span></code> folder in <strong>ASteCA</strong>.</p>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
@@ -229,7 +240,7 @@ paste it inside the <tt class="docutils literal"><span class="pre">isochrones/</
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rdp.html" class="btn btn-neutral float-right" title="5. Radial density profile"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="center.html" class="btn btn-neutral float-right" title="5. Center determination"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="input_data.html" class="btn btn-neutral" title="3. Input data file"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -261,7 +272,7 @@ paste it inside the <tt class="docutils literal"><span class="pre">isochrones/</
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.1',
+            VERSION:'v0.1.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

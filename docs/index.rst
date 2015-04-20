@@ -19,7 +19,7 @@ Cluster Analysis (**ASteCA**) package.
 
 .. warning::
    This documentation is in the process of being written and is **not yet finished**. Updates will
-   be made as versions are released. Last updated: April 1, 2015.
+   be made as versions are released. Last updated: April 20, 2015.
 
 .. important::
    A PDF version of this manual can be downloaded `here`__.
@@ -35,12 +35,14 @@ Table of Contents
    download
    input_data
    running
+   center
    rdp
    radius
    int_mags
    decont_algor
    synth_clust
    genet_algor
+   likelihood
    performance
 
 

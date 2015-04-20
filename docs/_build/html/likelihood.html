@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>12. Best fit model &mdash; ASteCA v0.1.8 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="author" title="About these documents"
+              href="about.html"/>
+    <link rel="top" title="ASteCA v0.1.8 documentation" href="index.html"/>
+        <link rel="next" title="13. Performance" href="performance.html"/>
+        <link rel="prev" title="11. Genetic algorithm" href="genet_algor.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> ASteCA</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="download.html#requirements">2.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#python-dependencies">2.2. Python dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#python-distributions">2.3. Python distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#extra-packages">2.4. Extra packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#cloning-the-repository">2.5. Cloning the repository</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="center.html#approximate-center-values">5.1. Approximate center values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="center.html#precise-center-value">5.2. Precise center value</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">9. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">9.1. Reduced membership</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">10. Synthetic clusters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">10.1. IMF sampling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="genet_algor.html">11. Genetic algorithm</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">12. Best fit model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ASteCA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>12. Best fit model</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/likelihood.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="best-fit-model">
+<h1>12. Best fit model<a class="headerlink" href="#best-fit-model" title="Permalink to this headline">¶</a></h1>
+<p>The best fit synthetic cluster (SYC) is obtained via one of two likelihood
+equations.</p>
+<p>The <code class="docutils literal"><span class="pre">tolstoy</span></code> option in the <strong>Cluster parameters assignation</strong> block (<code class="docutils literal"><span class="pre">BF</span></code> ID
+line) uses Eqs. 9, 10 &amp; 11 defined in the original article describing
+<strong>ASteCA</strong>.</p>
+<p>The <code class="docutils literal"><span class="pre">dolphin</span></code> option uses Eq. 10 in the <a class="reference external" href="http://adsabs.harvard.edu/abs/2002MNRAS.332...91D">Dolphin (2002)</a> article. This equation
+compares the <a class="reference external" href="https://en.wikipedia.org/wiki/Hess_diagram">Hess diagrams</a> of the observed SC vs the SYC, as shown in
+<strong>Fig 1.</strong></p>
+<div class="figure align-center" id="id1">
+<img alt="_images/likelihood.png" src="_images/likelihood.png" />
+<p class="caption"><span class="caption-text"><strong>Fig. 1</strong>: Observed and synthetic clusters (left) are compared via their
+respective Hess diagrams (center and right). The minimum <img class="math" src="_images/math/042c823fd7936530da8f264e8acbb3e380337e8b.png" alt="-\ln(PLR)"/>
+value determines the best fit SYC.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="performance.html" class="btn btn-neutral float-right" title="13. Performance"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="genet_algor.html" class="btn btn-neutral" title="11. Genetic algorithm"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Gabriel I Perren.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'v0.1.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

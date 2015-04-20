@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Center determination &mdash; ASteCA v0.1.8 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="author" title="About these documents"
+              href="about.html"/>
+    <link rel="top" title="ASteCA v0.1.8 documentation" href="index.html"/>
+        <link rel="next" title="6. Radial density profile" href="rdp.html"/>
+        <link rel="prev" title="4. Running" href="running.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> ASteCA</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="download.html#requirements">2.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#python-dependencies">2.2. Python dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#python-distributions">2.3. Python distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#extra-packages">2.4. Extra packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#cloning-the-repository">2.5. Cloning the repository</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Center determination</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#approximate-center-values">5.1. Approximate center values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#precise-center-value">5.2. Precise center value</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">9. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">9.1. Reduced membership</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">10. Synthetic clusters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">10.1. IMF sampling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="genet_algor.html">11. Genetic algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood.html">12. Best fit model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ASteCA</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>5. Center determination</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/center.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="center-determination">
+<h1>5. Center determination<a class="headerlink" href="#center-determination" title="Permalink to this headline">¶</a></h1>
+<p>Determining the central coordinates of a SC with accuracy is of utmost
+importance, since this parameter directly affects the generation of the radial
+density profile, and thus also the estimation of the SC&#8217;s radius.</p>
+<p><strong>ASteCA</strong> determines the center value in two steps: a coarse approximation
+is done first and a Gaussian kernel density estimation (KDE) is then applied to
+obtain precise final coordinates.</p>
+<p>The process is independent of the system of coordinates used and can be equally
+applied to positional data stored in pixels or degrees.</p>
+<div class="section" id="approximate-center-values">
+<span id="approx-center"></span><h2>5.1. Approximate center values<a class="headerlink" href="#approximate-center-values" title="Permalink to this headline">¶</a></h2>
+<p>The positional data is first binned in a 2D histogram. The bin width is either
+automatically calculated as 1% of the minimum range in either coordinate
+(x, y), or set manually via the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file in the <strong>Structure
+functions parameters</strong> block, by setting the <code class="docutils literal"><span class="pre">bin_width</span></code> parameter (<code class="docutils literal"><span class="pre">CH</span></code>
+ID line).</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Unless there is a specific reason to use the <code class="docutils literal"><span class="pre">manual</span></code> mode to set the bin
+width, it is recommended to use the <em>1% range</em> <code class="docutils literal"><span class="pre">auto</span></code> value. This figure has
+proven to be a very good heuristic value in a large number of situations.</p>
+</div>
+<p>This 2D histogram is processed with a Gaussian filter to smooth it out, using
+five different bandwidths of increasing values (see <a class="reference external" href="https://github.com/asteca/asteca/blob/master/functions/structure/get_center.py">get_center.py</a> function
+for more details)</p>
+<p>The maximum density values of each Gaussian filtered version of the 2D
+histogram, are presented in the final output image as seen in <strong>Fig. 1</strong> below.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/2d-histo.png"><img alt="_images/2d-histo.png" src="_images/2d-histo.png" style="width: 546.4px; height: 504.8px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Fig. 1</strong>: Approximate center coordinate values. The standard deviation
+values in the bottom right corner are the bandwidth values used in the
+Gaussian filter.
+The box in the top left corner contains the averaged coordinate values and
+their standard deviations (shown in the plot as continuous and dashed lines
+respectively).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Each one of these values represents an approximation to the final center
+coordinates obtained in the next step (see section below).</p>
+<p>If the <code class="docutils literal"><span class="pre">semi_input.dat</span></code> file is used to pass approximate center coordinates,
+this analysis is skipped and only the passed value is presented in the plot.</p>
+</div>
+<div class="section" id="precise-center-value">
+<h2>5.2. Precise center value<a class="headerlink" href="#precise-center-value" title="Permalink to this headline">¶</a></h2>
+<p>Once the approximate center coordinates have been obtained, <strong>ASteCA</strong> proceeds
+to refine this result. To this end, the code employs the approximate center
+coordinates obtained in the previous step using the smallest bandwidth value
+(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <strong>Fig. 1</strong>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
+<p>These coordinates serve as initial values for the cluster&#8217;s center. The final
+<em>precise</em> values are determined as the maximum spatial density of a
+two-dimensional Gaussian kernel, generated on a reduced square area of the
+positional diagram of the cluster; see <strong>Fig. 2</strong>.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/center_area_search.png"><img alt="_images/center_area_search.png" src="_images/center_area_search.png" style="width: 562.4px; height: 521.6px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Fig. 2</strong>: In yellow, area where the center coordinates are searched via the
+KDE. Blue lines are contour curves, the center found is marked with a cross.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The square area where the final center coordinates are searched is centered on
+the <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/> values, with a side length that spans 50% of the
+minimum x,y range.
+The bandwidth of the fitted kernel is automatically defined via Scott&#8217;s rule
+(<a class="reference external" href="http://onlinelibrary.wiley.com/book/10.1002/9780470316849">Scott 1992</a>).</p>
+<p>In <strong>Fig 3</strong> we can see the final center coordinates (equivalently: the
+maximum value of the positional KDE) plotted over the Gaussian filtered 2D
+histogram obtained using the minimum bandwidth, as defined in Sect.
+<a class="reference internal" href="#approx-center"><em>Approximate center values</em></a>.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" style="width: 508.8px; height: 503.2px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Fig. 3</strong>: Cluster&#8217;s center found via the KDE analysis. The <code class="docutils literal"><span class="pre">Bin</span></code> value
+in the top right corner is the bin width of the 2D histogram mentioned
+in the previous section, used to obtain the approximate center coordinates.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>After this analysis is completed, the final center coordinates are compared
+with the approximate values obtained in the previous section. Two flags are
+raised warning the user about large deviations that could require careful
+revision, and stored in the output file <code class="docutils literal"><span class="pre">asteca_output.dat</span></code>.</p>
+<p>The flags must meet the following conditions in order to be raised:</p>
+<ul class="simple">
+<li><strong>f1</strong>: The median value for the approximate center coordinates in either x or
+y, is more than 10% away from the final center coordinates.</li>
+<li><strong>f2</strong>: The standard deviation for the approximate center coordinates in
+either x or y, is larger than 10% of the final center coordinates.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rdp.html" class="btn btn-neutral float-right" title="6. Radial density profile"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="running.html" class="btn btn-neutral" title="4. Running"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Gabriel I Perren.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'v0.1.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

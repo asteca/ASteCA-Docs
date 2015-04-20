@@ -20,6 +20,9 @@ modified, the code can be executed with the command:
 
     $ python asteca.py
 
+This should work both in Linux based systems and OS X (Mac), but I've
+only tested it with Linux (since that's what I use).
+
 The ``CLUSTER.DAT`` file located in the ``input/`` folder contains
 a synthetic open cluster generated via the `MASSCLEAN`_ package with the
 following parameter values:

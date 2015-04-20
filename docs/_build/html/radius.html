@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6. Cluster radius estimation &mdash; ASteCA v0.1.1 documentation</title>
+  <title>7. Cluster radius estimation &mdash; ASteCA v0.1.8 documentation</title>
   
 
   
@@ -30,9 +30,9 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.1 documentation" href="index.html"/>
-        <link rel="next" title="7. Integrated magnitudes" href="int_mags.html"/>
-        <link rel="prev" title="5. Radial density profile" href="rdp.html"/> 
+    <link rel="top" title="ASteCA v0.1.8 documentation" href="index.html"/>
+        <link rel="next" title="8. Integrated magnitudes" href="int_mags.html"/>
+        <link rel="prev" title="6. Radial density profile" href="rdp.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -74,16 +74,25 @@
 <li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rdp.html">5. Radial density profile</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">6. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">7. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">8. Decontamination algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">9. Synthetic clusters</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">9.1. IMF sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="center.html#approximate-center-values">5.1. Approximate center values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="center.html#precise-center-value">5.2. Precise center value</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="genet_algor.html">10. Genetic algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">11. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">9. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">9.1. Reduced membership</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="synth_clust.html">10. Synthetic clusters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html#imf-sampling">10.1. IMF sampling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="genet_algor.html">11. Genetic algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood.html">12. Best fit model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
         
@@ -107,7 +116,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>6. Cluster radius estimation</li>
+    <li>7. Cluster radius estimation</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="_sources/radius.txt" rel="nofollow"> View page source</a>
@@ -119,7 +128,7 @@
           <div role="main">
             
   <div class="section" id="cluster-radius-estimation">
-<h1>6. Cluster radius estimation<a class="headerlink" href="#cluster-radius-estimation" title="Permalink to this headline">¶</a></h1>
+<h1>7. Cluster radius estimation<a class="headerlink" href="#cluster-radius-estimation" title="Permalink to this headline">¶</a></h1>
 <p>We begin
 by counting the number of RDP points that fall below a given maximum tolerance
 interval above $d_{field}$. When the number of these points reaches a
@@ -142,10 +151,10 @@ restrict the algorithm if needed.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="int_mags.html" class="btn btn-neutral float-right" title="7. Integrated magnitudes"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="int_mags.html" class="btn btn-neutral float-right" title="8. Integrated magnitudes"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rdp.html" class="btn btn-neutral" title="5. Radial density profile"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rdp.html" class="btn btn-neutral" title="6. Radial density profile"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -174,7 +183,7 @@ restrict the algorithm if needed.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.1',
+            VERSION:'v0.1.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

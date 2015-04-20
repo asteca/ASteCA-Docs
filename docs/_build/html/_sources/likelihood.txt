@@ -1,0 +1,23 @@
+Best fit model
+--------------
+
+The best fit synthetic cluster (SYC) is obtained via one of two likelihood
+equations.
+
+The ``tolstoy`` option in the **Cluster parameters assignation** block (``BF`` ID
+line) uses Eqs. 9, 10 & 11 defined in the original article describing
+**ASteCA**.
+
+The ``dolphin`` option uses Eq. 10 in the `Dolphin (2002)`_ article. This equation
+compares the `Hess diagrams`_ of the observed SC vs the SYC, as shown in
+**Fig 1.**
+
+.. figure:: _static/likelihood.png
+   :align: center
+
+   **Fig. 1**: Observed and synthetic clusters (left) are compared via their
+   respective Hess diagrams (center and right). The minimum :math:`-\ln(PLR)`
+   value determines the best fit SYC.
+
+.. _Dolphin (2002): http://adsabs.harvard.edu/abs/2002MNRAS.332...91D
+.. _Hess diagrams: https://en.wikipedia.org/wiki/Hess_diagram
