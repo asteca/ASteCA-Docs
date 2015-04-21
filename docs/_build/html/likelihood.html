@@ -131,18 +131,21 @@
 <h1>12. Best fit model<a class="headerlink" href="#best-fit-model" title="Permalink to this headline">¶</a></h1>
 <p>The best fit synthetic cluster (SYC) is obtained via one of two likelihood
 equations.</p>
-<p>The <code class="docutils literal"><span class="pre">tolstoy</span></code> option in the <strong>Cluster parameters assignation</strong> block (<code class="docutils literal"><span class="pre">BF</span></code> ID
+<p>The <tt class="docutils literal"><span class="pre">tolstoy</span></tt> method in the <strong>Cluster parameters assignation</strong> block (<tt class="docutils literal"><span class="pre">BF</span></tt> ID
 line) uses Eqs. 9, 10 &amp; 11 defined in the original article describing
 <strong>ASteCA</strong>.</p>
-<p>The <code class="docutils literal"><span class="pre">dolphin</span></code> option uses Eq. 10 in the <a class="reference external" href="http://adsabs.harvard.edu/abs/2002MNRAS.332...91D">Dolphin (2002)</a> article. This equation
+<p>The <tt class="docutils literal"><span class="pre">dolphin</span></tt> method uses Eq. 10 in the <a class="reference external" href="http://adsabs.harvard.edu/abs/2002MNRAS.332...91D">Dolphin (2002)</a> article. This equation
 compares the <a class="reference external" href="https://en.wikipedia.org/wiki/Hess_diagram">Hess diagrams</a> of the observed SC vs the SYC, as shown in
 <strong>Fig 1.</strong></p>
-<div class="figure align-center" id="id1">
+<div class="figure align-center">
 <img alt="_images/likelihood.png" src="_images/likelihood.png" />
-<p class="caption"><span class="caption-text"><strong>Fig. 1</strong>: Observed and synthetic clusters (left) are compared via their
+<p class="caption"><strong>Fig. 1</strong>: Observed and synthetic clusters (left) are compared via their
 respective Hess diagrams (center and right). The minimum <img class="math" src="_images/math/042c823fd7936530da8f264e8acbb3e380337e8b.png" alt="-\ln(PLR)"/>
-value determines the best fit SYC.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+value determines the best fit SYC.</p>
 </div>
+<p>When <tt class="docutils literal"><span class="pre">dolphin</span></tt> is used to obtain the best fit SYC, the membership probabilities
+obtained by the decontamination algorithm (see <a class="reference internal" href="decont_algor.html#decont-algor"><em>Decontamination algorithm</em></a>) are included
+in the equation via the <tt class="docutils literal"><span class="pre">weights</span></tt> parameter in the <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.histogramdd.html">numpy.histogramdd</a> function.</p>
 </div>
 
 

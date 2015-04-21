@@ -1,3 +1,5 @@
+.. _decont-algor:
+
 Decontamination algorithm
 =========================
 
