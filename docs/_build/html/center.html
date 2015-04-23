@@ -154,10 +154,11 @@ proven to be a very good heuristic value in a large number of situations.</p>
 five different bandwidths of increasing values (see <a class="reference external" href="https://github.com/asteca/asteca/blob/master/functions/structure/get_center.py">get_center.py</a> function
 for more details)</p>
 <p>The maximum density values of each Gaussian filtered version of the 2D
-histogram, are presented in the final output image as seen in <strong>Fig. 1</strong> below.</p>
+histogram, are presented in the final output image as seen in <strong>Fig.</strong>
+<a href="#fig-2dhisto">5.2</a> below.</p>
 <div class="figure align-center" id="id1">
-<a class="reference internal image-reference" href="_images/2d-histo.png"><img alt="_images/2d-histo.png" src="_images/2d-histo.png" style="width: 546.4px; height: 504.8px;" /></a>
-<p class="caption"><span class="caption-text"><strong>Fig. 1</strong>: Approximate center coordinate values. The standard deviation
+<span id="fig-2dhisto"></span><a class="reference internal image-reference" href="_images/2d-histo.png"><img alt="_images/2d-histo.png" src="_images/2d-histo.png" style="width: 546.4px; height: 504.8px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure 12.1:</strong> Approximate center coordinate values. The standard deviation
 values in the bottom right corner are the bandwidth values used in the
 Gaussian filter.
 The box in the top left corner contains the averaged coordinate values and
@@ -174,14 +175,14 @@ this analysis is skipped and only the passed value is presented in the plot.</p>
 <p>Once the approximate center coordinates have been obtained, <strong>ASteCA</strong> proceeds
 to refine this result. To this end, the code employs the approximate center
 coordinates obtained in the previous step using the smallest bandwidth value
-(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <strong>Fig. 1</strong>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
+(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <strong>Fig.</strong> <a href="#fig-2dhisto">5.2</a>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
 <p>These coordinates serve as initial values for the cluster&#8217;s center. The final
 <em>precise</em> values are determined as the maximum spatial density of a
 two-dimensional Gaussian kernel, generated on a reduced square area of the
-positional diagram of the cluster; see <strong>Fig. 2</strong>.</p>
+positional diagram of the cluster; see <strong>Fig.</strong> <a href="#fig-center-area">5.4</a>.</p>
 <div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="_images/center_area_search.png"><img alt="_images/center_area_search.png" src="_images/center_area_search.png" style="width: 562.4px; height: 521.6px;" /></a>
-<p class="caption"><span class="caption-text"><strong>Fig. 2</strong>: In yellow, area where the center coordinates are searched via the
+<span id="fig-center-area"></span><a class="reference internal image-reference" href="_images/center-area-search.png"><img alt="_images/center-area-search.png" src="_images/center-area-search.png" style="width: 562.4px; height: 521.6px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure 5.3:</strong> In yellow, area where the center coordinates are searched via the
 KDE. Blue lines are contour curves, the center found is marked with a cross.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The square area where the final center coordinates are searched is centered on
@@ -189,13 +190,13 @@ the <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9
 minimum x,y range.
 The bandwidth of the fitted kernel is automatically defined via Scott&#8217;s rule
 (<a class="reference external" href="http://onlinelibrary.wiley.com/book/10.1002/9780470316849">Scott 1992</a>).</p>
-<p>In <strong>Fig 3</strong> we can see the final center coordinates (equivalently: the
+<p>In <strong>Fig.</strong> <a href="#fig-center">5.6</a> we can see the final center coordinates (equivalently: the
 maximum value of the positional KDE) plotted over the Gaussian filtered 2D
 histogram obtained using the minimum bandwidth, as defined in Sect.
 <a class="reference internal" href="#approx-center"><em>5.1</em></a>.</p>
 <div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" style="width: 508.8px; height: 503.2px;" /></a>
-<p class="caption"><span class="caption-text"><strong>Fig. 3</strong>: Cluster&#8217;s center found via the KDE analysis. The <code class="docutils literal"><span class="pre">Bin</span></code> value
+<span id="fig-center"></span><a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" style="width: 508.8px; height: 503.2px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure 5.5:</strong> Cluster&#8217;s center found via the KDE analysis. The <code class="docutils literal"><span class="pre">Bin</span></code> value
 in the top right corner is the bin width of the 2D histogram mentioned
 in the previous section, used to obtain the approximate center coordinates.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>

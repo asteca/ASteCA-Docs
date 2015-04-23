@@ -34,13 +34,16 @@ five different bandwidths of increasing values (see `get_center.py`_ function
 for more details)
 
 The maximum density values of each Gaussian filtered version of the 2D
-histogram, are presented in the final output image as seen in **Fig. 1** below.
+histogram, are presented in the final output image as seen in **Fig.**
+:num:`fig-2dhisto` below.
+
+.. _fig-2dhisto:
 
 .. figure:: _static/2d-histo.png
    :scale: 80 %
    :align: center
 
-   **Fig. 1**: Approximate center coordinate values. The standard deviation
+   Approximate center coordinate values. The standard deviation
    values in the bottom right corner are the bandwidth values used in the
    Gaussian filter.
    The box in the top left corner contains the averaged coordinate values and
@@ -59,18 +62,20 @@ Precise center value
 Once the approximate center coordinates have been obtained, **ASteCA** proceeds
 to refine this result. To this end, the code employs the approximate center
 coordinates obtained in the previous step using the smallest bandwidth value
-(``St dev: 2.0`` in **Fig. 1**), or :math:`center_{bw-min}`.
+(``St dev: 2.0`` in **Fig.** :num:`fig-2dhisto`), or :math:`center_{bw-min}`.
 
 These coordinates serve as initial values for the cluster's center. The final
 *precise* values are determined as the maximum spatial density of a
 two-dimensional Gaussian kernel, generated on a reduced square area of the
-positional diagram of the cluster; see **Fig. 2**.
+positional diagram of the cluster; see **Fig.** :num:`fig-center-area`.
 
-.. figure:: _static/center_area_search.png
+.. _fig-center-area:
+
+.. figure:: _static/center-area-search.png
    :scale: 80 %
    :align: center
 
-   **Fig. 2**: In yellow, area where the center coordinates are searched via the
+   In yellow, area where the center coordinates are searched via the
    KDE. Blue lines are contour curves, the center found is marked with a cross.
 
 The square area where the final center coordinates are searched is centered on
@@ -79,16 +84,18 @@ minimum x,y range.
 The bandwidth of the fitted kernel is automatically defined via Scott's rule
 (`Scott 1992`_). 
 
-In **Fig 3** we can see the final center coordinates (equivalently: the
+In **Fig.** :num:`fig-center` we can see the final center coordinates (equivalently: the
 maximum value of the positional KDE) plotted over the Gaussian filtered 2D
 histogram obtained using the minimum bandwidth, as defined in Sect.
 :ref:`approx-center`.
+
+.. _fig-center:
 
 .. figure:: _static/center.png
    :scale: 80 %
    :align: center
 
-   **Fig. 3**: Cluster's center found via the KDE analysis. The ``Bin`` value
+   Cluster's center found via the KDE analysis. The ``Bin`` value
    in the top right corner is the bin width of the 2D histogram mentioned
    in the previous section, used to obtain the approximate center coordinates.
 

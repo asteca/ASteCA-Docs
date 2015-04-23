@@ -9,13 +9,15 @@ line) uses Eqs. 9, 10 & 11 defined in the original article describing
 **ASteCA**.
 
 The ``dolphin`` method uses Eq. 10 in the `Dolphin (2002)`_ article. This equation
-compares the `Hess diagrams`_ of the observed SC vs the SYC, as shown in
-**Fig 1.**
+compares the `Hess diagrams`_ of the observed SC vs the SYC, as shown in **Fig.**
+:num:`fig-likel`.
+
+.. _fig-likel:
 
 .. figure:: _static/likelihood.png
    :align: center
 
-   **Fig. 1**: Observed and synthetic clusters (left) are compared via their
+   Observed and synthetic clusters (left) are compared via their
    respective Hess diagrams (center and right). The minimum :math:`-\ln(PLR)`
    value determines the best fit SYC.
 
