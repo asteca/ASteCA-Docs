@@ -20,7 +20,7 @@ compares the `Hess diagrams`_ of the observed SC vs the SYC, as shown in
    value determines the best fit SYC.
 
 When ``dolphin`` is used to obtain the best fit SYC, the membership probabilities
-obtained by the decontamination algorithm (see :ref:`decont-algor`) are included
+obtained by the decontamination algorithm (see Sect. :ref:`decont-algor`) are included
 in the equation via the ``weights`` parameter in the `numpy.histogramdd`_ function.
 
 .. _Dolphin (2002): http://adsabs.harvard.edu/abs/2002MNRAS.332...91D

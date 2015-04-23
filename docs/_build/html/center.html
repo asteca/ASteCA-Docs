@@ -141,13 +141,13 @@ applied to positional data stored in pixels or degrees.</p>
 <span id="approx-center"></span><h2>5.1. Approximate center values<a class="headerlink" href="#approximate-center-values" title="Permalink to this headline">¶</a></h2>
 <p>The positional data is first binned in a 2D histogram. The bin width is either
 automatically calculated as 1% of the minimum range in either coordinate
-(x, y), or set manually via the <tt class="docutils literal"><span class="pre">params_input.dat</span></tt> file in the <strong>Structure
-functions parameters</strong> block, by setting the <tt class="docutils literal"><span class="pre">bin_width</span></tt> parameter (<tt class="docutils literal"><span class="pre">CH</span></tt>
+(x, y), or set manually via the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file in the <strong>Structure
+functions parameters</strong> block, by setting the <code class="docutils literal"><span class="pre">bin_width</span></code> parameter (<code class="docutils literal"><span class="pre">CH</span></code>
 ID line).</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">Unless there is a specific reason to use the <tt class="docutils literal"><span class="pre">manual</span></tt> mode to set the bin
-width, it is recommended to use the <em>1% range</em> <tt class="docutils literal"><span class="pre">auto</span></tt> value. This figure has
+<p class="last">Unless there is a specific reason to use the <code class="docutils literal"><span class="pre">manual</span></code> mode to set the bin
+width, it is recommended to use the <em>1% range</em> <code class="docutils literal"><span class="pre">auto</span></code> value. This figure has
 proven to be a very good heuristic value in a large number of situations.</p>
 </div>
 <p>This 2D histogram is processed with a Gaussian filter to smooth it out, using
@@ -155,18 +155,18 @@ five different bandwidths of increasing values (see <a class="reference external
 for more details)</p>
 <p>The maximum density values of each Gaussian filtered version of the 2D
 histogram, are presented in the final output image as seen in <strong>Fig. 1</strong> below.</p>
-<div class="figure align-center">
+<div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/2d-histo.png"><img alt="_images/2d-histo.png" src="_images/2d-histo.png" style="width: 546.4px; height: 504.8px;" /></a>
-<p class="caption"><strong>Fig. 1</strong>: Approximate center coordinate values. The standard deviation
+<p class="caption"><span class="caption-text"><strong>Fig. 1</strong>: Approximate center coordinate values. The standard deviation
 values in the bottom right corner are the bandwidth values used in the
 Gaussian filter.
 The box in the top left corner contains the averaged coordinate values and
 their standard deviations (shown in the plot as continuous and dashed lines
-respectively).</p>
+respectively).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>Each one of these values represents an approximation to the final center
 coordinates obtained in the next step (see section below).</p>
-<p>If the <tt class="docutils literal"><span class="pre">semi_input.dat</span></tt> file is used to pass approximate center coordinates,
+<p>If the <code class="docutils literal"><span class="pre">semi_input.dat</span></code> file is used to pass approximate center coordinates,
 this analysis is skipped and only the passed value is presented in the plot.</p>
 </div>
 <div class="section" id="precise-center-value">
@@ -174,15 +174,15 @@ this analysis is skipped and only the passed value is presented in the plot.</p>
 <p>Once the approximate center coordinates have been obtained, <strong>ASteCA</strong> proceeds
 to refine this result. To this end, the code employs the approximate center
 coordinates obtained in the previous step using the smallest bandwidth value
-(<tt class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></tt> in <strong>Fig. 1</strong>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
+(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <strong>Fig. 1</strong>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
 <p>These coordinates serve as initial values for the cluster&#8217;s center. The final
 <em>precise</em> values are determined as the maximum spatial density of a
 two-dimensional Gaussian kernel, generated on a reduced square area of the
 positional diagram of the cluster; see <strong>Fig. 2</strong>.</p>
-<div class="figure align-center">
+<div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="_images/center_area_search.png"><img alt="_images/center_area_search.png" src="_images/center_area_search.png" style="width: 562.4px; height: 521.6px;" /></a>
-<p class="caption"><strong>Fig. 2</strong>: In yellow, area where the center coordinates are searched via the
-KDE. Blue lines are contour curves, the center found is marked with a cross.</p>
+<p class="caption"><span class="caption-text"><strong>Fig. 2</strong>: In yellow, area where the center coordinates are searched via the
+KDE. Blue lines are contour curves, the center found is marked with a cross.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The square area where the final center coordinates are searched is centered on
 the <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/> values, with a side length that spans 50% of the
@@ -192,17 +192,17 @@ The bandwidth of the fitted kernel is automatically defined via Scott&#8217;s ru
 <p>In <strong>Fig 3</strong> we can see the final center coordinates (equivalently: the
 maximum value of the positional KDE) plotted over the Gaussian filtered 2D
 histogram obtained using the minimum bandwidth, as defined in Sect.
-<a class="reference internal" href="#approx-center"><em>Approximate center values</em></a>.</p>
-<div class="figure align-center">
+<a class="reference internal" href="#approx-center"><em>5.1</em></a>.</p>
+<div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" style="width: 508.8px; height: 503.2px;" /></a>
-<p class="caption"><strong>Fig. 3</strong>: Cluster&#8217;s center found via the KDE analysis. The <tt class="docutils literal"><span class="pre">Bin</span></tt> value
+<p class="caption"><span class="caption-text"><strong>Fig. 3</strong>: Cluster&#8217;s center found via the KDE analysis. The <code class="docutils literal"><span class="pre">Bin</span></code> value
 in the top right corner is the bin width of the 2D histogram mentioned
-in the previous section, used to obtain the approximate center coordinates.</p>
+in the previous section, used to obtain the approximate center coordinates.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>After this analysis is completed, the final center coordinates are compared
 with the approximate values obtained in the previous section. Two flags are
 raised warning the user about large deviations that could require careful
-revision, and stored in the output file <tt class="docutils literal"><span class="pre">asteca_output.dat</span></tt>.</p>
+revision, and stored in the output file <code class="docutils literal"><span class="pre">asteca_output.dat</span></code>.</p>
 <p>The flags must meet the following conditions in order to be raised:</p>
 <ul class="simple">
 <li><strong>f1</strong>: The median value for the approximate center coordinates in either x or
