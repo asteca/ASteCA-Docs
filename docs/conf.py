@@ -47,8 +47,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.pngmath',
     'sphinx.ext.viewcode',
-    'numsec',
-    # 'numfig',
+    'numsec'
 ]
 
 numfig = True

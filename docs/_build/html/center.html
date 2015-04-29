@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -25,6 +25,8 @@
   
   
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
   
 
   
@@ -46,9 +48,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="index.html" class="fa fa-home"> ASteCA</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+        
+          <a href="index.html" class="fa fa-home"> ASteCA</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -58,8 +63,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul class="current">
+          
+          
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#requirements">2.1. Requirements</a></li>
@@ -95,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -125,7 +132,7 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="center-determination">
 <h1>5. Center determination<a class="headerlink" href="#center-determination" title="Permalink to this headline">¶</a></h1>
@@ -155,7 +162,7 @@ five different bandwidths of increasing values (see <a class="reference external
 for more details)</p>
 <p>The maximum density values of each Gaussian filtered version of the 2D
 histogram, are presented in the final output image as seen in
-<a class="reference internal" href="#fig-2dhisto"><em>Fig. 5.1</em></a> below.</p>
+<a class="reference internal" href="#fig-2dhisto"><span>Fig. 5.1</span></a> below.</p>
 <div class="figure align-center" id="id1">
 <span id="fig-2dhisto"></span><a class="reference internal image-reference" href="_images/2d-histo.png"><img alt="_images/2d-histo.png" src="_images/2d-histo.png" style="width: 546.4px; height: 504.8px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Approximate center coordinate values. The standard deviation
@@ -163,7 +170,7 @@ values in the bottom right corner are the bandwidth values used in the
 Gaussian filter.
 The box in the top left corner contains the averaged coordinate values and
 their standard deviations (shown in the plot as continuous and dashed lines
-respectively).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+respectively).</span></p>
 </div>
 <p>Each one of these values represents an approximation to the final center
 coordinates obtained in the next step (see section below).</p>
@@ -175,30 +182,30 @@ this analysis is skipped and only the passed value is presented in the plot.</p>
 <p>Once the approximate center coordinates have been obtained, <strong>ASteCA</strong> proceeds
 to refine this result. To this end, the code employs the approximate center
 coordinates obtained in the previous step using the smallest bandwidth value
-(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><em>Fig. 5.1</em></a>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
+(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><span>Fig. 5.1</span></a>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
 <p>These coordinates serve as initial values for the cluster&#8217;s center. The final
 <em>precise</em> values are determined as the maximum spatial density of a
 two-dimensional Gaussian kernel, generated on a reduced square area of the
-positional diagram of the cluster; see <a class="reference internal" href="#fig-center-area"><em>Fig. 5.2</em></a>.</p>
+positional diagram of the cluster; see <a class="reference internal" href="#fig-center-area"><span>Fig. 5.2</span></a>.</p>
 <div class="figure align-center" id="id2">
 <span id="fig-center-area"></span><a class="reference internal image-reference" href="_images/center-area-search.png"><img alt="_images/center-area-search.png" src="_images/center-area-search.png" style="width: 562.4px; height: 521.6px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">In yellow, area where the center coordinates are searched via the
-KDE. Blue lines are contour curves, the center found is marked with a cross.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+KDE. Blue lines are contour curves, the center found is marked with a cross.</span></p>
 </div>
 <p>The square area where the final center coordinates are searched is centered on
 the <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/> values, with a side length that spans 50% of the
 minimum x,y range.
 The bandwidth of the fitted kernel is automatically defined via Scott&#8217;s rule
 (<a class="reference external" href="http://onlinelibrary.wiley.com/book/10.1002/9780470316849">Scott 1992</a>).</p>
-<p>In <a class="reference internal" href="#fig-center"><em>Fig. 5.3</em></a> we can see the final center coordinates (equivalently:
+<p>In <a class="reference internal" href="#fig-center"><span>Fig. 5.3</span></a> we can see the final center coordinates (equivalently:
 the maximum value of the positional KDE) plotted over the Gaussian filtered 2D
 histogram obtained using the minimum bandwidth, as defined in Sect.
-<a class="reference internal" href="#approx-center"><em>5.1</em></a>.</p>
+<a class="reference internal" href="#approx-center"><span>5.1</span></a>.</p>
 <div class="figure align-center" id="id3">
 <span id="fig-center"></span><a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" style="width: 508.8px; height: 503.2px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Cluster&#8217;s center found via the KDE analysis. The <code class="docutils literal"><span class="pre">Bin</span></code> value
 in the top right corner is the bin width of the 2D histogram mentioned
-in the previous section, used to obtain the approximate center coordinates.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+in the previous section, used to obtain the approximate center coordinates.</span></p>
 </div>
 <p>After this analysis is completed, the final center coordinates are compared
 with the approximate values obtained in the previous section. Two flags are
@@ -220,7 +227,7 @@ either x or y, is larger than 10% of the final center coordinates.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rdp.html" class="btn btn-neutral float-right" title="6. Radial density profile"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rdp.html" class="btn btn-neutral float-right" title="6. Radial density profile">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="running.html" class="btn btn-neutral" title="4. Running"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -236,7 +243,8 @@ either x or y, is larger than 10% of the final center coordinates.</li>
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>

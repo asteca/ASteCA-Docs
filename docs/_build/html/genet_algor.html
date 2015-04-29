@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -25,6 +25,8 @@
   
   
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
   
 
   
@@ -46,9 +48,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="index.html" class="fa fa-home"> ASteCA</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+        
+          <a href="index.html" class="fa fa-home"> ASteCA</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -58,8 +63,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul class="current">
+          
+          
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="download.html#requirements">2.1. Requirements</a></li>
@@ -95,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -125,7 +132,7 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="genetic-algorithm">
 <h1>11. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
@@ -133,7 +140,7 @@
 operators, as shown in <strong>Fig. 1</strong>.</p>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/ga-tree.png"><img alt="_images/ga-tree.png" src="_images/ga-tree.png" style="width: 496.0px; height: 933.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11.1 </span><span class="caption-text"><strong>Fig. 1</strong>: Genetic algorithm work tree.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11.1 </span><span class="caption-text"><strong>Fig. 1</strong>: Genetic algorithm work tree.</span></p>
 </div>
 <p>The first step consists in drawing a random initial population, that is a set of
 <img class="math" src="_images/math/4e09a011d309ba5e451290f8bcc607ff1e0fc7ab.png" alt="N_{pop}"/> random models taken from <img class="math" src="_images/math/83956e92fcc80dee17fce864543216939a3c9da7.png" alt="B"/>. This set is evaluated to
@@ -179,7 +186,7 @@ variable involved in the GA process (e.g.: <img class="math" src="_images/math/e
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="likelihood.html" class="btn btn-neutral float-right" title="12. Best fit model"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="likelihood.html" class="btn btn-neutral float-right" title="12. Best fit model">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="synth_clust.html" class="btn btn-neutral" title="10. Synthetic clusters"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -195,7 +202,8 @@ variable involved in the GA process (e.g.: <img class="math" src="_images/math/e
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
