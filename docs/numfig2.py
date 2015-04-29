@@ -9,7 +9,7 @@ from backports import OrderedDict, OrderedSet
 class page_ref(nodes.reference):
     pass
 
-class num_ref(nodes.reference):
+class numref2(nodes.reference):
     pass
 
 
@@ -126,7 +126,7 @@ def doctree_resolved(app, doctree, docname):
                     boldcaption = "(%s)" % fignum[-1]
                 cap[0] = nodes.strong('', boldcaption)
         
-        for ref_info in doctree.traverse(num_ref):
+        for ref_info in doctree.traverse(numref2):
             if '#' in ref_info['reftarget']:
                 label, target = ref_info['reftarget'].split('#')
                 labelfmt = label + " %s"
@@ -164,11 +164,11 @@ def setup(app):
 
     app.add_role('page', XRefRole(nodeclass=page_ref))
 
-    app.add_node(num_ref,
+    app.add_node(numref2,
                  latex=(latex_visit_num_ref, None),
                  text=(skip_page_ref, None))
 
-    app.add_role('num', XRefRole(nodeclass=num_ref))
+    app.add_role('num', XRefRole(nodeclass=numref2))
 
     app.connect('doctree-read', doctree_read)
     app.connect('doctree-resolved', doctree_resolved)
