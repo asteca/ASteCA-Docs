@@ -50,6 +50,7 @@ histogram, are presented in the final output image as seen in
    their standard deviations (shown in the plot as continuous and dashed lines
    respectively).
 
+
 Each one of these values represents an approximation to the final center
 coordinates obtained in the next step (see section below).
 
