@@ -47,10 +47,11 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.pngmath',
     'sphinx.ext.viewcode',
-    'numsec'
+    'numsec',
+    'numfig2'
 ]
 
-numfig = True
+# numfig = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

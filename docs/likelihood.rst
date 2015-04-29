@@ -10,7 +10,7 @@ line) uses Eqs. 9, 10 & 11 defined in the original article describing
 
 The ``dolphin`` method uses Eq. 10 in the `Dolphin (2002)`_ article. This equation
 compares the `Hess diagrams`_ of the observed SC vs the SYC, as shown in
-:numref:`fig-likel`.
+:num:`fig-likel`.
 
 .. _fig-likel:
 

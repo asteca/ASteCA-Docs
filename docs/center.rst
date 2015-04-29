@@ -35,7 +35,7 @@ for more details)
 
 The maximum density values of each Gaussian filtered version of the 2D
 histogram, are presented in the final output image as seen in
-:numref:`fig-2dhisto` below.
+:num:`fig-2dhisto` below.
 
 .. _fig-2dhisto:
 
@@ -63,12 +63,12 @@ Precise center value
 Once the approximate center coordinates have been obtained, **ASteCA** proceeds
 to refine this result. To this end, the code employs the approximate center
 coordinates obtained in the previous step using the smallest bandwidth value
-(``St dev: 2.0`` in :numref:`fig-2dhisto`), or :math:`center_{bw-min}`.
+(``St dev: 2.0`` in :num:`fig-2dhisto`), or :math:`center_{bw-min}`.
 
 These coordinates serve as initial values for the cluster's center. The final
 *precise* values are determined as the maximum spatial density of a
 two-dimensional Gaussian kernel, generated on a reduced square area of the
-positional diagram of the cluster; see :numref:`fig-center-area`.
+positional diagram of the cluster; see :num:`fig-center-area`.
 
 .. _fig-center-area:
 
@@ -85,7 +85,7 @@ minimum x,y range.
 The bandwidth of the fitted kernel is automatically defined via Scott's rule
 (`Scott 1992`_). 
 
-In :numref:`fig-center` we can see the final center coordinates (equivalently:
+In :num:`fig-center` we can see the final center coordinates (equivalently:
 the maximum value of the positional KDE) plotted over the Gaussian filtered 2D
 histogram obtained using the minimum bandwidth, as defined in Sect.
 :ref:`approx-center`.
