@@ -16,10 +16,11 @@ compares the `Hess diagrams`_ of the observed SC vs the SYC, as shown in
 
 .. figure:: _static/likelihood.png
    :align: center
+   :scale: 40%
 
    Observed and synthetic clusters (left) are compared via their
    respective Hess diagrams (center and right). The minimum :math:`-\ln(PLR)`
-   value determines the best fit SYC.
+   value determines the best fit SYC. Click on the image to enlarge.
 
 When ``dolphin`` is used to obtain the best fit SYC, the membership probabilities
 obtained by the decontamination algorithm (see Sect. :ref:`decont-algor`) are included
