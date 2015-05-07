@@ -40,7 +40,6 @@ histogram, are presented in the final output image as seen in
 .. _fig-2dhisto:
 
 .. figure:: _static/2d-histo.png
-   :scale: 80 %
    :align: center
 
    Approximate center coordinate values. The standard deviation

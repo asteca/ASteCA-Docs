@@ -48,10 +48,15 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.pngmath',
     'sphinx.ext.viewcode',
-    'numsec'
+    'numsec',
+    'sphinx.ext.todo'
 ]
 
+# Allows figures to be referenced by numbers.
 numfig = True
+
+# Add TODO box.
+todo_include_todos = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
