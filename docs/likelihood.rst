@@ -16,7 +16,6 @@ in :numref:`fig-likelihood`.
 
 .. figure:: _static/likelihood.png
    :align: center
-   :scale: 40%
 
    Observed and synthetic clusters (left) are compared via their
    respective Hess diagrams (center and right). The minimum :math:`-\ln(PLR)`

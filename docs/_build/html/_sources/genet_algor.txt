@@ -2,13 +2,14 @@ Genetic algorithm
 =================
 
 The implementation of the GA can be divided into several blocks composed of
-operators, as shown in **Fig. 1**.
+operators, as shown in :numref:`fig-ga-tree`.
+
+.. _fig-ga-tree:
 
 .. figure:: _static/ga-tree.png
-   :scale: 50 %
    :align: center
 
-   **Fig. 1**: Genetic algorithm work tree.
+   Genetic algorithm work tree.
 
 The first step consists in drawing a random initial population, that is a set of
 :math:`N_{pop}` random models taken from :math:`B`. This set is evaluated to
