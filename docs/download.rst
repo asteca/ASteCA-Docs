@@ -41,7 +41,7 @@ and can figure out how to run the code in a ``2.7.x`` environment.
 
 
 Python dependencies
--------------------
+...................
 
 The packages listed below are required to run **ASteCA**.
 
@@ -76,21 +76,9 @@ If **pip** is not installed in your system, you can install it
 
 after downloading the ``get-pip.py`` file from `here`_.
 
-Python distributions
---------------------
-
-An alternative to installing packages separately is to download a **python**
-distribution which comes with many packages already installed:
-
--  `Anaconda`_
--  `Canopy`_
-
-The best and easiest way to install and manage several versions of
-**python** and its packages without affecting your system is `pyenv`_.
-
 
 Extra packages
---------------
+..............
 
 If you want to use the `function`_ that obtains the cluster probability
 of being a true cluster, the following software is needed:
@@ -119,6 +107,29 @@ needed:
 These extra packages are *not mandatory* and **ASteCA** will still run without
 them, just not the particular function mentioned above.
 
+.. important::
+
+  All the dependencies can be installed at once via the included
+  *requirements.txt* file. To do this, first move into the main **ASteCA**
+  directory (the one that contains the file) and run:
+
+  .. code-block:: bash
+
+    $ pip install -r requirements.txt
+
+
+Python distributions
+--------------------
+
+An alternative to installing packages separately is to download a **python**
+distribution which comes with many packages already installed:
+
+-  `Anaconda`_
+-  `Canopy`_
+
+The best and easiest way to install and manage several versions of
+**python** and its packages without affecting your system is `pyenv`_.
+
 
 Cloning the repository
 ----------------------
@@ -131,8 +142,8 @@ run the following command in a terminal:
 
     $ git clone https://github.com/Gabriel-p/asteca.git
 
-This will create a new sub-folder named ``/asteca`` with all the code
-stored inside.
+This will create a new sub-folder named ``/asteca`` with all the necessary
+files and code stored inside.
 
 
 .. _.zip: https://github.com/Gabriel-p/asteca/releases

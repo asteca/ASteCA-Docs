@@ -69,10 +69,8 @@
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">2. Download</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#requirements">2.1. Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python-dependencies">2.2. Python dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python-distributions">2.3. Python distributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extra-packages">2.4. Extra packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cloning-the-repository">2.5. Cloning the repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-distributions">2.2. Python distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cloning-the-repository">2.3. Cloning the repository</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
@@ -172,9 +170,8 @@ a terminal the command:</p>
 <p>If your version is <code class="docutils literal"><span class="pre">2.7.x</span></code> you are probably good to go. If you are using
 the new <code class="docutils literal"><span class="pre">3.x</span></code> version of <strong>python</strong> I assume you know what you are doing
 and can figure out how to run the code in a <code class="docutils literal"><span class="pre">2.7.x</span></code> environment.</p>
-</div>
 <div class="section" id="python-dependencies">
-<h2>2.2. Python dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h2>
+<h3>2.1.1. Python dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h3>
 <p>The packages listed below are required to run <strong>ASteCA</strong>.</p>
 <ul class="simple">
 <li><a class="reference external" href="http://www.numpy.org/">numpy &gt;= 1.8.2</a></li>
@@ -203,19 +200,8 @@ the above commands.</p>
 </div>
 <p>after downloading the <code class="docutils literal"><span class="pre">get-pip.py</span></code> file from <a class="reference external" href="https://pip.pypa.io/en/latest/installing.html">here</a>.</p>
 </div>
-<div class="section" id="python-distributions">
-<h2>2.3. Python distributions<a class="headerlink" href="#python-distributions" title="Permalink to this headline">¶</a></h2>
-<p>An alternative to installing packages separately is to download a <strong>python</strong>
-distribution which comes with many packages already installed:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a></li>
-<li><a class="reference external" href="https://www.enthought.com/products/canopy/">Canopy</a></li>
-</ul>
-<p>The best and easiest way to install and manage several versions of
-<strong>python</strong> and its packages without affecting your system is <a class="reference external" href="https://github.com/yyuu/pyenv">pyenv</a>.</p>
-</div>
 <div class="section" id="extra-packages">
-<h2>2.4. Extra packages<a class="headerlink" href="#extra-packages" title="Permalink to this headline">¶</a></h2>
+<h3>2.1.2. Extra packages<a class="headerlink" href="#extra-packages" title="Permalink to this headline">¶</a></h3>
 <p>If you want to use the <a class="reference external" href="https://github.com/Gabriel-p/asteca/blob/master/functions/get_p_value.py">function</a> that obtains the cluster probability
 of being a true cluster, the following software is needed:</p>
 <ul class="simple">
@@ -240,17 +226,38 @@ needed:</p>
 </ul>
 <p>These extra packages are <em>not mandatory</em> and <strong>ASteCA</strong> will still run without
 them, just not the particular function mentioned above.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>All the dependencies can be installed at once via the included
+<em>requirements.txt</em> file. To do this, first move into the main <strong>ASteCA</strong>
+directory (the one that contains the file) and run:</p>
+<div class="last highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install -r requirements.txt
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="python-distributions">
+<h2>2.2. Python distributions<a class="headerlink" href="#python-distributions" title="Permalink to this headline">¶</a></h2>
+<p>An alternative to installing packages separately is to download a <strong>python</strong>
+distribution which comes with many packages already installed:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a></li>
+<li><a class="reference external" href="https://www.enthought.com/products/canopy/">Canopy</a></li>
+</ul>
+<p>The best and easiest way to install and manage several versions of
+<strong>python</strong> and its packages without affecting your system is <a class="reference external" href="https://github.com/yyuu/pyenv">pyenv</a>.</p>
 </div>
 <div class="section" id="cloning-the-repository">
-<h2>2.5. Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permalink to this headline">¶</a></h2>
 <p>The entire project can be cloned via <a class="reference external" href="http://git-scm.com/">git</a>. Simply
 locate yourself in the folder you want the code to be downloaded and
 run the following command in a terminal:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git clone https://github.com/Gabriel-p/asteca.git
 </pre></div>
 </div>
-<p>This will create a new sub-folder named <code class="docutils literal"><span class="pre">/asteca</span></code> with all the code
-stored inside.</p>
+<p>This will create a new sub-folder named <code class="docutils literal"><span class="pre">/asteca</span></code> with all the necessary
+files and code stored inside.</p>
 </div>
 </div>
 
