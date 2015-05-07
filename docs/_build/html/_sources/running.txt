@@ -85,11 +85,11 @@ For example, if you download a sequence of isochrones with metallicity
 ``z=0.019``, then the file should be called ``0.019.dat`` or ``0.0190.dat``
 or ``0.019000.dat``, etc.
 
-  This means that the file name must respect the decimal point in the
-  metallicity value, and that the number of zeros at the end of the value in
-  the name does not matter.
-  This is necessary because the code takes the metallicity value directly from
-  the file name (which I plan to `simplify`_ sometime).
+This means that the file name must respect the decimal point in the
+metallicity value, and that the number of zeros at the end of the value in
+the name does not matter.
+This is necessary because the code takes the metallicity value directly from
+the file name (which I plan to `simplify`_ sometime).
 
 3. The theoretical isochrones files must be stored in a sub-folder of
 ``isochrones/``, with the naming convention: ``parsecXX_YYY`` (currently only
@@ -98,9 +98,9 @@ depending on the version of PARSEC used (1.0, 1.1 or 1.2S, respectively) and
 'YYYY' is ``ubvi``, ``wash`` or ``2MASS``, depending on the system chosen to
 generate the isochrones.
 
-  For example, if the PARSEC v1.2S tracks and the *UBVRIJHK (cf. Maiz-Apellaniz
-  2006 + Bessell 1990)* system is selected, the name of the sub-folder where
-  the isochrones must be stored would be: ``parsec12_ubvi``.
+For example, if the PARSEC v1.2S tracks and the *UBVRIJHK (cf. Maiz-Apellaniz
+2006 + Bessell 1990)* system is selected, the name of the sub-folder where
+the isochrones must be stored would be: ``parsec12_ubvi``.
 
 
 Automatic download

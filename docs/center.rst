@@ -34,8 +34,8 @@ five different bandwidths of increasing values (see `get_center.py`_ function
 for more details)
 
 The maximum density values of each Gaussian filtered version of the 2D
-histogram, are presented in the final output image as seen in the figure
-below.
+histogram, are presented in the final output image as seen in
+:numref:`fig-2dhisto`.
 
 .. _fig-2dhisto:
 

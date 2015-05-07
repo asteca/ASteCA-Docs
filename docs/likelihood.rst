@@ -10,7 +10,9 @@ ID line) uses Eqs. 9, 10 & 11 defined in the original article describing
 
 The ``dolphin`` method uses Eq. 10 in the `Dolphin (2002)`_ article. This
 equation compares the `Hess diagrams`_ of the observed SC vs the SYC, as shown
-in the figure below.
+in :numref:`fig-likelihood`.
+
+.. _fig-likelihood:
 
 .. figure:: _static/likelihood.png
    :align: center

@@ -203,22 +203,20 @@ metallicity must all be stored in the same file.</p>
 For example, if you download a sequence of isochrones with metallicity
 <code class="docutils literal"><span class="pre">z=0.019</span></code>, then the file should be called <code class="docutils literal"><span class="pre">0.019.dat</span></code> or <code class="docutils literal"><span class="pre">0.0190.dat</span></code>
 or <code class="docutils literal"><span class="pre">0.019000.dat</span></code>, etc.</p>
-<blockquote>
-<div>This means that the file name must respect the decimal point in the
+<p>This means that the file name must respect the decimal point in the
 metallicity value, and that the number of zeros at the end of the value in
 the name does not matter.
 This is necessary because the code takes the metallicity value directly from
-the file name (which I plan to <a class="reference external" href="https://github.com/asteca/asteca/issues/161">simplify</a> sometime).</div></blockquote>
+the file name (which I plan to <a class="reference external" href="https://github.com/asteca/asteca/issues/161">simplify</a> sometime).</p>
 <p>3. The theoretical isochrones files must be stored in a sub-folder of
 <code class="docutils literal"><span class="pre">isochrones/</span></code>, with the naming convention: <code class="docutils literal"><span class="pre">parsecXX_YYY</span></code> (currently only
 PARSEC isochrones are supported). In this name, <code class="docutils literal"><span class="pre">XX</span></code> is 10, 11 or 12
 depending on the version of PARSEC used (1.0, 1.1 or 1.2S, respectively) and
 &#8216;YYYY&#8217; is <code class="docutils literal"><span class="pre">ubvi</span></code>, <code class="docutils literal"><span class="pre">wash</span></code> or <code class="docutils literal"><span class="pre">2MASS</span></code>, depending on the system chosen to
 generate the isochrones.</p>
-<blockquote>
-<div>For example, if the PARSEC v1.2S tracks and the <em>UBVRIJHK (cf. Maiz-Apellaniz
+<p>For example, if the PARSEC v1.2S tracks and the <em>UBVRIJHK (cf. Maiz-Apellaniz
 2006 + Bessell 1990)</em> system is selected, the name of the sub-folder where
-the isochrones must be stored would be: <code class="docutils literal"><span class="pre">parsec12_ubvi</span></code>.</div></blockquote>
+the isochrones must be stored would be: <code class="docutils literal"><span class="pre">parsec12_ubvi</span></code>.</p>
 </div>
 <div class="section" id="automatic-download">
 <h3>4.1.2. Automatic download<a class="headerlink" href="#automatic-download" title="Permalink to this headline">¶</a></h3>
