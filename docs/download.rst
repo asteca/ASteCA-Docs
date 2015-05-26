@@ -76,6 +76,32 @@ If **pip** is not installed in your system, you can install it
 
 after downloading the ``get-pip.py`` file from `here`_.
 
+If when attempting to install `matplotlib` the system returns the error:
+
+.. code-block:: bash
+
+  * The following required packages can not be built:
+
+  * freetype, png
+
+this means you need to install the following package first:
+
+.. code-block:: bash
+
+  $ sudo apt-get install libfreetype6-dev
+
+If you're also getting the error:
+
+.. code-block:: bash
+
+  error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+
+you'll need to install **python's** development headers with:
+
+.. code-block:: bash
+
+  sudo apt-get install python-dev 
+
 
 Extra packages
 ..............
@@ -99,10 +125,16 @@ install, *in order*, the packages (installation commands to the right):
 -  misc3d – ``install.packages("misc3d")``
 -  ks – ``install.packages("ks")``
 
-The package that allows ``python`` and ``R`` to communicate is also
+The package that allows **python** and **R** to communicate is also
 needed:
 
--  `rpy2 -2.4.3`_ –  ``pip install rpy2``
+-  `rpy2 -2.4.3`_
+
+which you can install via:
+
+.. code-block:: bash
+
+  $ pip install rpy2
 
 These extra packages are *not mandatory* and **ASteCA** will still run without
 them, just not the particular function mentioned above.
@@ -110,12 +142,27 @@ them, just not the particular function mentioned above.
 .. important::
 
   All the dependencies can be installed at once via the included
-  *requirements.txt* file. To do this, first move into the main **ASteCA**
-  directory (the one that contains the file) and run:
+  ``requirements.txt`` file. To do this, first move into the main **ASteCA**
+  directory (the one that contains this file) and run:
 
   .. code-block:: bash
 
-    $ pip install -r requirements.txt
+    $ pip install --download=/tmp -r requirements.txt
+    $ pip install --no-index --find-links=/tmp -r requirements.txt
+
+  The first command downloads all packages and the second one installs them.
+  We split the installation like this so that if something fails, the packages
+  won't have to be downloaded all over again.
+
+.. warning::
+
+  Be aware that **R** *should already be installed* before attempting to
+  install all packages using the ``requirements.txt`` file, otherwise
+  the installation for the ``rpy2`` package will fail.
+
+  If you want to use this file to install all packages *except* ``rpy2``,
+  simply open the ``requirements.txt`` file and comment this package out (or
+  delete its line) before running the command shown above.
 
 
 Python distributions

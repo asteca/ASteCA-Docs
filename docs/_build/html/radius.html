@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>7. Cluster radius estimation &mdash; ASteCA v0.1.8 documentation</title>
@@ -14,7 +15,6 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -37,7 +37,7 @@
         <link rel="prev" title="6. Radial density profile" href="rdp.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -49,8 +49,14 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         
-          <a href="index.html" class="fa fa-home"> ASteCA</a>
+
         
+          <a href="index.html" class="icon icon-home"> ASteCA
+        
+
+        
+        </a>
+
         
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,6 +65,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
+
+        
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
@@ -68,14 +76,22 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="download.html#requirements">2.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#requirements">2.1. Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="download.html#python-dependencies">2.1.1. Python dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download.html#extra-packages">2.1.2. Extra packages</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#python-distributions">2.2. Python distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download.html#cloning-the-repository">2.3. Cloning the repository</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="running.html#manual-download">4.1.1. Manual download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running.html#automatic-download">4.1.2. Automatic download</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a><ul>
@@ -131,7 +147,9 @@
     <li>7. Cluster radius estimation</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="_sources/radius.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/radius.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
@@ -141,20 +159,20 @@
             
   <div class="section" id="cluster-radius-estimation">
 <h1>7. Cluster radius estimation<a class="headerlink" href="#cluster-radius-estimation" title="Permalink to this headline">¶</a></h1>
-<p>We begin
-by counting the number of RDP points that fall below a given maximum tolerance
-interval above $d_{field}$. When the number of these points reaches a
-fixed value, $n_{fixed}$, the point closest to $d_{field}$ is stored as the
-most probable radius for this iteration. This process is repeated increasing
-the tolerance around $d_{field}$ which results in another probable radius
-being stored, not necessarily the same found in the previous iteration. The
-final estimation for $r_{cl}$ and its associated error comes from averaging
-the set of radius values stored this way and taking its standard deviation,
-respectively.</p>
-<p>By manually
-adjusting the value for $n_{fixed}$ in the input data file (set by default
-as $20%$ of the total number of points in the RDP) the user can relax or
-restrict the algorithm if needed.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">This section is outdated.</p>
+</div>
+<p>We begin by counting the number of RDP points that fall below a given maximum
+tolerance interval above <img class="math" src="_images/math/e61bf18ed3402bedbc04c1242944e881eef9ba05.png" alt="d_{field}"/>. When the number of these points
+reaches a fixed value, <img class="math" src="_images/math/9837f71cc33741f84a1973999b2faf6fc0fdbba9.png" alt="n_{fixed}"/>, the point closest to
+<img class="math" src="_images/math/e61bf18ed3402bedbc04c1242944e881eef9ba05.png" alt="d_{field}"/> is stored as the most probable radius for this iteration.
+This process is repeated increasing the tolerance around <img class="math" src="_images/math/e61bf18ed3402bedbc04c1242944e881eef9ba05.png" alt="d_{field}"/>
+which results in another probable radius being stored, not necessarily the
+same found in the previous iteration.
+The final estimation for <img class="math" src="_images/math/6d0c9103be0cbcd7a47685c292bca4d04407ff14.png" alt="r_{cl}"/> and its associated error comes from
+averaging the set of radius values stored this way and taking its standard
+deviation, respectively.</p>
 </div>
 
 
@@ -163,10 +181,10 @@ restrict the algorithm if needed.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="int_mags.html" class="btn btn-neutral float-right" title="8. Integrated magnitudes">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="int_mags.html" class="btn btn-neutral float-right" title="8. Integrated magnitudes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rdp.html" class="btn btn-neutral" title="6. Radial density profile"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rdp.html" class="btn btn-neutral" title="6. Radial density profile" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -178,10 +196,10 @@ restrict the algorithm if needed.</p>
         &copy; Copyright 2015, Gabriel I Perren.
     </p>
   </div>
-
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
+
 </footer>
+
         </div>
       </div>
 

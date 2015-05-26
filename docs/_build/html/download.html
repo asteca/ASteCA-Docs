@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2. Download &mdash; ASteCA v0.1.8 documentation</title>
@@ -14,7 +15,6 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -37,7 +37,7 @@
         <link rel="prev" title="1. About" href="about.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -49,8 +49,14 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         
-          <a href="index.html" class="fa fa-home"> ASteCA</a>
+
         
+          <a href="index.html" class="icon icon-home"> ASteCA
+        
+
+        
+        </a>
+
         
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,6 +65,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
+
+        
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
@@ -68,14 +76,22 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">2. Download</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#requirements">2.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">2.1. Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-dependencies">2.1.1. Python dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extra-packages">2.1.2. Extra packages</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#python-distributions">2.2. Python distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cloning-the-repository">2.3. Cloning the repository</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="running.html#manual-download">4.1.1. Manual download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running.html#automatic-download">4.1.2. Automatic download</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a><ul>
@@ -131,7 +147,9 @@
     <li>2. Download</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="_sources/download.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/download.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
@@ -199,6 +217,24 @@ the above commands.</p>
 </pre></div>
 </div>
 <p>after downloading the <code class="docutils literal"><span class="pre">get-pip.py</span></code> file from <a class="reference external" href="https://pip.pypa.io/en/latest/installing.html">here</a>.</p>
+<p>If when attempting to install <cite>matplotlib</cite> the system returns the error:</p>
+<div class="highlight-bash"><div class="highlight"><pre>* The following required packages can not be built:
+
+* freetype, png
+</pre></div>
+</div>
+<p>this means you need to install the following package first:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install libfreetype6-dev
+</pre></div>
+</div>
+<p>If you&#8217;re also getting the error:</p>
+<div class="highlight-bash"><div class="highlight"><pre>error: <span class="nb">command</span> <span class="s1">&#39;x86_64-linux-gnu-gcc&#39;</span> failed with <span class="nb">exit </span>status 1
+</pre></div>
+</div>
+<p>you&#8217;ll need to install <strong>python&#8217;s</strong> development headers with:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install python-dev
+</pre></div>
+</div>
 </div>
 <div class="section" id="extra-packages">
 <h3>2.1.2. Extra packages<a class="headerlink" href="#extra-packages" title="Permalink to this headline">¶</a></h3>
@@ -219,21 +255,38 @@ install, <em>in order</em>, the packages (installation commands to the right):</
 <li>misc3d – <code class="docutils literal"><span class="pre">install.packages(&quot;misc3d&quot;)</span></code></li>
 <li>ks – <code class="docutils literal"><span class="pre">install.packages(&quot;ks&quot;)</span></code></li>
 </ul>
-<p>The package that allows <code class="docutils literal"><span class="pre">python</span></code> and <code class="docutils literal"><span class="pre">R</span></code> to communicate is also
+<p>The package that allows <strong>python</strong> and <strong>R</strong> to communicate is also
 needed:</p>
 <ul class="simple">
-<li><a class="reference external" href="http://rpy.sourceforge.net/">rpy2 -2.4.3</a> –  <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">rpy2</span></code></li>
+<li><a class="reference external" href="http://rpy.sourceforge.net/">rpy2 -2.4.3</a></li>
 </ul>
+<p>which you can install via:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install rpy2
+</pre></div>
+</div>
 <p>These extra packages are <em>not mandatory</em> and <strong>ASteCA</strong> will still run without
 them, just not the particular function mentioned above.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p>All the dependencies can be installed at once via the included
-<em>requirements.txt</em> file. To do this, first move into the main <strong>ASteCA</strong>
-directory (the one that contains the file) and run:</p>
-<div class="last highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install -r requirements.txt
+<code class="docutils literal"><span class="pre">requirements.txt</span></code> file. To do this, first move into the main <strong>ASteCA</strong>
+directory (the one that contains this file) and run:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install --download<span class="o">=</span>/tmp -r requirements.txt
+<span class="nv">$ </span>pip install --no-index --find-links<span class="o">=</span>/tmp -r requirements.txt
 </pre></div>
 </div>
+<p class="last">The first command downloads all packages and the second one installs them.
+We split the installation like this so that if something fails, the packages
+won&#8217;t have to be downloaded all over again.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Be aware that <strong>R</strong> <em>should already be installed</em> before attempting to
+install all packages using the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file, otherwise
+the installation for the <code class="docutils literal"><span class="pre">rpy2</span></code> package will fail.</p>
+<p class="last">If you want to use this file to install all packages <em>except</em> <code class="docutils literal"><span class="pre">rpy2</span></code>,
+simply open the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file and comment this package out (or
+delete its line) before running the command shown above.</p>
 </div>
 </div>
 </div>
@@ -267,10 +320,10 @@ files and code stored inside.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="input_data.html" class="btn btn-neutral float-right" title="3. Input data file">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="input_data.html" class="btn btn-neutral float-right" title="3. Input data file" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="about.html" class="btn btn-neutral" title="1. About"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="about.html" class="btn btn-neutral" title="1. About" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -282,10 +335,10 @@ files and code stored inside.</p>
         &copy; Copyright 2015, Gabriel I Perren.
     </p>
   </div>
-
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
+
 </footer>
+
         </div>
       </div>
 
