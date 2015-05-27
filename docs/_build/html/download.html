@@ -255,6 +255,12 @@ install, <em>in order</em>, the packages (installation commands to the right):</
 <li>misc3d – <code class="docutils literal"><span class="pre">install.packages(&quot;misc3d&quot;)</span></code></li>
 <li>ks – <code class="docutils literal"><span class="pre">install.packages(&quot;ks&quot;)</span></code></li>
 </ul>
+<p>If you have issues installing the <code class="docutils literal"><span class="pre">rgl</span></code>, you probably have dependencies
+issues. They can be fixed by running in a terminal:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get build-dep r-cran-rgl
+</pre></div>
+</div>
+<p>and then installing <code class="docutils literal"><span class="pre">rgl</span></code> from within <strong>R</strong>.</p>
 <p>The package that allows <strong>python</strong> and <strong>R</strong> to communicate is also
 needed:</p>
 <ul class="simple">

@@ -125,6 +125,15 @@ install, *in order*, the packages (installation commands to the right):
 -  misc3d – ``install.packages("misc3d")``
 -  ks – ``install.packages("ks")``
 
+If you have issues installing the ``rgl``, you probably have dependencies
+issues. They can be fixed by running in a terminal:
+
+.. code-block:: bash
+
+  $ sudo apt-get build-dep r-cran-rgl
+
+and then installing ``rgl`` from within **R**.
+
 The package that allows **python** and **R** to communicate is also
 needed:
 
