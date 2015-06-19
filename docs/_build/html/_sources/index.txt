@@ -20,7 +20,7 @@ Cluster Analysis (**ASteCA**) package.
 .. warning::
    This documentation is in the process of being written and is
    **not yet finished**. Updates will be made as versions are released.
-   Last updated: May 07, 2015.
+   Last updated: Jun 18, 2015.
 
 .. important::
    A PDF version of this manual can be downloaded `here`__.
@@ -30,7 +30,7 @@ Table of Contents
 
 .. toctree::
    :numbered:
-   :maxdepth: 3
+   :maxdepth: 2
 
    about
    download
@@ -41,9 +41,7 @@ Table of Contents
    radius
    int_mags
    decont_algor
-   synth_clust
-   genet_algor
-   likelihood
+   best_fit
    performance
 
 

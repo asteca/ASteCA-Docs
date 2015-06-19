@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10.3. Genetic algorithm &mdash; ASteCA v0.1.9 documentation</title>
+  <title>10. Best fit model &mdash; ASteCA v0.1.9 documentation</title>
   
 
   
@@ -33,9 +33,8 @@
         <link rel="author" title="About these documents"
               href="about.html"/>
     <link rel="top" title="ASteCA v0.1.9 documentation" href="index.html"/>
-        <link rel="up" title="10. Best fit model" href="best_fit.html"/>
-        <link rel="next" title="10.4. Bootstrap" href="bootstrap.html"/>
-        <link rel="prev" title="10.2. Likelihood" href="likelihood.html"/> 
+        <link rel="next" title="10.1. Synthetic clusters" href="synth_clust.html"/>
+        <link rel="prev" title="9. Decontamination algorithm" href="decont_algor.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -107,7 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">9.1. Reduced membership</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="best_fit.html">10. Best fit model</a><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">10. Best fit model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="synth_clust.html">10.1. Synthetic clusters</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">10.1.1. Isochrone interpolation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">10.1.2. Isochrone shift</a></li>
@@ -120,7 +119,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="likelihood.html">10.2. Likelihood</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">10.3. Genetic algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">10.3. Genetic algorithm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bootstrap.html">10.4. Bootstrap</a></li>
 </ul>
 </li>
@@ -149,13 +148,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-          <li><a href="best_fit.html">10. Best fit model</a> &raquo;</li>
-      
-    <li>10.3. Genetic algorithm</li>
+    <li>10. Best fit model</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/genet_algor.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/best_fit.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -164,54 +161,20 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="genetic-algorithm">
-<span id="genetic-algor"></span><h1>10.3. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="best-fit-model">
+<span id="best-fit"></span><h1>10. Best fit model<a class="headerlink" href="#best-fit-model" title="Permalink to this headline">¶</a></h1>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
 </div>
-<p>The implementation of the GA can be divided into several blocks composed of
-operators, as shown in <a class="reference internal" href="#fig-ga-tree"><span>Fig. 10.5</span></a>.</p>
-<div class="figure align-center" id="id1">
-<span id="fig-ga-tree"></span><img alt="_images/ga-tree.png" src="_images/ga-tree.png" />
-<p class="caption"><span class="caption-number">Fig. 10.5 </span><span class="caption-text">Genetic algorithm work tree.</span></p>
+<p>The functions involved in the best fit process aim at obtaining
+the observed cluster&#8217;s parameters (metallicity, age, extinction, distance,
+binarity, mass), along with the uncertainties in each value.</p>
+<p>The process basically consists in comparing the observed cluster&#8217;s photometric
+diagram with the diagrams of many synthetic clusters, and selecting the one
+that shows the &#8220;best match&#8221;.</p>
+<div class="toctree-wrapper compound">
 </div>
-<p>The first step consists in drawing a random initial population, that is a set of
-<img class="math" src="_images/math/4e09a011d309ba5e451290f8bcc607ff1e0fc7ab.png" alt="N_{pop}"/> random models taken from <img class="math" src="_images/math/83956e92fcc80dee17fce864543216939a3c9da7.png" alt="B"/>. This set is evaluated to
-obtain the <img class="math" src="_images/math/3f2d4c72f3ac52ae717ee4f246837c2da4d13b74.png" alt="L_i"/> likelihood for each <img class="math" src="_images/math/caeb3bc7a061320bfe9e2040aa9c0e69b5958b2a.png" alt="B_i"/> model via Eq. ?? and fed
-to the GA loop as the starting generation.</p>
-<p>The <em>selection</em> block (in gray) contains the selection operator that picks
-models to reproduce from the generation pool with a breeding probability given
-by their ranked fitness (the rank-based fitness function associates higher
-<img class="math" src="_images/math/3f2d4c72f3ac52ae717ee4f246837c2da4d13b74.png" alt="L_i"/> values with higher probabilities) and the encode operator which
-translates the parameter values that define each chosen model into a binary
-chromosome .</p>
-<p>The <em>breeding</em> block (in green) pairs chromosomes randomly and produces a new
-generation via the crossover and mutation operators that combine each pair of
-parent chromosomes into two (theoretically fitter) offsprings.</p>
-<p>The <em>evaluation</em> block (in red) is finally applied where each offspring
-chromosome is decoded into a <img class="math" src="_images/math/caeb3bc7a061320bfe9e2040aa9c0e69b5958b2a.png" alt="B_i"/> model, the best solutions from the
-previous iteration added into this new generation by the elitism operator (to
-ensure the fittest chromosomes are not lost) and the evaluation operator which
-obtains the <img class="math" src="_images/math/512422e23cc6e6f979a76bbbcc69c96b2c722c23.png" alt="L_i^{\ast}"/> values associated with this generation. Every
-generation produces a “best solution” or fittest chromosome/model; we count the
-number of times this solution remains unchanged throughout generations and store
-it as <img class="math" src="_images/math/fe061e1b4fded924f0472603bf2986bc2f7e2f0f.png" alt="N_{bs}"/>. If <img class="math" src="_images/math/fe061e1b4fded924f0472603bf2986bc2f7e2f0f.png" alt="N_{bs}"/> reaches a fixed value <img class="math" src="_images/math/f9913040b648b72197f71185cab9dd5a3c28ab43.png" alt="N_{ei}"/>,
-the extinction/immigration operator is applied . This operator prevents the GA
-from getting stuck in a local minima by discarding every chromosome but the
-fittest one (extinction) and introducing <img class="math" src="_images/math/03c55b5906a1d3b89d4cb4c680f7ca89b8e7f901.png" alt="N_{pop}-1"/> new random
-chromosomes into the generation pool (immigration); the number of times this
-operator is run consecutively is stored in <img class="math" src="_images/math/a4db915f67494a4522f8d03b038114be05234bce.png" alt="N_{ct}^{ei}"/>.</p>
-<p>An <em>exit switch</em> is put in place to terminate the GA if no improvement on the
-best solution found happened after <img class="math" src="_images/math/6ec67ea955519ac99f8541f68df9d8814d5295d9.png" alt="N_{es}"/> consecutive applications of
-the extinction/immigration operator, i.e.: when <img class="math" src="_images/math/03fa96ca7a0ff5fb1df54e11d4ecaace615f1143.png" alt="N_{ct}^{ei}=N_{es}"/>, in
-which case the GA is forced to halt.</p>
-<p>The GA iterates for a maximum of <img class="math" src="_images/math/e6f5abacd4587afec528d272d53c1ba73d28258e.png" alt="N_{gen}"/> generations unless the exit
-switch forces a premature termination, in either case the result is the best fit
-model found for <img class="math" src="_images/math/0acafa529182e79b4f56165ec677554fba7fcf98.png" alt="A"/>, the observed SC, represented by
-<img class="math" src="_images/math/442b6284d67d2a07411dc1bb27f61c4e8a33e4dd.png" alt="\mathbf{L}_A(z^{\star},  a^{\star}, d^{\star}, e^{\star})"/>. Every
-variable involved in the GA process (e.g.: <img class="math" src="_images/math/e6f5abacd4587afec528d272d53c1ba73d28258e.png" alt="N_{gen}"/>, <img class="math" src="_images/math/4e09a011d309ba5e451290f8bcc607ff1e0fc7ab.png" alt="N_{pop}"/>,
-<img class="math" src="_images/math/f9913040b648b72197f71185cab9dd5a3c28ab43.png" alt="N_{ei}"/>, etc.) can be modified via <strong>ASteCA</strong>&#8216;s input data file.</p>
 </div>
 
 
@@ -220,10 +183,10 @@ variable involved in the GA process (e.g.: <img class="math" src="_images/math/e
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="bootstrap.html" class="btn btn-neutral float-right" title="10.4. Bootstrap" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="synth_clust.html" class="btn btn-neutral float-right" title="10.1. Synthetic clusters" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="likelihood.html" class="btn btn-neutral" title="10.2. Likelihood" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="decont_algor.html" class="btn btn-neutral" title="9. Decontamination algorithm" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,6 +1,11 @@
+.. _genetic-algor:
+
 Genetic algorithm
 =================
 
+.. todo::
+   Not finished.
+   
 The implementation of the GA can be divided into several blocks composed of
 operators, as shown in :numref:`fig-ga-tree`.
 

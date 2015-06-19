@@ -10,10 +10,10 @@ sub-folder.
 
 **Every** file inside the ``input/`` folder (inside or outside a
 sub-folder) will be processed by **ASteCA**, with the exception of the
-membership probabilities files that end with a ``.memb.dat`` extension
-(see XXX).
+membership probabilities files that end with a ``_memb.dat`` extension
+(see Sect. :ref:`decont-algor`).
 
-Once file(s) are in place and the ``params_input.dat`` file correctly
+Once the file(s) are in place and the ``params_input.dat`` file correctly
 modified, the code can be executed with the command:
 
 .. code-block:: bash

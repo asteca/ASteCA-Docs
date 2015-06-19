@@ -1,6 +1,11 @@
-Best fit model
---------------
+.. _sect-likelihood:
 
+Likelihood
+----------
+
+.. todo::
+   Not finished.
+   
 The best fit synthetic cluster (SYC) is obtained via one of two likelihood
 equations.
 

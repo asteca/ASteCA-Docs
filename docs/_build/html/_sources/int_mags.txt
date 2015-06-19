@@ -1,6 +1,9 @@
 Integrated magnitudes
 =====================
 
+.. todo::
+   Not finished.
+   
 To obtain the integrated magnitude for the cluster region *cleaned* from
 field stars contamination, the following equations are used.
 

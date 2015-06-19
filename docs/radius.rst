@@ -5,6 +5,9 @@ Cluster radius estimation
 
   This section is outdated.
 
+.. todo::
+   Not finished.
+
 We begin by counting the number of RDP points that fall below a given maximum
 tolerance interval above :math:`d_{field}`. When the number of these points
 reaches a fixed value, :math:`n_{fixed}`, the point closest to
