@@ -77,8 +77,10 @@
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">2. Download</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#requirements">2.1. Requirements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#python-dependencies">2.1.1. Python dependencies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#extra-packages">2.1.2. Extra packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#r-software">2.1.1. R software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-pip">2.1.2. Python-pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-dependencies">2.1.3. Python dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#possible-errors">2.1.4. Possible errors</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#python-distributions">2.2. Python distributions</a></li>
@@ -174,13 +176,13 @@ No further installation is necessary with the exception of the
 requirements listed below.</p>
 <div class="section" id="requirements">
 <h2>2.1. Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<p>The code has been tested with the July 2014 release of <strong>python</strong>:</p>
+<p>The code has been tested with the July 2014 release of <strong>Python</strong>:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://www.python.org/download/releases/2.7.8/">Python - 2.7.8</a></li>
 </ul>
 <p>It should also work on older versions, if you encounter any problems
 please contact me or <a class="reference external" href="https://github.com/Gabriel-p/asteca/issues/new">open a new issue</a>.</p>
-<p>To check the version of <strong>python</strong> installed in your system simply run in
+<p>To check the version of <strong>Python</strong> installed in your system simply run in
 a terminal the command:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python --version
 </pre></div>
@@ -190,10 +192,54 @@ a terminal the command:</p>
 </pre></div>
 </div>
 <p>If your version is <code class="docutils literal"><span class="pre">2.7.x</span></code> you are probably good to go. If you are using
-the new <code class="docutils literal"><span class="pre">3.x</span></code> version of <strong>python</strong> I assume you know what you are doing
+the new <code class="docutils literal"><span class="pre">3.x</span></code> version of <strong>Python</strong> I assume you know what you are doing
 and can figure out how to run the code in a <code class="docutils literal"><span class="pre">2.7.x</span></code> environment.</p>
+<div class="section" id="r-software">
+<span id="sect-extra-pack"></span><h3>2.1.1. R software<a class="headerlink" href="#r-software" title="Permalink to this headline">¶</a></h3>
+<p>If you want to use the <a class="reference external" href="https://github.com/Gabriel-p/asteca/blob/master/functions/get_p_value.py">function</a> that obtains the cluster probability
+of being a true cluster, the <a class="reference external" href="http://www.r-project.org/">R statistical software</a> is needed. It
+can be installed with:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install r-base
+</pre></div>
+</div>
+<p>After <strong>R</strong> is installed, open with sudo privileges (<code class="docutils literal"><span class="pre">sudo</span> <span class="pre">R</span></code>) and
+install, <em>in order</em>, the following packages (installation commands to the
+right):</p>
+<ul class="simple">
+<li>rgl – <code class="docutils literal"><span class="pre">install.packages(&quot;rgl&quot;)</span></code></li>
+<li>mvtnorm – <code class="docutils literal"><span class="pre">install.packages(&quot;mvtnorm&quot;)</span></code></li>
+<li>misc3d – <code class="docutils literal"><span class="pre">install.packages(&quot;misc3d&quot;)</span></code></li>
+<li>ks – <code class="docutils literal"><span class="pre">install.packages(&quot;ks&quot;)</span></code></li>
+</ul>
+<p>The package <a class="reference external" href="http://rpy.sourceforge.net/">rpy2</a>, that allows <strong>Python</strong> and <strong>R</strong> to communicate, is also
+needed. To install it see Sect. <a class="reference internal" href="#sect-pyth-depen"><span>2.1.3</span></a>.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">These two extra packages are <em>not mandatory</em> and <strong>ASteCA</strong> will still run
+without them, just not the particular function mentioned above.</p>
+</div>
+</div>
+<div class="section" id="python-pip">
+<h3>2.1.2. Python-pip<a class="headerlink" href="#python-pip" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://pypi.python.org/pypi/pip/">pip</a> tool for installing <strong>Python</strong> packages (see <a class="reference external" href="https://pip.pypa.io/en/latest/index.html">the docs</a> for more
+information) should be included by default for <strong>Python</strong> versions 2.7.7 and
+above. To check if it is installed in your system run:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip list
+</pre></div>
+</div>
+<p>If <strong>pip</strong> is installed, it should return a list of the packages available
+in your system. If <strong>pip</strong> is not installed, you can get it via:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install python-pip
+</pre></div>
+</div>
+<p>or manually with:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python get-pip.py
+</pre></div>
+</div>
+<p>after downloading the <code class="docutils literal"><span class="pre">get-pip.py</span></code> file from <a class="reference external" href="https://pip.pypa.io/en/latest/installing.html">here</a>.</p>
+</div>
 <div class="section" id="python-dependencies">
-<h3>2.1.1. Python dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h3>
+<span id="sect-pyth-depen"></span><h3>2.1.3. Python dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h3>
 <p>The packages listed below are required to run <strong>ASteCA</strong>.</p>
 <ul class="simple">
 <li><a class="reference external" href="http://www.numpy.org/">numpy &gt;= 1.8.2</a></li>
@@ -201,26 +247,44 @@ and can figure out how to run the code in a <code class="docutils literal"><span
 <li><a class="reference external" href="http://www.scipy.org/">sciPy &gt;= 0.14.0</a></li>
 <li><a class="reference external" href="http://www.astroml.org/">astroML &gt;= 0.2</a></li>
 <li><a class="reference external" href="http://scikit-learn.org/">scikit-learn &gt;= 0.14.1</a></li>
+<li><a class="reference external" href="http://rpy.sourceforge.net/">rpy2 &gt;= 2.4.3</a> (optional)</li>
 </ul>
 <p>These versions are the ones I used, the code could work with older
-versions of the packages but I can&#8217;t guarantee it.
-The recommended way to install each of the above packages is to
-use <a class="reference external" href="https://pypi.python.org/pypi/pip/">pip</a> (see <a class="reference external" href="https://pip.pypa.io/en/latest/index.html">the docs</a> for more information on this tool):</p>
+versions of the packages but I can&#8217;t guarantee it.</p>
+<p>All the dependencies can be installed at once via the included
+<code class="docutils literal"><span class="pre">requirements.txt</span></code> file. To do this, first move into the main <strong>ASteCA</strong>
+directory (the one that contains this file) and run:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install --download<span class="o">=</span>/tmp -r requirements.txt
+<span class="nv">$ </span>pip install --no-index --find-links<span class="o">=</span>/tmp -r requirements.txt
+</pre></div>
+</div>
+<p>The first command downloads all packages and the second one installs them.
+We split the installation like this so that if something fails, the packages
+won&#8217;t have to be downloaded all over again.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Be aware that <strong>R</strong> <em>should already be installed</em> before attempting to
+install all packages using the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file, otherwise
+the installation for the <code class="docutils literal"><span class="pre">rpy2</span></code> package will fail. See Sect.
+<a class="reference internal" href="#sect-extra-pack"><span>2.1.1</span></a> on how to install <strong>R</strong>.</p>
+<p class="last">If you want to use this file to install all packages <em>except</em> <code class="docutils literal"><span class="pre">rpy2</span></code>,
+simply open the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file and comment this package out (or
+delete its line) before running the command shown above.</p>
+</div>
+<p>The manual way to install each of the above packages is to use <strong>pip</strong>:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install numpy
 <span class="nv">$ </span>pip install matplotlib
 <span class="nv">$ </span>pip install scipy
 <span class="nv">$ </span>pip install astroml
 <span class="nv">$ </span>pip install scikit-learn
+<span class="nv">$ </span>pip install rpy2
 </pre></div>
 </div>
-<p>If you get a <em>Permission denied</em> error, append <cite>sudo</cite> before
-the above commands.</p>
-<p>If <strong>pip</strong> is not installed in your system, you can install it
-(assuming <strong>python</strong> is) via:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python get-pip.py
-</pre></div>
+<p>If you get a <em>Permission denied</em> error, append <code class="docutils literal"><span class="pre">sudo</span></code> before the above
+commands.</p>
 </div>
-<p>after downloading the <code class="docutils literal"><span class="pre">get-pip.py</span></code> file from <a class="reference external" href="https://pip.pypa.io/en/latest/installing.html">here</a>.</p>
+<div class="section" id="possible-errors">
+<h3>2.1.4. Possible errors<a class="headerlink" href="#possible-errors" title="Permalink to this headline">¶</a></h3>
 <p>If when attempting to install <cite>matplotlib</cite> the system returns the error:</p>
 <div class="highlight-bash"><div class="highlight"><pre>* The following required packages can not be built:
 
@@ -235,81 +299,28 @@ the above commands.</p>
 <div class="highlight-bash"><div class="highlight"><pre>error: <span class="nb">command</span> <span class="s1">&#39;x86_64-linux-gnu-gcc&#39;</span> failed with <span class="nb">exit </span>status 1
 </pre></div>
 </div>
-<p>you&#8217;ll need to install <strong>python&#8217;s</strong> development headers with:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install python-dev
+<p>you&#8217;ll need to install <strong>Python&#8217;s</strong> development headers with:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install python-dev libevent-dev
 </pre></div>
 </div>
-</div>
-<div class="section" id="extra-packages">
-<h3>2.1.2. Extra packages<a class="headerlink" href="#extra-packages" title="Permalink to this headline">¶</a></h3>
-<p>If you want to use the <a class="reference external" href="https://github.com/Gabriel-p/asteca/blob/master/functions/get_p_value.py">function</a> that obtains the cluster probability
-of being a true cluster, the following software is needed:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.r-project.org/">R - 3.0.1</a></li>
-</ul>
-<p>which can be installed with:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install r-base
-</pre></div>
-</div>
-<p>After <strong>R</strong> is installed, open with sudo privileges (<code class="docutils literal"><span class="pre">sudo</span> <span class="pre">R</span></code>) and
-install, <em>in order</em>, the packages (installation commands to the right):</p>
-<ul class="simple">
-<li>rgl – <code class="docutils literal"><span class="pre">install.packages(&quot;rgl&quot;)</span></code></li>
-<li>mvtnorm – <code class="docutils literal"><span class="pre">install.packages(&quot;mvtnorm&quot;)</span></code></li>
-<li>misc3d – <code class="docutils literal"><span class="pre">install.packages(&quot;misc3d&quot;)</span></code></li>
-<li>ks – <code class="docutils literal"><span class="pre">install.packages(&quot;ks&quot;)</span></code></li>
-</ul>
-<p>If you have issues installing the <code class="docutils literal"><span class="pre">rgl</span></code>, you probably have dependencies
-issues. They can be fixed by running in a terminal:</p>
+<p>If you have issues installing <code class="docutils literal"><span class="pre">rgl</span></code> within <strong>R</strong>, you probably have unmet
+dependencies. These can be fixed by running in a terminal:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get build-dep r-cran-rgl
 </pre></div>
 </div>
 <p>and then installing <code class="docutils literal"><span class="pre">rgl</span></code> from within <strong>R</strong>.</p>
-<p>The package that allows <strong>python</strong> and <strong>R</strong> to communicate is also
-needed:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://rpy.sourceforge.net/">rpy2 -2.4.3</a></li>
-</ul>
-<p>which you can install via:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install rpy2
-</pre></div>
-</div>
-<p>These extra packages are <em>not mandatory</em> and <strong>ASteCA</strong> will still run without
-them, just not the particular function mentioned above.</p>
-<div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p>All the dependencies can be installed at once via the included
-<code class="docutils literal"><span class="pre">requirements.txt</span></code> file. To do this, first move into the main <strong>ASteCA</strong>
-directory (the one that contains this file) and run:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install --download<span class="o">=</span>/tmp -r requirements.txt
-<span class="nv">$ </span>pip install --no-index --find-links<span class="o">=</span>/tmp -r requirements.txt
-</pre></div>
-</div>
-<p class="last">The first command downloads all packages and the second one installs them.
-We split the installation like this so that if something fails, the packages
-won&#8217;t have to be downloaded all over again.</p>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p>Be aware that <strong>R</strong> <em>should already be installed</em> before attempting to
-install all packages using the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file, otherwise
-the installation for the <code class="docutils literal"><span class="pre">rpy2</span></code> package will fail.</p>
-<p class="last">If you want to use this file to install all packages <em>except</em> <code class="docutils literal"><span class="pre">rpy2</span></code>,
-simply open the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file and comment this package out (or
-delete its line) before running the command shown above.</p>
-</div>
 </div>
 </div>
 <div class="section" id="python-distributions">
 <h2>2.2. Python distributions<a class="headerlink" href="#python-distributions" title="Permalink to this headline">¶</a></h2>
-<p>An alternative to installing packages separately is to download a <strong>python</strong>
+<p>An alternative to installing packages separately is to download a <strong>Python</strong>
 distribution which comes with many packages already installed:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a></li>
 <li><a class="reference external" href="https://www.enthought.com/products/canopy/">Canopy</a></li>
 </ul>
 <p>The best and easiest way to install and manage several versions of
-<strong>python</strong> and its packages without affecting your system is <a class="reference external" href="https://github.com/yyuu/pyenv">pyenv</a>.</p>
+<strong>Python</strong> and its packages without affecting your system is <a class="reference external" href="https://github.com/yyuu/pyenv">pyenv</a>.</p>
 </div>
 <div class="section" id="cloning-the-repository">
 <h2>2.3. Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permalink to this headline">¶</a></h2>
