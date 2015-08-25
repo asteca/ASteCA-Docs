@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Center determination &mdash; ASteCA v0.1.9 documentation</title>
+  <title>6. Center determination &mdash; ASteCA v0.1.9 documentation</title>
   
 
   
@@ -33,8 +33,8 @@
         <link rel="author" title="About these documents"
               href="about.html"/>
     <link rel="top" title="ASteCA v0.1.9 documentation" href="index.html"/>
-        <link rel="next" title="6. Radial density profile" href="rdp.html"/>
-        <link rel="prev" title="4. Running" href="running.html"/> 
+        <link rel="next" title="7. Radial density profile" href="rdp.html"/>
+        <link rel="prev" title="5. Running" href="running.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -76,56 +76,55 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="download.html#requirements">2.1. Requirements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="download.html#r-software">2.1.1. R software</a></li>
-<li class="toctree-l3"><a class="reference internal" href="download.html#python-pip">2.1.2. Python-pip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="download.html#python-dependencies">2.1.3. Python dependencies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="download.html#possible-errors">2.1.4. Possible errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html#cloning-the-repository">2.1. Cloning the repository</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="download.html#python-distributions">2.2. Python distributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="download.html#cloning-the-repository">2.3. Cloning the repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">3. Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#r-software">3.1. R software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#python-pip">3.2. Python-pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#python-dependencies">3.3. Python dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#troubleshooting">3.4. Troubleshooting</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="running.html#manual-download">4.1.1. Manual download</a></li>
-<li class="toctree-l3"><a class="reference internal" href="running.html#automatic-download">4.1.2. Automatic download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_data.html">4. Input data file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">5. Running</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">5.1. Theoretical isochrones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="running.html#manual-download">5.1.1. Manual download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running.html#automatic-download">5.1.2. Automatic download</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">5. Center determination</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#approximate-center-values">5.1. Approximate center values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#precise-center-value">5.2. Precise center value</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">6. Center determination</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#approximate-center-values">6.1. Approximate center values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#precise-center-value">6.2. Precise center value</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">9. Decontamination algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">9.1. Reduced membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">10.1. Reduced membership</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="best_fit.html">10. Best fit model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">10.1. Synthetic clusters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">10.1.1. Isochrone interpolation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">10.1.2. Isochrone shift</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#maximum-magnitude-cut">10.1.3. Maximum magnitude cut</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#mass-distribution">10.1.4. Mass distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#imf-sampling">10.1.5. IMF sampling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#binarity">10.1.6. Binarity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#completeness">10.1.7. Completeness</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#errors">10.1.8. Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best_fit.html">11. Best fit model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">11.1. Synthetic clusters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">11.1.1. Isochrone interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">11.1.2. Isochrone shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#maximum-magnitude-cut">11.1.3. Maximum magnitude cut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#mass-distribution">11.1.4. Mass distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#imf-sampling">11.1.5. IMF sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#binarity">11.1.6. Binarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#completeness">11.1.7. Completeness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#errors">11.1.8. Errors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="likelihood.html">10.2. Likelihood</a></li>
-<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">10.3. Genetic algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">10.4. Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="likelihood.html">11.2. Likelihood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">11.3. Genetic algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">11.4. Bootstrap</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">11. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
 </ul>
 
           
@@ -150,7 +149,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>5. Center determination</li>
+    <li>6. Center determination</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -164,7 +163,7 @@
           <div role="main" class="document">
             
   <div class="section" id="center-determination">
-<h1>5. Center determination<a class="headerlink" href="#center-determination" title="Permalink to this headline">¶</a></h1>
+<h1>6. Center determination<a class="headerlink" href="#center-determination" title="Permalink to this headline">¶</a></h1>
 <p>Determining the central coordinates of a SC with accuracy is of utmost
 importance, since this parameter directly affects the generation of the radial
 density profile, and thus also the estimation of the SC&#8217;s radius.</p>
@@ -174,7 +173,7 @@ obtain precise final coordinates.</p>
 <p>The process is independent of the system of coordinates used and can be equally
 applied to positional data stored in pixels or degrees.</p>
 <div class="section" id="approximate-center-values">
-<span id="approx-center"></span><h2>5.1. Approximate center values<a class="headerlink" href="#approximate-center-values" title="Permalink to this headline">¶</a></h2>
+<span id="approx-center"></span><h2>6.1. Approximate center values<a class="headerlink" href="#approximate-center-values" title="Permalink to this headline">¶</a></h2>
 <p>The positional data is first binned in a 2D histogram. The bin width is either
 automatically calculated as 1% of the minimum range in either coordinate
 (x, y), or set manually via the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file in the <strong>Structure
@@ -191,10 +190,10 @@ five different bandwidths of increasing values (see <a class="reference external
 for more details)</p>
 <p>The maximum density values of each Gaussian filtered version of the 2D
 histogram, are presented in the final output image as seen in
-<a class="reference internal" href="#fig-2dhisto"><span>Fig. 5.1</span></a>.</p>
+<a class="reference internal" href="#fig-2dhisto"><span>Fig. 6.1</span></a>.</p>
 <div class="figure align-center" id="id1">
 <span id="fig-2dhisto"></span><img alt="_images/2d-histo.png" src="_images/2d-histo.png" />
-<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Approximate center coordinate values. The standard deviation
+<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Approximate center coordinate values. The standard deviation
 values in the bottom right corner are the bandwidth values used in the
 Gaussian filter.
 The box in the top left corner contains the averaged coordinate values and
@@ -207,18 +206,18 @@ coordinates obtained in the next step (see section below).</p>
 this analysis is skipped and only the passed value is presented in the plot.</p>
 </div>
 <div class="section" id="precise-center-value">
-<h2>5.2. Precise center value<a class="headerlink" href="#precise-center-value" title="Permalink to this headline">¶</a></h2>
+<h2>6.2. Precise center value<a class="headerlink" href="#precise-center-value" title="Permalink to this headline">¶</a></h2>
 <p>Once the approximate center coordinates have been obtained, <strong>ASteCA</strong> proceeds
 to refine this result. To this end, the code employs the approximate center
 coordinates obtained in the previous step using the smallest bandwidth value
-(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><span>Fig. 5.1</span></a>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
+(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><span>Fig. 6.1</span></a>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
 <p>These coordinates serve as initial values for the cluster&#8217;s center. The final
 <em>precise</em> values are determined as the maximum spatial density of a
 two-dimensional Gaussian kernel, generated on a reduced square area of the
-positional diagram of the cluster; see <a class="reference internal" href="#fig-center-area"><span>Fig. 5.2</span></a>.</p>
+positional diagram of the cluster; see <a class="reference internal" href="#fig-center-area"><span>Fig. 6.2</span></a>.</p>
 <div class="figure align-center" id="id2">
-<span id="fig-center-area"></span><a class="reference internal image-reference" href="_images/center-area-search.png"><img alt="_images/center-area-search.png" src="_images/center-area-search.png" style="width: 562.4px; height: 521.6px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">In yellow, area where the center coordinates are searched via the
+<span id="fig-center-area"></span><a class="reference internal image-reference" href="_images/center-area-search.png"><img alt="_images/center-area-search.png" src="_images/center-area-search.png" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text">In yellow, area where the center coordinates are searched via the
 KDE. Blue lines are contour curves, the center found is marked with a cross.</span></p>
 </div>
 <p>The square area where the final center coordinates are searched is centered on
@@ -226,13 +225,13 @@ the <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9
 minimum x,y range.
 The bandwidth of the fitted kernel is automatically defined via Scott&#8217;s rule
 (<a class="reference external" href="http://onlinelibrary.wiley.com/book/10.1002/9780470316849">Scott 1992</a>).</p>
-<p>In <a class="reference internal" href="#fig-center"><span>Fig. 5.3</span></a> we can see the final center coordinates (equivalently:
+<p>In <a class="reference internal" href="#fig-center"><span>Fig. 6.3</span></a> we can see the final center coordinates (equivalently:
 the maximum value of the positional KDE) plotted over the Gaussian filtered 2D
 histogram obtained using the minimum bandwidth, as defined in Sect.
-<a class="reference internal" href="#approx-center"><span>5.1</span></a>.</p>
+<a class="reference internal" href="#approx-center"><span>6.1</span></a>.</p>
 <div class="figure align-center" id="id3">
-<span id="fig-center"></span><a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" style="width: 508.8px; height: 503.2px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Cluster&#8217;s center found via the KDE analysis. The <code class="docutils literal"><span class="pre">Bin</span></code> value
+<span id="fig-center"></span><a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Cluster&#8217;s center found via the KDE analysis. The <code class="docutils literal"><span class="pre">Bin</span></code> value
 in the top right corner is the bin width of the 2D histogram mentioned
 in the previous section, used to obtain the approximate center coordinates.</span></p>
 </div>
@@ -256,10 +255,10 @@ either x or y, is larger than 10% of the final center coordinates.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rdp.html" class="btn btn-neutral float-right" title="6. Radial density profile" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rdp.html" class="btn btn-neutral float-right" title="7. Radial density profile" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="running.html" class="btn btn-neutral" title="4. Running" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="running.html" class="btn btn-neutral" title="5. Running" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
