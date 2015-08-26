@@ -129,7 +129,7 @@ Python dependencies
 The packages listed below are required to run **ASteCA**.
 
 -  `numpy >= 1.8.2`_
--  `matplotlib >= 1.3.1`_ 
+-  `matplotlib >= 1.3.1`_
 -  `sciPy >= 0.14.0`_
 -  `astroML >= 0.2`_
 -  `scikit-learn >= 0.14.1`_
@@ -153,7 +153,7 @@ these libraries too:
 
   $ sudo apt-get install libpcre3-dev liblzma-dev libbz2-dev
 
-All the **Python** dependencies for can be installed at once via the
+All the **Python** dependencies can be installed at once via the
 included ``requirements.txt`` file. To do this, first move into the main
 **ASteCA** directory (where this file resides) and run:
 
