@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>11.3. Genetic algorithm &mdash; ASteCA v0.1.9 documentation</title>
+  <title>12.3. Genetic algorithm &mdash; ASteCA v0.1.9.1 documentation</title>
   
 
   
@@ -32,10 +32,10 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.9 documentation" href="index.html"/>
-        <link rel="up" title="11. Best fit model" href="best_fit.html"/>
-        <link rel="next" title="11.4. Bootstrap" href="bootstrap.html"/>
-        <link rel="prev" title="11.2. Likelihood" href="likelihood.html"/> 
+    <link rel="top" title="ASteCA v0.1.9.1 documentation" href="index.html"/>
+        <link rel="up" title="12. Best fit model" href="best_fit.html"/>
+        <link rel="next" title="12.4. Bootstrap" href="bootstrap.html"/>
+        <link rel="prev" title="12.2. Likelihood" href="likelihood.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -104,28 +104,29 @@
 <li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">10.1. Reduced membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">11.1. Reduced membership</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="best_fit.html">11. Best fit model</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">11.1. Synthetic clusters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">11.1.1. Isochrone interpolation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">11.1.2. Isochrone shift</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#maximum-magnitude-cut">11.1.3. Maximum magnitude cut</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#mass-distribution">11.1.4. Mass distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#imf-sampling">11.1.5. IMF sampling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#binarity">11.1.6. Binarity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#completeness">11.1.7. Completeness</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#errors">11.1.8. Errors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="best_fit.html">12. Best fit model</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">12.1. Synthetic clusters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">12.1.1. Isochrone interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">12.1.2. Isochrone shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#maximum-magnitude-cut">12.1.3. Maximum magnitude cut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#mass-distribution">12.1.4. Mass distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#imf-sampling">12.1.5. IMF sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#binarity">12.1.6. Binarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#completeness">12.1.7. Completeness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#errors">12.1.8. Errors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="likelihood.html">11.2. Likelihood</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">11.3. Genetic algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">11.4. Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="likelihood.html">12.2. Likelihood</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">12.3. Genetic algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">12.4. Bootstrap</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
           
@@ -150,9 +151,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-          <li><a href="best_fit.html">11. Best fit model</a> &raquo;</li>
+          <li><a href="best_fit.html">12. Best fit model</a> &raquo;</li>
       
-    <li>11.3. Genetic algorithm</li>
+    <li>12.3. Genetic algorithm</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -166,16 +167,16 @@
           <div role="main" class="document">
             
   <div class="section" id="genetic-algorithm">
-<span id="genetic-algor"></span><h1>11.3. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
+<span id="genetic-algor"></span><h1>12.3. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
 </div>
 <p>The implementation of the GA can be divided into several blocks composed of
-operators, as shown in <a class="reference internal" href="#fig-ga-tree"><span>Fig. 11.5</span></a>.</p>
+operators, as shown in <a class="reference internal" href="#fig-ga-tree"><span>Fig. 12.5</span></a>.</p>
 <div class="figure align-center" id="id1">
 <span id="fig-ga-tree"></span><img alt="_images/ga-tree.png" src="_images/ga-tree.png" />
-<p class="caption"><span class="caption-number">Fig. 11.5 </span><span class="caption-text">Genetic algorithm work tree.</span></p>
+<p class="caption"><span class="caption-number">Fig. 12.5 </span><span class="caption-text">Genetic algorithm work tree.</span></p>
 </div>
 <p>The first step consists in drawing a random initial population, that is a set of
 <img class="math" src="_images/math/4e09a011d309ba5e451290f8bcc607ff1e0fc7ab.png" alt="N_{pop}"/> random models taken from <img class="math" src="_images/math/83956e92fcc80dee17fce864543216939a3c9da7.png" alt="B"/>. This set is evaluated to
@@ -221,10 +222,10 @@ variable involved in the GA process (e.g.: <img class="math" src="_images/math/e
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="bootstrap.html" class="btn btn-neutral float-right" title="11.4. Bootstrap" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="bootstrap.html" class="btn btn-neutral float-right" title="12.4. Bootstrap" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="likelihood.html" class="btn btn-neutral" title="11.2. Likelihood" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="likelihood.html" class="btn btn-neutral" title="12.2. Likelihood" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -254,7 +255,7 @@ variable involved in the GA process (e.g.: <img class="math" src="_images/math/e
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.9',
+            VERSION:'v0.1.9.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

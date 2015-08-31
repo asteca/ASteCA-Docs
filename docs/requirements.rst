@@ -33,34 +33,22 @@ and can figure out how to run the code in a ``2.7.x`` environment.
 R software
 ----------
 
-If you want to use the `function`_ that obtains the cluster probability
-of being a true cluster, the `R statistical software`_ is needed. It
-can be installed with:
+If you want to use the function that obtains the cluster probability
+of being a true cluster (see Sect. :ref:`sect-clust-prob`), the
+`R statistical software`_ is needed. To install thee latest version, follow
+these steps:
 
-.. code-block:: bash
-
- $ sudo apt-get install r-base
-
-If you get **R** version 3.0.2 (you can check this by typing ``$ R`` in a
-command line) you'll need to follow the steps outlined below in order to obtain
-a newer version, since that one has issues with the ``rpy2`` package.
-
-  1. Uninstall previous r-base installation
-
-  .. code-block:: bash
-
-   $ sudo apt-get remove r-base-core
-
-  2. Add the following entry to your sources (for **Ubuntu 14.04** and
-  derivatives, for other distributions change the name from *trusty* to the
-  correct one):
+  1. Add the following entry to your sources. Notice this is valid for
+  **Ubuntu 14.04** (and other OSs based on that release), for other
+  Ubuntu versions change the name from *trusty* to the correct one; ie:
+  *precise* (v12.04), *utopic* (14.10) or *vivid* (15.04):
 
   .. code-block:: bash
 
    $ echo 'deb http://cran.rstudio.com/bin/linux/ubuntu trusty/' | sudo tee \
    -a /etc/apt/sources.list.d/r.list
 
-  3. Add the Public Keys
+  2. Add the Public Keys
 
   .. code-block:: bash
 
@@ -68,20 +56,29 @@ a newer version, since that one has issues with the ``rpy2`` package.
    $ gpg -a --export E084DAB9 | sudo apt-key add -
    $ sudo apt-get update
 
-  4. Install **R**
+  3. Install **R**
 
   .. code-block:: bash
 
    $ sudo apt-get install r-base
 
-After **R** is installed, open with sudo privileges (``$ sudo R``) and
-install, *in order*, the following packages (installation commands to the
-right):
+After **R** is installed, build the dependencies for the ``rgl`` package with:
+
+  .. code-block:: bash
+
+    $ sudo apt-get build-dep rgl
+
+Next, open **R** with sudo privileges (``$ sudo R``) and install, *in order*,
+the following packages (installation commands to the right):
 
 -  rgl – ``install.packages("rgl")``
--  mvtnorm – ``install.packages("mvtnorm")``
--  misc3d – ``install.packages("misc3d")``
 -  ks – ``install.packages("ks")``
+
+.. -  mvtnorm – ``install.packages("mvtnorm")``
+.. -  misc3d – ``install.packages("misc3d")``
+
+If you run into issues installing the ``rgl`` package, please refer to Sect.
+:ref:`sect-trouble`.
 
 The package `rpy2`_, that allows **Python** and **R** to communicate, is also
 needed. To install it see Sect. :ref:`sect-pyth-depen`.
@@ -119,6 +116,14 @@ or manually with:
 
 after downloading the ``get-pip.py`` file from
 `here <https://pip.pypa.io/en/latest/installing.html>`__.
+
+After installing it, upgrade ``pip`` and ``distribute`` (needed for **Ubuntu
+12.04**) with:
+
+.. code-block:: bash
+
+  $ sudo pip install --upgrade pip
+  $ pip install --user --upgrade distribute
 
 
 .. _sect-pyth-depen:
@@ -181,12 +186,12 @@ The manual way to install each of the above packages using **pip** is:
 
 .. code-block:: bash
 
-  $ pip install --user numpy
-  $ pip install --user matplotlib
-  $ pip install --user scipy
-  $ pip install --user astroml
-  $ pip install --user scikit-learn
-  $ pip install --user rpy2
+  $ pip install --user -r numpy
+  $ pip install --user -r matplotlib
+  $ pip install --user -r scipy
+  $ pip install --user -r astroml
+  $ pip install --user -r scikit-learn
+  $ pip install --user -r rpy2
 
 .. warning::
 
@@ -216,20 +221,12 @@ The manual way to install each of the above packages using **pip** is:
 Troubleshooting
 ---------------
 
-* If you have issues installing ``rgl`` within **R**, you probably have unmet
-  dependencies.
-
-  Install (after this, install ``rgl``):
-
-  .. code-block:: bash
-
-    $ sudo apt-get build-dep r-cran-rgl
-
-  If you see an error:
+* If when installing the ``rgl`` package within **R** you see an error:
 
   >>> E: You must put some 'source' URIs in your sources.list
 
-  this is related to ``build-dep``. Run:
+  this is related to ``build-dep``. For **Ubuntu 14.04 (Trusty)** (change
+  *trusty* if you are using a different version) run:
 
   .. code-block:: bash
 
@@ -317,7 +314,11 @@ Troubleshooting
 
   >>> error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
 
-  install (**Python's** development headers):
+  or:
+
+  >>> SystemError: Cannot compile 'Python.h'. Perhaps you need to install python-dev|python-devel
+
+  install **Python's** development headers:
 
   .. code-block:: bash
 
@@ -326,7 +327,6 @@ Troubleshooting
 
 .. _Python - 2.7.8: https://www.python.org/download/releases/2.7.8/
 .. _open a new issue: https://github.com/Gabriel-p/asteca/issues/new
-.. _function: https://github.com/Gabriel-p/asteca/blob/master/functions/get_p_value.py
 .. _R statistical software: http://www.r-project.org/
 .. _rpy2: http://rpy.sourceforge.net/
 .. _Linux Mint: http://www.linuxmint.com/download.php

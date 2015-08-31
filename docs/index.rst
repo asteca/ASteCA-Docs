@@ -41,6 +41,7 @@ Table of Contents
    rdp
    radius
    int_mags
+   clust_prob
    decont_algor
    best_fit
    performance

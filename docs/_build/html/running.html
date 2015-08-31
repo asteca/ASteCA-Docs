@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Running &mdash; ASteCA v0.1.9 documentation</title>
+  <title>5. Running &mdash; ASteCA v0.1.9.1 documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.9 documentation" href="index.html"/>
+    <link rel="top" title="ASteCA v0.1.9.1 documentation" href="index.html"/>
         <link rel="next" title="6. Center determination" href="center.html"/>
         <link rel="prev" title="4. Input data file" href="input_data.html"/> 
 
@@ -103,28 +103,29 @@
 <li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">10.1. Reduced membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">11.1. Reduced membership</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="best_fit.html">11. Best fit model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">11.1. Synthetic clusters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">11.1.1. Isochrone interpolation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">11.1.2. Isochrone shift</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#maximum-magnitude-cut">11.1.3. Maximum magnitude cut</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#mass-distribution">11.1.4. Mass distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#imf-sampling">11.1.5. IMF sampling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#binarity">11.1.6. Binarity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#completeness">11.1.7. Completeness</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#errors">11.1.8. Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best_fit.html">12. Best fit model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">12.1. Synthetic clusters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">12.1.1. Isochrone interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">12.1.2. Isochrone shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#maximum-magnitude-cut">12.1.3. Maximum magnitude cut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#mass-distribution">12.1.4. Mass distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#imf-sampling">12.1.5. IMF sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#binarity">12.1.6. Binarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#completeness">12.1.7. Completeness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#errors">12.1.8. Errors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="likelihood.html">11.2. Likelihood</a></li>
-<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">11.3. Genetic algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">11.4. Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="likelihood.html">12.2. Likelihood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">12.3. Genetic algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">12.4. Bootstrap</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
           
@@ -173,7 +174,7 @@ sub-folder.</p>
 <p><strong>Every</strong> file inside the <code class="docutils literal"><span class="pre">input/</span></code> folder (inside or outside a
 sub-folder) will be processed by <strong>ASteCA</strong>, with the exception of the
 membership probabilities files that end with a <code class="docutils literal"><span class="pre">_memb.dat</span></code> extension
-(see Sect. <a class="reference internal" href="decont_algor.html#decont-algor"><span>10</span></a>).</p>
+(see Sect. <a class="reference internal" href="decont_algor.html#decont-algor"><span>11</span></a>).</p>
 <p>Once the file(s) are in place and the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file correctly
 modified, the code can be executed with the command:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python asteca.py
@@ -308,7 +309,7 @@ paste it inside the <code class="docutils literal"><span class="pre">isochrones/
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.9',
+            VERSION:'v0.1.9.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

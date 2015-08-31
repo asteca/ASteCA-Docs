@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>11.1. Synthetic clusters &mdash; ASteCA v0.1.9 documentation</title>
+  <title>12.1. Synthetic clusters &mdash; ASteCA v0.1.9.1 documentation</title>
   
 
   
@@ -32,10 +32,10 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.9 documentation" href="index.html"/>
-        <link rel="up" title="11. Best fit model" href="best_fit.html"/>
-        <link rel="next" title="11.2. Likelihood" href="likelihood.html"/>
-        <link rel="prev" title="11. Best fit model" href="best_fit.html"/> 
+    <link rel="top" title="ASteCA v0.1.9.1 documentation" href="index.html"/>
+        <link rel="up" title="12. Best fit model" href="best_fit.html"/>
+        <link rel="next" title="12.2. Likelihood" href="likelihood.html"/>
+        <link rel="prev" title="12. Best fit model" href="best_fit.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -104,28 +104,29 @@
 <li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">10.1. Reduced membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">11.1. Reduced membership</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="best_fit.html">11. Best fit model</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">11.1. Synthetic clusters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#isochrone-interpolation">11.1.1. Isochrone interpolation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#isochrone-shift">11.1.2. Isochrone shift</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#maximum-magnitude-cut">11.1.3. Maximum magnitude cut</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mass-distribution">11.1.4. Mass distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#imf-sampling">11.1.5. IMF sampling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#binarity">11.1.6. Binarity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#completeness">11.1.7. Completeness</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#errors">11.1.8. Errors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="best_fit.html">12. Best fit model</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">12.1. Synthetic clusters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#isochrone-interpolation">12.1.1. Isochrone interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isochrone-shift">12.1.2. Isochrone shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maximum-magnitude-cut">12.1.3. Maximum magnitude cut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mass-distribution">12.1.4. Mass distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#imf-sampling">12.1.5. IMF sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#binarity">12.1.6. Binarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#completeness">12.1.7. Completeness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#errors">12.1.8. Errors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="likelihood.html">11.2. Likelihood</a></li>
-<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">11.3. Genetic algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">11.4. Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="likelihood.html">12.2. Likelihood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">12.3. Genetic algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">12.4. Bootstrap</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
           
@@ -150,9 +151,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-          <li><a href="best_fit.html">11. Best fit model</a> &raquo;</li>
+          <li><a href="best_fit.html">12. Best fit model</a> &raquo;</li>
       
-    <li>11.1. Synthetic clusters</li>
+    <li>12.1. Synthetic clusters</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -166,7 +167,7 @@
           <div role="main" class="document">
             
   <div class="section" id="synthetic-clusters">
-<h1>11.1. Synthetic clusters<a class="headerlink" href="#synthetic-clusters" title="Permalink to this headline">¶</a></h1>
+<h1>12.1. Synthetic clusters<a class="headerlink" href="#synthetic-clusters" title="Permalink to this headline">¶</a></h1>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
@@ -178,48 +179,48 @@ distance, mass and binarity values, affected by a maximum magnitude cut,
 completeness star removal and photometric errors mimicking those of the
 input observed cluster.</p>
 <div class="section" id="isochrone-interpolation">
-<h2>11.1.1. Isochrone interpolation<a class="headerlink" href="#isochrone-interpolation" title="Permalink to this headline">¶</a></h2>
+<h2>12.1.1. Isochrone interpolation<a class="headerlink" href="#isochrone-interpolation" title="Permalink to this headline">¶</a></h2>
 <p>The first step is done by the <code class="docutils literal"><span class="pre">interp_isoch</span></code> function stored in the
 <a class="reference external" href="https://github.com/asteca/asteca/blob/master/functions/_in/get_isoch_params.py">get_isoch_params</a> function.
 This function generates 1500 points in the theoretical isochrone, as shown
-in <a class="reference internal" href="#fig-synth-cl-a"><span>Fig. 11.1</span></a>.</p>
+in <a class="reference internal" href="#fig-synth-cl-a"><span>Fig. 12.1</span></a>.</p>
 <div class="figure align-center" id="id1">
 <span id="fig-synth-cl-a"></span><img alt="_images/synth-cl-a.png" src="_images/synth-cl-a.png" />
-<p class="caption"><span class="caption-number">Fig. 11.1 </span><span class="caption-text">Interpolation of theoretical isochrone of given metallicity and age.</span></p>
+<p class="caption"><span class="caption-number">Fig. 12.1 </span><span class="caption-text">Interpolation of theoretical isochrone of given metallicity and age.</span></p>
 </div>
 </div>
 <div class="section" id="isochrone-shift">
-<h2>11.1.2. Isochrone shift<a class="headerlink" href="#isochrone-shift" title="Permalink to this headline">¶</a></h2>
+<h2>12.1.2. Isochrone shift<a class="headerlink" href="#isochrone-shift" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="index-1">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
 </div>
 <div class="figure align-center" id="id2">
 <span id="fig-synth-cl-b"></span><img alt="_images/synth-cl-b.png" src="_images/synth-cl-b.png" />
-<p class="caption"><span class="caption-number">Fig. 11.2 </span><span class="caption-text">Shift interpolated theoretical isochrone according to given extinction
+<p class="caption"><span class="caption-number">Fig. 12.2 </span><span class="caption-text">Shift interpolated theoretical isochrone according to given extinction
 and distance modulus values.</span></p>
 </div>
 </div>
 <div class="section" id="maximum-magnitude-cut">
-<h2>11.1.3. Maximum magnitude cut<a class="headerlink" href="#maximum-magnitude-cut" title="Permalink to this headline">¶</a></h2>
+<h2>12.1.3. Maximum magnitude cut<a class="headerlink" href="#maximum-magnitude-cut" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="index-2">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
 </div>
 <div class="figure align-center" id="id3">
 <span id="fig-synth-cl-c"></span><img alt="_images/synth-cl-c.png" src="_images/synth-cl-c.png" />
-<p class="caption"><span class="caption-number">Fig. 11.3 </span><span class="caption-text">Remove stars beyond the maximum magnitude value in the observed cluster.</span></p>
+<p class="caption"><span class="caption-number">Fig. 12.3 </span><span class="caption-text">Remove stars beyond the maximum magnitude value in the observed cluster.</span></p>
 </div>
 </div>
 <div class="section" id="mass-distribution">
-<h2>11.1.4. Mass distribution<a class="headerlink" href="#mass-distribution" title="Permalink to this headline">¶</a></h2>
+<h2>12.1.4. Mass distribution<a class="headerlink" href="#mass-distribution" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="index-3">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
 </div>
 </div>
 <div class="section" id="imf-sampling">
-<h2>11.1.5. IMF sampling<a class="headerlink" href="#imf-sampling" title="Permalink to this headline">¶</a></h2>
+<h2>12.1.5. IMF sampling<a class="headerlink" href="#imf-sampling" title="Permalink to this headline">¶</a></h2>
 <p>The initial mass function (IMF) is the distribution of initial masses
 for a population of stars. For a population of <img class="math" src="_images/math/75e27f04188974063be3230dca208cd495b77ce1.png" alt="N"/> stars with
 masses <img class="math" src="_images/math/21728519fb5117232be3dab5913f25e4508c8c29.png" alt="m_i"/> and a total mass of <img class="math" src="_images/math/aae0db378a6c094311c8da0198e30b8da3034855.png" alt="M_T"/>:</p>
@@ -249,21 +250,21 @@ probabilistically sampled from a certain IMF, whose masses sum up to a
 total cluster mass.</p>
 </div>
 <div class="section" id="binarity">
-<h2>11.1.6. Binarity<a class="headerlink" href="#binarity" title="Permalink to this headline">¶</a></h2>
+<h2>12.1.6. Binarity<a class="headerlink" href="#binarity" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="index-4">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
 </div>
 </div>
 <div class="section" id="completeness">
-<h2>11.1.7. Completeness<a class="headerlink" href="#completeness" title="Permalink to this headline">¶</a></h2>
+<h2>12.1.7. Completeness<a class="headerlink" href="#completeness" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="index-5">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
 </div>
 </div>
 <div class="section" id="errors">
-<h2>11.1.8. Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<h2>12.1.8. Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="index-6">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
@@ -277,10 +278,10 @@ total cluster mass.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="likelihood.html" class="btn btn-neutral float-right" title="11.2. Likelihood" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="likelihood.html" class="btn btn-neutral float-right" title="12.2. Likelihood" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="best_fit.html" class="btn btn-neutral" title="11. Best fit model" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="best_fit.html" class="btn btn-neutral" title="12. Best fit model" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -310,7 +311,7 @@ total cluster mass.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.9',
+            VERSION:'v0.1.9.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

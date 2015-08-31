@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Requirements &mdash; ASteCA v0.1.9 documentation</title>
+  <title>3. Requirements &mdash; ASteCA v0.1.9.1 documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.9 documentation" href="index.html"/>
+    <link rel="top" title="ASteCA v0.1.9.1 documentation" href="index.html"/>
         <link rel="next" title="4. Input data file" href="input_data.html"/>
         <link rel="prev" title="2. Download" href="download.html"/> 
 
@@ -103,28 +103,29 @@
 <li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">10.1. Reduced membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">11.1. Reduced membership</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="best_fit.html">11. Best fit model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">11.1. Synthetic clusters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">11.1.1. Isochrone interpolation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">11.1.2. Isochrone shift</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#maximum-magnitude-cut">11.1.3. Maximum magnitude cut</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#mass-distribution">11.1.4. Mass distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#imf-sampling">11.1.5. IMF sampling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#binarity">11.1.6. Binarity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#completeness">11.1.7. Completeness</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#errors">11.1.8. Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best_fit.html">12. Best fit model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">12.1. Synthetic clusters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">12.1.1. Isochrone interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">12.1.2. Isochrone shift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#maximum-magnitude-cut">12.1.3. Maximum magnitude cut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#mass-distribution">12.1.4. Mass distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#imf-sampling">12.1.5. IMF sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#binarity">12.1.6. Binarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#completeness">12.1.7. Completeness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#errors">12.1.8. Errors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="likelihood.html">11.2. Likelihood</a></li>
-<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">11.3. Genetic algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">11.4. Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="likelihood.html">12.2. Likelihood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">12.3. Genetic algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">12.4. Bootstrap</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
           
@@ -184,30 +185,20 @@ the new <code class="docutils literal"><span class="pre">3.x</span></code> versi
 and can figure out how to run the code in a <code class="docutils literal"><span class="pre">2.7.x</span></code> environment.</p>
 <div class="section" id="r-software">
 <span id="sect-extra-pack"></span><h2>3.1. R software<a class="headerlink" href="#r-software" title="Permalink to this headline">¶</a></h2>
-<p>If you want to use the <a class="reference external" href="https://github.com/Gabriel-p/asteca/blob/master/functions/get_p_value.py">function</a> that obtains the cluster probability
-of being a true cluster, the <a class="reference external" href="http://www.r-project.org/">R statistical software</a> is needed. It
-can be installed with:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install r-base
-</pre></div>
-</div>
-<p>If you get <strong>R</strong> version 3.0.2 (you can check this by typing <code class="docutils literal"><span class="pre">$</span> <span class="pre">R</span></code> in a
-command line) you&#8217;ll need to follow the steps outlined below in order to obtain
-a newer version, since that one has issues with the <code class="docutils literal"><span class="pre">rpy2</span></code> package.</p>
+<p>If you want to use the function that obtains the cluster probability
+of being a true cluster (see Sect. <a class="reference internal" href="clust_prob.html#sect-clust-prob"><span>10</span></a>), the
+<a class="reference external" href="http://www.r-project.org/">R statistical software</a> is needed. To install thee latest version, follow
+these steps:</p>
 <blockquote>
-<div><ol class="arabic simple">
-<li>Uninstall previous r-base installation</li>
-</ol>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get remove r-base-core
-</pre></div>
-</div>
-<p>2. Add the following entry to your sources (for <strong>Ubuntu 14.04</strong> and
-derivatives, for other distributions change the name from <em>trusty</em> to the
-correct one):</p>
+<div><p>1. Add the following entry to your sources. Notice this is valid for
+<strong>Ubuntu 14.04</strong> (and other OSs based on that release), for other
+Ubuntu versions change the name from <em>trusty</em> to the correct one; ie:
+<em>precise</em> (v12.04), <em>utopic</em> (14.10) or <em>vivid</em> (15.04):</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;deb http://cran.rstudio.com/bin/linux/ubuntu trusty/&#39;</span> <span class="p">|</span> sudo tee <span class="se">\</span>
 -a /etc/apt/sources.list.d/r.list
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="2">
 <li>Add the Public Keys</li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
@@ -215,22 +206,27 @@ correct one):</p>
 <span class="nv">$ </span>sudo apt-get update
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="3">
 <li>Install <strong>R</strong></li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install r-base
 </pre></div>
 </div>
 </div></blockquote>
-<p>After <strong>R</strong> is installed, open with sudo privileges (<code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">R</span></code>) and
-install, <em>in order</em>, the following packages (installation commands to the
-right):</p>
+<p>After <strong>R</strong> is installed, build the dependencies for the <code class="docutils literal"><span class="pre">rgl</span></code> package with:</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get build-dep rgl
+</pre></div>
+</div>
+</div></blockquote>
+<p>Next, open <strong>R</strong> with sudo privileges (<code class="docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">R</span></code>) and install, <em>in order</em>,
+the following packages (installation commands to the right):</p>
 <ul class="simple">
 <li>rgl – <code class="docutils literal"><span class="pre">install.packages(&quot;rgl&quot;)</span></code></li>
-<li>mvtnorm – <code class="docutils literal"><span class="pre">install.packages(&quot;mvtnorm&quot;)</span></code></li>
-<li>misc3d – <code class="docutils literal"><span class="pre">install.packages(&quot;misc3d&quot;)</span></code></li>
 <li>ks – <code class="docutils literal"><span class="pre">install.packages(&quot;ks&quot;)</span></code></li>
 </ul>
+<p>If you run into issues installing the <code class="docutils literal"><span class="pre">rgl</span></code> package, please refer to Sect.
+<a class="reference internal" href="#sect-trouble"><span>3.4</span></a>.</p>
 <p>The package <a class="reference external" href="http://rpy.sourceforge.net/">rpy2</a>, that allows <strong>Python</strong> and <strong>R</strong> to communicate, is also
 needed. To install it see Sect. <a class="reference internal" href="#sect-pyth-depen"><span>3.3</span></a>.</p>
 <div class="admonition important">
@@ -259,6 +255,12 @@ in your system. If <strong>pip</strong> is not installed, you can get it via:</p
 </div>
 <p>after downloading the <code class="docutils literal"><span class="pre">get-pip.py</span></code> file from
 <a class="reference external" href="https://pip.pypa.io/en/latest/installing.html">here</a>.</p>
+<p>After installing it, upgrade <code class="docutils literal"><span class="pre">pip</span></code> and <code class="docutils literal"><span class="pre">distribute</span></code> (needed for <strong>Ubuntu
+12.04</strong>) with:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo pip install --upgrade pip
+<span class="nv">$ </span>pip install --user --upgrade distribute
+</pre></div>
+</div>
 </div>
 <div class="section" id="python-dependencies">
 <span id="sect-pyth-depen"></span><h2>3.3. Python dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h2>
@@ -284,7 +286,7 @@ these libraries too:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install libpcre3-dev liblzma-dev libbz2-dev
 </pre></div>
 </div>
-<p>All the <strong>Python</strong> dependencies for can be installed at once via the
+<p>All the <strong>Python</strong> dependencies can be installed at once via the
 included <code class="docutils literal"><span class="pre">requirements.txt</span></code> file. To do this, first move into the main
 <strong>ASteCA</strong> directory (where this file resides) and run:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install --download<span class="o">=</span>/tmp -r requirements.txt
@@ -305,12 +307,12 @@ simply open the <code class="docutils literal"><span class="pre">requirements.tx
 delete its line) before running the command shown above.</p>
 </div>
 <p>The manual way to install each of the above packages using <strong>pip</strong> is:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install --user numpy
-<span class="nv">$ </span>pip install --user matplotlib
-<span class="nv">$ </span>pip install --user scipy
-<span class="nv">$ </span>pip install --user astroml
-<span class="nv">$ </span>pip install --user scikit-learn
-<span class="nv">$ </span>pip install --user rpy2
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install --user -r numpy
+<span class="nv">$ </span>pip install --user -r matplotlib
+<span class="nv">$ </span>pip install --user -r scipy
+<span class="nv">$ </span>pip install --user -r astroml
+<span class="nv">$ </span>pip install --user -r scikit-learn
+<span class="nv">$ </span>pip install --user -r rpy2
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -325,17 +327,12 @@ there, contact me or open an issue in the code&#8217;s Github tracker).</p>
 <div class="section" id="troubleshooting">
 <span id="sect-trouble"></span><h2>3.4. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">If you have issues installing <code class="docutils literal"><span class="pre">rgl</span></code> within <strong>R</strong>, you probably have unmet
-dependencies.</p>
-<p>Install (after this, install <code class="docutils literal"><span class="pre">rgl</span></code>):</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get build-dep r-cran-rgl
-</pre></div>
-</div>
-<p>If you see an error:</p>
+<li><p class="first">If when installing the <code class="docutils literal"><span class="pre">rgl</span></code> package within <strong>R</strong> you see an error:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">E</span><span class="p">:</span> <span class="n">You</span> <span class="n">must</span> <span class="n">put</span> <span class="n">some</span> <span class="s">&#39;source&#39;</span> <span class="n">URIs</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">sources</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
-<p>this is related to <code class="docutils literal"><span class="pre">build-dep</span></code>. Run:</p>
+<p>this is related to <code class="docutils literal"><span class="pre">build-dep</span></code>. For <strong>Ubuntu 14.04 (Trusty)</strong> (change
+<em>trusty</em> if you are using a different version) run:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;deb-src http://cran.rstudio.com/bin/linux/ubuntu trusty/&#39;</span> <span class="p">|</span> sudo <span class="se">\</span>
 tee -a /etc/apt/sources.list.d/r.list
 <span class="nv">$ </span>gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
@@ -411,7 +408,11 @@ tee -a /etc/apt/sources.list.d/r.list
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">error</span><span class="p">:</span> <span class="n">command</span> <span class="s">&#39;x86_64-linux-gnu-gcc&#39;</span> <span class="n">failed</span> <span class="k">with</span> <span class="nb">exit</span> <span class="n">status</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>install (<strong>Python&#8217;s</strong> development headers):</p>
+<p>or:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="ne">SystemError</span><span class="p">:</span> <span class="n">Cannot</span> <span class="nb">compile</span> <span class="s">&#39;Python.h&#39;</span><span class="o">.</span> <span class="n">Perhaps</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span><span class="o">|</span><span class="n">python</span><span class="o">-</span><span class="n">devel</span>
+</pre></div>
+</div>
+<p>install <strong>Python&#8217;s</strong> development headers:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install python-dev libevent-dev
 </pre></div>
 </div>
@@ -459,7 +460,7 @@ tee -a /etc/apt/sources.list.d/r.list
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.9',
+            VERSION:'v0.1.9.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
