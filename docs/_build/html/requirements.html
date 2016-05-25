@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Requirements &mdash; ASteCA v0.1.9.1 documentation</title>
+  <title>3. Requirements &mdash; ASteCA v0.1.9.3 documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.9.1 documentation" href="index.html"/>
+    <link rel="top" title="ASteCA v0.1.9.3 documentation" href="index.html"/>
         <link rel="next" title="4. Input data file" href="input_data.html"/>
         <link rel="prev" title="2. Download" href="download.html"/> 
 
@@ -47,17 +47,27 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
 
-        
-          <a href="index.html" class="icon icon-home"> ASteCA
-        
+          
+            <a href="index.html" class="icon icon-home"> ASteCA
+          
 
-        
-        </a>
+          
+          </a>
 
-        
+          
+            
+            
+              <div class="version">
+                v0.1.9.3
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -66,20 +76,17 @@
   </form>
 </div>
 
-        
-      </div>
+          
+        </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-          
-              <ul class="current">
+            
+            
+                <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="download.html#cloning-the-repository">2.1. Cloning the repository</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">3. Requirements</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Requirements</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#r-software">3.1. R software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python-pip">3.2. Python-pip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python-dependencies">3.3. Python dependencies</a></li>
@@ -87,51 +94,21 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="input_data.html">4. Input data file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running.html">5. Running</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">5.1. Theoretical isochrones</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="running.html#manual-download">5.1.1. Manual download</a></li>
-<li class="toctree-l3"><a class="reference internal" href="running.html#automatic-download">5.1.2. Automatic download</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="center.html">6. Center determination</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="center.html#approximate-center-values">6.1. Approximate center values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="center.html#precise-center-value">6.2. Precise center value</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">5. Running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">6. Center determination</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">11.1. Reduced membership</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="best_fit.html">12. Best fit model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">12.1. Synthetic clusters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-interpolation">12.1.1. Isochrone interpolation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#isochrone-shift">12.1.2. Isochrone shift</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#maximum-magnitude-cut">12.1.3. Maximum magnitude cut</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#mass-distribution">12.1.4. Mass distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#imf-sampling">12.1.5. IMF sampling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#binarity">12.1.6. Binarity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#completeness">12.1.7. Completeness</a></li>
-<li class="toctree-l3"><a class="reference internal" href="synth_clust.html#errors">12.1.8. Errors</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="likelihood.html">12.2. Likelihood</a></li>
-<li class="toctree-l2"><a class="reference internal" href="genet_algor.html">12.3. Genetic algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">12.4. Bootstrap</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best_fit.html">12. Best fit model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -146,7 +123,13 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
@@ -161,7 +144,8 @@
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="requirements">
 <span id="sect-requirements"></span><h1>3. Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h1>
@@ -173,11 +157,11 @@
 please contact me or <a class="reference external" href="https://github.com/Gabriel-p/asteca/issues/new">open a new issue</a>.</p>
 <p>To check the version of <strong>Python</strong> installed in your system simply run in
 a terminal the command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python --version
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ python --version
 </pre></div>
 </div>
 <p>The output will resemble this:</p>
-<div class="highlight-bash"><div class="highlight"><pre>Python 2.7.3
+<div class="highlight-bash"><div class="highlight"><pre><span></span>Python 2.7.3
 </pre></div>
 </div>
 <p>If your version is <code class="docutils literal"><span class="pre">2.7.x</span></code> you are probably good to go. If you are using
@@ -186,7 +170,7 @@ and can figure out how to run the code in a <code class="docutils literal"><span
 <div class="section" id="r-software">
 <span id="sect-extra-pack"></span><h2>3.1. R software<a class="headerlink" href="#r-software" title="Permalink to this headline">¶</a></h2>
 <p>If you want to use the function that obtains the cluster probability
-of being a true cluster (see Sect. <a class="reference internal" href="clust_prob.html#sect-clust-prob"><span>10</span></a>), the
+of being a true cluster (see Sect. <a class="reference internal" href="clust_prob.html#sect-clust-prob"><span class="std std-ref">10</span></a>), the
 <a class="reference external" href="http://www.r-project.org/">R statistical software</a> is needed. To install thee latest version, follow
 these steps:</p>
 <blockquote>
@@ -194,28 +178,28 @@ these steps:</p>
 <strong>Ubuntu 14.04</strong> (and other OSs based on that release), for other
 Ubuntu versions change the name from <em>trusty</em> to the correct one; ie:
 <em>precise</em> (v12.04), <em>utopic</em> (14.10) or <em>vivid</em> (15.04):</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;deb http://cran.rstudio.com/bin/linux/ubuntu trusty/&#39;</span> <span class="p">|</span> sudo tee <span class="se">\</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s1">&#39;deb http://cran.rstudio.com/bin/linux/ubuntu trusty/&#39;</span> <span class="p">|</span> sudo tee <span class="se">\</span>
 -a /etc/apt/sources.list.d/r.list
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
 <li>Add the Public Keys</li>
 </ol>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
-<span class="nv">$ </span>gpg -a --export E084DAB9 <span class="p">|</span> sudo apt-key add -
-<span class="nv">$ </span>sudo apt-get update
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+$ gpg -a --export E084DAB9 <span class="p">|</span> sudo apt-key add -
+$ sudo apt-get update
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
 <li>Install <strong>R</strong></li>
 </ol>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install r-base
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install r-base
 </pre></div>
 </div>
 </div></blockquote>
 <p>After <strong>R</strong> is installed, build the dependencies for the <code class="docutils literal"><span class="pre">rgl</span></code> package with:</p>
 <blockquote>
-<div><div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get build-dep rgl
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get build-dep rgl
 </pre></div>
 </div>
 </div></blockquote>
@@ -226,9 +210,9 @@ the following packages (installation commands to the right):</p>
 <li>ks – <code class="docutils literal"><span class="pre">install.packages(&quot;ks&quot;)</span></code></li>
 </ul>
 <p>If you run into issues installing the <code class="docutils literal"><span class="pre">rgl</span></code> package, please refer to Sect.
-<a class="reference internal" href="#sect-trouble"><span>3.4</span></a>.</p>
+<a class="reference internal" href="#sect-trouble"><span class="std std-ref">3.4</span></a>.</p>
 <p>The package <a class="reference external" href="http://rpy.sourceforge.net/">rpy2</a>, that allows <strong>Python</strong> and <strong>R</strong> to communicate, is also
-needed. To install it see Sect. <a class="reference internal" href="#sect-pyth-depen"><span>3.3</span></a>.</p>
+needed. To install it see Sect. <a class="reference internal" href="#sect-pyth-depen"><span class="std std-ref">3.3</span></a>.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">These two extra packages (<strong>R</strong> and <code class="docutils literal"><span class="pre">rpy2</span></code>) are <em>not mandatory</em> and
@@ -241,24 +225,24 @@ mentioned above.</p>
 <p>The <a class="reference external" href="https://pypi.python.org/pypi/pip/">pip</a> tool for installing <strong>Python</strong> packages (see <a class="reference external" href="https://pip.pypa.io/en/latest/index.html">the docs</a> for more
 information) should be included by default for <strong>Python</strong> versions 2.7.7 and
 above. To check if it is installed in your system run:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip list
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ pip list
 </pre></div>
 </div>
 <p>If <strong>pip</strong> is installed, it should return a list of the packages available
 in your system. If <strong>pip</strong> is not installed, you can get it via:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install python-pip
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install python-pip
 </pre></div>
 </div>
 <p>or manually with:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>python get-pip.py
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ python get-pip.py
 </pre></div>
 </div>
 <p>after downloading the <code class="docutils literal"><span class="pre">get-pip.py</span></code> file from
 <a class="reference external" href="https://pip.pypa.io/en/latest/installing.html">here</a>.</p>
 <p>After installing it, upgrade <code class="docutils literal"><span class="pre">pip</span></code> and <code class="docutils literal"><span class="pre">distribute</span></code> (needed for <strong>Ubuntu
 12.04</strong>) with:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo pip install --upgrade pip
-<span class="nv">$ </span>pip install --user --upgrade distribute
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo pip install --upgrade pip
+$ pip install --user --upgrade distribute
 </pre></div>
 </div>
 </div>
@@ -276,21 +260,21 @@ in your system. If <strong>pip</strong> is not installed, you can get it via:</p
 <p>These versions are the ones I used, the code could work with older versions of
 the packages but I can&#8217;t guarantee it.</p>
 <p>To save some time, we install first all the required libraries listed in Sect.
-<a class="reference internal" href="#sect-trouble"><span>3.4</span></a>:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install g++ libreadline-dev libblas-dev liblapack-dev <span class="se">\</span>
+<a class="reference internal" href="#sect-trouble"><span class="std std-ref">3.4</span></a>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install g++ libreadline-dev libblas-dev liblapack-dev <span class="se">\</span>
 libatlas-base-dev gfortran libfreetype6-dev python-dev libevent-dev
 </pre></div>
 </div>
 <p>If you are running <strong>ASteCA</strong>  in <a class="reference external" href="http://www.linuxmint.com/download.php">Linux Mint</a>, you&#8217;ll probably need to install
 these libraries too:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install libpcre3-dev liblzma-dev libbz2-dev
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install libpcre3-dev liblzma-dev libbz2-dev
 </pre></div>
 </div>
 <p>All the <strong>Python</strong> dependencies can be installed at once via the
 included <code class="docutils literal"><span class="pre">requirements.txt</span></code> file. To do this, first move into the main
 <strong>ASteCA</strong> directory (where this file resides) and run:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install --download<span class="o">=</span>/tmp -r requirements.txt
-<span class="nv">$ </span>pip install --user --no-index --find-links<span class="o">=</span>/tmp -r requirements.txt
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ pip install --download<span class="o">=</span>/tmp -r requirements.txt
+$ pip install --user --no-index --find-links<span class="o">=</span>/tmp -r requirements.txt
 </pre></div>
 </div>
 <p>The first command downloads all packages and the second one installs them.
@@ -301,18 +285,18 @@ won&#8217;t have to be downloaded all over again.</p>
 <p>Be aware that <strong>R</strong> <em>should already be installed</em> before attempting to
 install all packages using the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file, otherwise
 the installation for the <code class="docutils literal"><span class="pre">rpy2</span></code> package will fail. See Sect.
-<a class="reference internal" href="#sect-extra-pack"><span>3.1</span></a> on how to install <strong>R</strong>.</p>
+<a class="reference internal" href="#sect-extra-pack"><span class="std std-ref">3.1</span></a> on how to install <strong>R</strong>.</p>
 <p class="last">If you want to use this file to install all packages <em>except</em> <code class="docutils literal"><span class="pre">rpy2</span></code>,
 simply open the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file and comment this package out (or
 delete its line) before running the command shown above.</p>
 </div>
 <p>The manual way to install each of the above packages using <strong>pip</strong> is:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install --user -r numpy
-<span class="nv">$ </span>pip install --user -r matplotlib
-<span class="nv">$ </span>pip install --user -r scipy
-<span class="nv">$ </span>pip install --user -r astroml
-<span class="nv">$ </span>pip install --user -r scikit-learn
-<span class="nv">$ </span>pip install --user -r rpy2
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ pip install --user -r numpy
+$ pip install --user -r matplotlib
+$ pip install --user -r scipy
+$ pip install --user -r astroml
+$ pip install --user -r scikit-learn
+$ pip install --user -r rpy2
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -320,7 +304,7 @@ delete its line) before running the command shown above.</p>
 <p class="last">Don&#8217;t use <code class="docutils literal"><span class="pre">sudo</span></code> to apply the above commands. This may seem like a quick way
 to solve issues but it is <a class="reference external" href="http://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/">discouraged</a> since it can mess with your system&#8217;s
 <strong>Python</strong>  install. If you run into any issues installing the packages, check
-Sect <a class="reference internal" href="#sect-trouble"><span>3.4</span></a> to see how to solve them (if your issue is not listed
+Sect <a class="reference internal" href="#sect-trouble"><span class="std std-ref">3.4</span></a> to see how to solve them (if your issue is not listed
 there, contact me or open an issue in the code&#8217;s Github tracker).</p>
 </div>
 </div>
@@ -328,92 +312,92 @@ there, contact me or open an issue in the code&#8217;s Github tracker).</p>
 <span id="sect-trouble"></span><h2>3.4. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">If when installing the <code class="docutils literal"><span class="pre">rgl</span></code> package within <strong>R</strong> you see an error:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">E</span><span class="p">:</span> <span class="n">You</span> <span class="n">must</span> <span class="n">put</span> <span class="n">some</span> <span class="s">&#39;source&#39;</span> <span class="n">URIs</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">sources</span><span class="o">.</span><span class="n">list</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">E</span><span class="p">:</span> <span class="n">You</span> <span class="n">must</span> <span class="n">put</span> <span class="n">some</span> <span class="s1">&#39;source&#39;</span> <span class="n">URIs</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">sources</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
 <p>this is related to <code class="docutils literal"><span class="pre">build-dep</span></code>. For <strong>Ubuntu 14.04 (Trusty)</strong> (change
 <em>trusty</em> if you are using a different version) run:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;deb-src http://cran.rstudio.com/bin/linux/ubuntu trusty/&#39;</span> <span class="p">|</span> sudo <span class="se">\</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s1">&#39;deb-src http://cran.rstudio.com/bin/linux/ubuntu trusty/&#39;</span> <span class="p">|</span> sudo <span class="se">\</span>
 tee -a /etc/apt/sources.list.d/r.list
-<span class="nv">$ </span>gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
-<span class="nv">$ </span>gpg -a --export E084DAB9 <span class="p">|</span> sudo apt-key add -
-<span class="nv">$ </span>sudo apt-get update
+$ gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+$ gpg -a --export E084DAB9 <span class="p">|</span> sudo apt-key add -
+$ sudo apt-get update
 </pre></div>
 </div>
 </li>
 <li><p class="first">Error (when installing <code class="docutils literal"><span class="pre">rpy2</span></code>):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ld</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">find</span> <span class="o">-</span><span class="n">l</span><span class="o">&lt;</span><span class="n">NameOfTheLibrary</span><span class="o">&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">collect2</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">ld</span> <span class="n">returned</span> <span class="mi">1</span> <span class="nb">exit</span> <span class="n">status</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ld</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">find</span> <span class="o">-</span><span class="n">l</span><span class="o">&lt;</span><span class="n">NameOfTheLibrary</span><span class="o">&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">collect2</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">ld</span> <span class="n">returned</span> <span class="mi">1</span> <span class="n">exit</span> <span class="n">status</span>
 </pre></div>
 </div>
 <p>this can (probably) be solved by installing:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install lib&lt;NameOfTheLibrary&gt;-dev
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install lib&lt;NameOfTheLibrary&gt;-dev
 </pre></div>
 </div>
 <p>If this does not work, you&#8217;ll need to do some <a class="reference external" href="http://stackoverflow.com/q/16710047/1391441">linking</a>.</p>
 <p>Error:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">gcc</span><span class="p">:</span> <span class="n">error</span> <span class="n">trying</span> <span class="n">to</span> <span class="k">exec</span> <span class="s">&#39;cc1plus&#39;</span><span class="p">:</span> <span class="n">execvp</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="nb">file</span> <span class="ow">or</span> <span class="n">directory</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gcc</span><span class="p">:</span> <span class="n">error</span> <span class="n">trying</span> <span class="n">to</span> <span class="n">exec</span> <span class="s1">&#39;cc1plus&#39;</span><span class="p">:</span> <span class="n">execvp</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
 </pre></div>
 </div>
 <p>install:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install g++
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install g++
 </pre></div>
 </div>
 <p>Error:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">fatal</span> <span class="n">error</span><span class="p">:</span> <span class="n">readline</span><span class="o">/</span><span class="n">readline</span><span class="o">.</span><span class="n">h</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fatal</span> <span class="n">error</span><span class="p">:</span> <span class="n">readline</span><span class="o">/</span><span class="n">readline</span><span class="o">.</span><span class="n">h</span>
 </pre></div>
 </div>
 <p>install:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install libreadline-dev
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install libreadline-dev
 </pre></div>
 </div>
 </li>
 <li><p class="first">Error (when installing <code class="docutils literal"><span class="pre">scipy</span></code>):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">numpy</span><span class="o">.</span><span class="n">distutils</span><span class="o">.</span><span class="n">system_info</span><span class="o">.</span><span class="n">NotFoundError</span><span class="p">:</span> <span class="n">no</span> <span class="n">lapack</span><span class="o">/</span><span class="n">blas</span> <span class="n">resources</span> <span class="n">found</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numpy</span><span class="o">.</span><span class="n">distutils</span><span class="o">.</span><span class="n">system_info</span><span class="o">.</span><span class="n">NotFoundError</span><span class="p">:</span> <span class="n">no</span> <span class="n">lapack</span><span class="o">/</span><span class="n">blas</span> <span class="n">resources</span> <span class="n">found</span>
 </pre></div>
 </div>
 <p>install:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install libblas-dev liblapack-dev libatlas-base-dev
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install libblas-dev liblapack-dev libatlas-base-dev
 </pre></div>
 </div>
 <p>Error:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">error</span><span class="p">:</span> <span class="n">library</span> <span class="n">dfftpack</span> <span class="n">has</span> <span class="n">Fortran</span> <span class="n">sources</span> <span class="n">but</span> <span class="n">no</span> <span class="n">Fortran</span> <span class="n">compiler</span> <span class="n">found</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">error</span><span class="p">:</span> <span class="n">library</span> <span class="n">dfftpack</span> <span class="n">has</span> <span class="n">Fortran</span> <span class="n">sources</span> <span class="n">but</span> <span class="n">no</span> <span class="n">Fortran</span> <span class="n">compiler</span> <span class="n">found</span>
 </pre></div>
 </div>
 <p>install:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install gfortran
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install gfortran
 </pre></div>
 </div>
 </li>
 <li><p class="first">Error (when installing <code class="docutils literal"><span class="pre">matplotlib</span></code>):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="o">*</span> <span class="n">The</span> <span class="n">following</span> <span class="n">required</span> <span class="n">packages</span> <span class="n">can</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">built</span><span class="p">:</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">*</span> <span class="n">The</span> <span class="n">following</span> <span class="n">required</span> <span class="n">packages</span> <span class="n">can</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">built</span><span class="p">:</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="o">*</span> <span class="n">freetype</span><span class="p">,</span> <span class="n">png</span>
 </pre></div>
 </div>
 <p>install:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install libfreetype6-dev
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install libfreetype6-dev
 </pre></div>
 </div>
 </li>
 <li><p class="first">Error (when running <code class="docutils literal"><span class="pre">matplotlib</span></code>):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="ne">ImportError</span><span class="p">:</span> <span class="n">matplotlib</span> <span class="n">requires</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="ne">ImportError</span><span class="p">:</span> <span class="n">matplotlib</span> <span class="n">requires</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>install (add any other missing package not listed here):</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install --user python-dateutil pyparsing
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ pip install --user python-dateutil pyparsing
 </pre></div>
 </div>
 </li>
 <li><p class="first">Error:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">error</span><span class="p">:</span> <span class="n">command</span> <span class="s">&#39;x86_64-linux-gnu-gcc&#39;</span> <span class="n">failed</span> <span class="k">with</span> <span class="nb">exit</span> <span class="n">status</span> <span class="mi">1</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">error</span><span class="p">:</span> <span class="n">command</span> <span class="s1">&#39;x86_64-linux-gnu-gcc&#39;</span> <span class="n">failed</span> <span class="k">with</span> <span class="n">exit</span> <span class="n">status</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p>or:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="ne">SystemError</span><span class="p">:</span> <span class="n">Cannot</span> <span class="nb">compile</span> <span class="s">&#39;Python.h&#39;</span><span class="o">.</span> <span class="n">Perhaps</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span><span class="o">|</span><span class="n">python</span><span class="o">-</span><span class="n">devel</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="ne">SystemError</span><span class="p">:</span> <span class="n">Cannot</span> <span class="nb">compile</span> <span class="s1">&#39;Python.h&#39;</span><span class="o">.</span> <span class="n">Perhaps</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span><span class="o">|</span><span class="n">python</span><span class="o">-</span><span class="n">devel</span>
 </pre></div>
 </div>
 <p>install <strong>Python&#8217;s</strong> development headers:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install python-dev libevent-dev
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install python-dev libevent-dev
 </pre></div>
 </div>
 </li>
@@ -422,6 +406,7 @@ tee -a /etc/apt/sources.list.d/r.list
 </div>
 
 
+           </div>
           </div>
           <footer>
   
@@ -440,9 +425,10 @@ tee -a /etc/apt/sources.list.d/r.list
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Gabriel I Perren.
+
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -460,7 +446,7 @@ tee -a /etc/apt/sources.list.d/r.list
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.9.1',
+            VERSION:'v0.1.9.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
