@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Running &mdash; ASteCA v0.1.9.3 documentation</title>
+  <title>5. Running &mdash; ASteCA v0.1.9.4 documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.9.3 documentation" href="index.html"/>
+    <link rel="top" title="ASteCA v0.1.9.4 documentation" href="index.html"/>
         <link rel="next" title="6. Center determination" href="center.html"/>
         <link rel="prev" title="4. Input data file" href="input_data.html"/> 
 
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                v0.1.9.3
+                v0.1.9.4
               </div>
             
           
@@ -204,6 +204,7 @@ extend <strong>ASteCA</strong> to support all systems present in the CMD service
 <li>2MASS JHK_s</li>
 <li>Washington CMT1T2</li>
 <li>SDSS ugriz</li>
+<li>HST/ACS WFC</li>
 </ul>
 </div>
 <div class="section" id="manual-download">
@@ -217,16 +218,16 @@ isochrones of constant metallicity, Z</em> option. That is, isochrones of the sa
 metallicity must all be stored in the same file.</p>
 <p>2. Each file must have the name of the metallicity that characterizes it.
 For example, if you download a sequence of isochrones with metallicity
-<code class="docutils literal"><span class="pre">z=0.019</span></code>, then the file should be called <code class="docutils literal"><span class="pre">0.019.dat</span></code> or <code class="docutils literal"><span class="pre">0.0190.dat</span></code>
-or <code class="docutils literal"><span class="pre">0.019000.dat</span></code>, etc.</p>
-<p>This means that the file name must respect the decimal point in the
-metallicity value, and that the number of zeros at the end of the value in
-the name does not matter.
+<code class="docutils literal"><span class="pre">z=0.019</span></code>, then the file should be called <code class="docutils literal"><span class="pre">0.019.dat</span></code>, or <code class="docutils literal"><span class="pre">0_019.dat</span></code>,
+or <code class="docutils literal"><span class="pre">0.0190.dat</span></code>, or <code class="docutils literal"><span class="pre">0_019000.dat</span></code>, etc.</p>
+<p>This means that the file name can contain either a point or an underscore
+separating the decimal portion of the metallicity value. The number of zeros
+at the end of the value in the name does not matter.
 This is necessary because the code takes the metallicity value directly from
 the file name (which I plan to <a class="reference external" href="https://github.com/asteca/asteca/issues/161">simplify</a> sometime).</p>
 <p>3. The theoretical isochrones files must be stored in a sub-folder of
-<code class="docutils literal"><span class="pre">isochrones/</span></code>, with the naming convention: <code class="docutils literal"><span class="pre">parsecXX_YYY</span></code> (currently only
-PARSEC isochrones are supported). In this name, <code class="docutils literal"><span class="pre">XX</span></code> is 10, 11 or 12
+<code class="docutils literal"><span class="pre">isochrones/</span></code>, with the naming convention: <code class="docutils literal"><span class="pre">parsecXX_YYY</span></code> (if PARSEC
+isochrones are used). In this name, <code class="docutils literal"><span class="pre">XX</span></code> is 10, 11 or 12
 depending on the version of PARSEC used (1.0, 1.1 or 1.2S, respectively) and
 &#8216;YYYY&#8217; is <code class="docutils literal"><span class="pre">ubvi</span></code>, <code class="docutils literal"><span class="pre">wash</span></code> or <code class="docutils literal"><span class="pre">2MASS</span></code>, depending on the system chosen to
 generate the isochrones.</p>
@@ -296,7 +297,7 @@ paste it inside the <code class="docutils literal"><span class="pre">isochrones/
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.9.3',
+            VERSION:'v0.1.9.4',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

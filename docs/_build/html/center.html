@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6. Center determination &mdash; ASteCA v0.1.9.3 documentation</title>
+  <title>6. Center determination &mdash; ASteCA v0.1.9.4 documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.9.3 documentation" href="index.html"/>
+    <link rel="top" title="ASteCA v0.1.9.4 documentation" href="index.html"/>
         <link rel="next" title="7. Radial density profile" href="rdp.html"/>
         <link rel="prev" title="5. Running" href="running.html"/> 
 
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                v0.1.9.3
+                v0.1.9.4
               </div>
             
           
@@ -193,7 +193,7 @@ this analysis is skipped and only the passed value is presented in the plot.</p>
 <p>Once the approximate center coordinates have been obtained, <strong>ASteCA</strong> proceeds
 to refine this result. To this end, the code employs the approximate center
 coordinates obtained in the previous step using the smallest bandwidth value
-(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><span class="std std-numref">Fig. 6.1</span></a>), or <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/>.</p>
+(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><span class="std std-numref">Fig. 6.1</span></a>), or <img class="math" src="_images/math/e937201e5d475fb5332d07376663816232346829.png" alt="center_{bw-min}"/>.</p>
 <p>These coordinates serve as initial values for the cluster&#8217;s center. The final
 <em>precise</em> values are determined as the maximum spatial density of a
 two-dimensional Gaussian kernel, generated on a reduced square area of the
@@ -204,7 +204,7 @@ positional diagram of the cluster; see <a class="reference internal" href="#fig-
 KDE. Blue lines are contour curves, the center found is marked with a cross.</span></p>
 </div>
 <p>The square area where the final center coordinates are searched is centered on
-the <img class="math" src="_images/math/1bcc8566033ed10cf9f510ec3b2c279b67eba6f9.png" alt="center_{bw-min}"/> values, with a side length that spans 50% of the
+the <img class="math" src="_images/math/e937201e5d475fb5332d07376663816232346829.png" alt="center_{bw-min}"/> values, with a side length that spans 50% of the
 minimum x,y range.
 The bandwidth of the fitted kernel is automatically defined via Scott&#8217;s rule
 (<a class="reference external" href="http://onlinelibrary.wiley.com/book/10.1002/9780470316849">Scott 1992</a>).</p>
@@ -213,7 +213,7 @@ the maximum value of the positional KDE) plotted over the Gaussian filtered 2D
 histogram obtained using the minimum bandwidth, as defined in Sect.
 <a class="reference internal" href="#approx-center"><span class="std std-ref">6.1</span></a>.</p>
 <div class="figure align-center" id="id3">
-<span id="fig-center"></span><a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" style="width: 508.8px; height: 503.2px;" /></a>
+<span id="fig-center"></span><a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" style="width: 508.8px; height: 503.20000000000005px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Cluster&#8217;s center found via the KDE analysis. The <code class="docutils literal"><span class="pre">Bin</span></code> value
 in the top right corner is the bin width of the 2D histogram mentioned
 in the previous section, used to obtain the approximate center coordinates.</span></p>
@@ -273,7 +273,7 @@ either x or y, is larger than 10% of the final center coordinates.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.9.3',
+            VERSION:'v0.1.9.4',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

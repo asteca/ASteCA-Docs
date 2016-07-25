@@ -68,6 +68,7 @@ possibilities below.
    * 2MASS JHK_s
    * Washington CMT1T2
    * SDSS ugriz
+   * HST/ACS WFC
 
 
 Manual download
@@ -85,18 +86,18 @@ metallicity must all be stored in the same file.
 
 2. Each file must have the name of the metallicity that characterizes it.
 For example, if you download a sequence of isochrones with metallicity
-``z=0.019``, then the file should be called ``0.019.dat`` or ``0.0190.dat``
-or ``0.019000.dat``, etc.
+``z=0.019``, then the file should be called ``0.019.dat``, or ``0_019.dat``,
+or ``0.0190.dat``, or ``0_019000.dat``, etc.
 
-This means that the file name must respect the decimal point in the
-metallicity value, and that the number of zeros at the end of the value in
-the name does not matter.
+This means that the file name can contain either a point or an underscore
+separating the decimal portion of the metallicity value. The number of zeros
+at the end of the value in the name does not matter.
 This is necessary because the code takes the metallicity value directly from
 the file name (which I plan to `simplify`_ sometime).
 
 3. The theoretical isochrones files must be stored in a sub-folder of
-``isochrones/``, with the naming convention: ``parsecXX_YYY`` (currently only
-PARSEC isochrones are supported). In this name, ``XX`` is 10, 11 or 12
+``isochrones/``, with the naming convention: ``parsecXX_YYY`` (if PARSEC
+isochrones are used). In this name, ``XX`` is 10, 11 or 12
 depending on the version of PARSEC used (1.0, 1.1 or 1.2S, respectively) and
 'YYYY' is ``ubvi``, ``wash`` or ``2MASS``, depending on the system chosen to
 generate the isochrones.

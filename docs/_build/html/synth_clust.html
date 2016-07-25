@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12.1. Synthetic clusters &mdash; ASteCA v0.1.9.3 documentation</title>
+  <title>12.1. Synthetic clusters &mdash; ASteCA v0.1.9.4 documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="ASteCA v0.1.9.3 documentation" href="index.html"/>
+    <link rel="top" title="ASteCA v0.1.9.4 documentation" href="index.html"/>
         <link rel="up" title="12. Best fit model" href="best_fit.html"/>
         <link rel="next" title="12.2. Likelihood" href="likelihood.html"/>
         <link rel="prev" title="12. Best fit model" href="best_fit.html"/> 
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                v0.1.9.3
+                v0.1.9.4
               </div>
             
           
@@ -216,22 +216,22 @@ and distance modulus values.</span></p>
 <div class="section" id="imf-sampling">
 <h2>12.1.5. IMF sampling<a class="headerlink" href="#imf-sampling" title="Permalink to this headline">¶</a></h2>
 <p>The initial mass function (IMF) is the distribution of initial masses
-for a population of stars. For a population of <img class="math" src="_images/math/75e27f04188974063be3230dca208cd495b77ce1.png" alt="N"/> stars with
-masses <img class="math" src="_images/math/21728519fb5117232be3dab5913f25e4508c8c29.png" alt="m_i"/> and a total mass of <img class="math" src="_images/math/aae0db378a6c094311c8da0198e30b8da3034855.png" alt="M_T"/>:</p>
+for a population of stars. For a population of <img class="math" src="_images/math/f4170ed8938b79490d8923857962695514a8e4cb.png" alt="N"/> stars with
+masses <img class="math" src="_images/math/a9850fd3cf70d5ac90a474d257041fe9dcf965e7.png" alt="m_i"/> and a total mass of <img class="math" src="_images/math/1dbdb876c5086a0dcc9f3e42ada5eb8e2f180db2.png" alt="M_T"/>:</p>
 <div class="math">
-<p><img src="_images/math/85ff47e0ecfe0fd81dfafcbd6b8bca849d3bb0ad.png" alt="IMF \, &amp;\rightarrow \, \xi(m)=\frac{dn}{dm} \, \rightarrow \,dn = \xi(m)dm \\
+<p><img src="_images/math/6129ffb72e2346ab11b49dd24144c82b6b674f2f.png" alt="IMF \, &amp;\rightarrow \, \xi(m)=\frac{dn}{dm} \, \rightarrow \,dn = \xi(m)dm \\
 M_T &amp;= \sum_{i=1}^N m_i \, \rightarrow \, M_T = C\int_{m_l}^{m_h} m(n)dn = \\
 &amp;= C\int_{m_l}^{m_h} m\xi(m)dm"/></p>
-</div><p>where <img class="math" src="_images/math/381bafe9fef47ee765d57184c2d8eacad8900c6a.png" alt="m_l"/> and <img class="math" src="_images/math/5cff571f6c0a3ff86f006462dd8aa66e3ec8eaf8.png" alt="m_h"/> are the mass limits for the IMF
-(<img class="math" src="_images/math/5cff571f6c0a3ff86f006462dd8aa66e3ec8eaf8.png" alt="m_h"/> is fixed to <img class="math" src="_images/math/0adf6210ba19d7dcc11953272ae622ebefb76652.png" alt="100 M_{\odot}"/> in the code) and
-<img class="math" src="_images/math/2bcc65482aa8e15cd4c9e9f2542451fb4e971a91.png" alt="C"/> is a normalization constant. Setting the total mass to unity,
-<img class="math" src="_images/math/6c99d31afa7f74b244ad026849a20cc6b3b0b84e.png" alt="M_T=1 M_{\odot}"/>, allows us to obtain the normalization constant
-<img class="math" src="_images/math/a37c919e07a75380817840dfff31d2781ee02586.png" alt="C_1"/> and treat the normalized IMF as a PDF:</p>
+</div><p>where <img class="math" src="_images/math/949f2cbed1ff84f572f3d233f36abf5fd5d38c17.png" alt="m_l"/> and <img class="math" src="_images/math/9bea08915c3cac48af1c6ea47df9d5372efabca5.png" alt="m_h"/> are the mass limits for the IMF
+(<img class="math" src="_images/math/9bea08915c3cac48af1c6ea47df9d5372efabca5.png" alt="m_h"/> is fixed to <img class="math" src="_images/math/d74ec10d712ce64265165b17e9adf2aec0c1134b.png" alt="100 M_{\odot}"/> in the code) and
+<img class="math" src="_images/math/afce44aa7c55836ca9345404c22fc7b599d2ed84.png" alt="C"/> is a normalization constant. Setting the total mass to unity,
+<img class="math" src="_images/math/0adaf57a413208ff358f13dea7b16ec65b9af72a.png" alt="M_T=1 M_{\odot}"/>, allows us to obtain the normalization constant
+<img class="math" src="_images/math/92f1ac1f62d4f5af721784de8310b6d7acece911.png" alt="C_1"/> and treat the normalized IMF as a PDF:</p>
 <div class="math">
-<p><img src="_images/math/912896bd48cec080b7334d1d98c2cdfeb5b563d9.png" alt="M_T=1M_{\odot}\, \rightarrow \, C_1 = \frac{1}{\int_{m_l}^{m_h} m\xi(m)dm}"/></p>
+<p><img src="_images/math/4eb77f8e0255f4bcbada015dacfefd0a4968f5bd.png" alt="M_T=1M_{\odot}\, \rightarrow \, C_1 = \frac{1}{\int_{m_l}^{m_h} m\xi(m)dm}"/></p>
 </div><p>and thus the normalized IMF can be written as:</p>
 <div class="math">
-<p><img src="_images/math/2f54fde8dbf2dccfd034ce5bcf9ba3c87478ca78.png" alt="PDF(m) = \xi(m)_{norm} = C_1 \xi(m)"/></p>
+<p><img src="_images/math/5ecaa877d6d886e971938c804889adb406c3bf4e.png" alt="PDF(m) = \xi(m)_{norm} = C_1 \xi(m)"/></p>
 </div><p>This is the first step, performed by the <code class="docutils literal"><span class="pre">get-IMF-PDF</span></code> function for
 a given selected IMF (Chabrier 2001, Kroupa et al. 1993, Kroupa 2002)</p>
 <p>Once the PDF is generated, every time a new synthetic cluster is created
@@ -307,7 +307,7 @@ total cluster mass.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.1.9.3',
+            VERSION:'v0.1.9.4',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
