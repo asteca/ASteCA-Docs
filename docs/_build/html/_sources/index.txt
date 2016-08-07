@@ -20,7 +20,7 @@ Cluster Analysis (**ASteCA**) package.
 .. warning::
    This documentation is in the process of being written and is
    **not yet finished**. Updates will be made as versions are released.
-   Last updated: Jul 25, 2016.
+   Last updated: Aug 07, 2016.
 
 .. important::
    A PDF version of this manual can be downloaded `here`__.
