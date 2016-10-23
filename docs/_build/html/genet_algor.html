@@ -166,41 +166,41 @@ operators, as shown in <a class="reference internal" href="#fig-ga-tree"><span c
 <p class="caption"><span class="caption-number">Fig. 12.5 </span><span class="caption-text">Genetic algorithm work tree.</span></p>
 </div>
 <p>The first step consists in drawing a random initial population, that is a set of
-<img class="math" src="_images/math/47cf473fcfed60404a8737e51b4369497ed3d7db.png" alt="N_{pop}"/> random models taken from <img class="math" src="_images/math/9805f44feec6f81d376d09e88b8236635edbb3c8.png" alt="B"/>. This set is evaluated to
-obtain the <img class="math" src="_images/math/a3af17b7dbd4e75d965f8393b7e812a0f1435418.png" alt="L_i"/> likelihood for each <img class="math" src="_images/math/9a08a8d8306918a13000efa39c200175e5553b9b.png" alt="B_i"/> model via Eq. ?? and fed
+<span class="math">\(N_{pop}\)</span> random models taken from <span class="math">\(B\)</span>. This set is evaluated to
+obtain the <span class="math">\(L_i\)</span> likelihood for each <span class="math">\(B_i\)</span> model via Eq. ?? and fed
 to the GA loop as the starting generation.</p>
 <p>The <em>selection</em> block (in gray) contains the selection operator that picks
 models to reproduce from the generation pool with a breeding probability given
 by their ranked fitness (the rank-based fitness function associates higher
-<img class="math" src="_images/math/a3af17b7dbd4e75d965f8393b7e812a0f1435418.png" alt="L_i"/> values with higher probabilities) and the encode operator which
+<span class="math">\(L_i\)</span> values with higher probabilities) and the encode operator which
 translates the parameter values that define each chosen model into a binary
 chromosome .</p>
 <p>The <em>breeding</em> block (in green) pairs chromosomes randomly and produces a new
 generation via the crossover and mutation operators that combine each pair of
 parent chromosomes into two (theoretically fitter) offsprings.</p>
 <p>The <em>evaluation</em> block (in red) is finally applied where each offspring
-chromosome is decoded into a <img class="math" src="_images/math/9a08a8d8306918a13000efa39c200175e5553b9b.png" alt="B_i"/> model, the best solutions from the
+chromosome is decoded into a <span class="math">\(B_i\)</span> model, the best solutions from the
 previous iteration added into this new generation by the elitism operator (to
 ensure the fittest chromosomes are not lost) and the evaluation operator which
-obtains the <img class="math" src="_images/math/57d03cee2edfc611c503064dde7d787ab99bbe33.png" alt="L_i^{\ast}"/> values associated with this generation. Every
+obtains the <span class="math">\(L_i^{\ast}\)</span> values associated with this generation. Every
 generation produces a “best solution” or fittest chromosome/model; we count the
 number of times this solution remains unchanged throughout generations and store
-it as <img class="math" src="_images/math/4dd4c2b6ae8925ada1bc28493e41f532f763b47b.png" alt="N_{bs}"/>. If <img class="math" src="_images/math/4dd4c2b6ae8925ada1bc28493e41f532f763b47b.png" alt="N_{bs}"/> reaches a fixed value <img class="math" src="_images/math/b8a013774ea7f069fbacbbfc18fc408e78c18f57.png" alt="N_{ei}"/>,
+it as <span class="math">\(N_{bs}\)</span>. If <span class="math">\(N_{bs}\)</span> reaches a fixed value <span class="math">\(N_{ei}\)</span>,
 the extinction/immigration operator is applied . This operator prevents the GA
 from getting stuck in a local minima by discarding every chromosome but the
-fittest one (extinction) and introducing <img class="math" src="_images/math/112e275c44bc8e4d3da68db871c02433966101ad.png" alt="N_{pop}-1"/> new random
+fittest one (extinction) and introducing <span class="math">\(N_{pop}-1\)</span> new random
 chromosomes into the generation pool (immigration); the number of times this
-operator is run consecutively is stored in <img class="math" src="_images/math/60bf1ec27b53723f2c84c312649a00b37bd11687.png" alt="N_{ct}^{ei}"/>.</p>
+operator is run consecutively is stored in <span class="math">\(N_{ct}^{ei}\)</span>.</p>
 <p>An <em>exit switch</em> is put in place to terminate the GA if no improvement on the
-best solution found happened after <img class="math" src="_images/math/a088f3fd627721844c026ae7773aeca45373cf68.png" alt="N_{es}"/> consecutive applications of
-the extinction/immigration operator, i.e.: when <img class="math" src="_images/math/889da973b6352cbff2465e7d09ca9a2c90a149f4.png" alt="N_{ct}^{ei}=N_{es}"/>, in
+best solution found happened after <span class="math">\(N_{es}\)</span> consecutive applications of
+the extinction/immigration operator, i.e.: when <span class="math">\(N_{ct}^{ei}=N_{es}\)</span>, in
 which case the GA is forced to halt.</p>
-<p>The GA iterates for a maximum of <img class="math" src="_images/math/9712a794fe7048acefe79b5e78e0e8f4ab4ef5f5.png" alt="N_{gen}"/> generations unless the exit
+<p>The GA iterates for a maximum of <span class="math">\(N_{gen}\)</span> generations unless the exit
 switch forces a premature termination, in either case the result is the best fit
-model found for <img class="math" src="_images/math/0043fe6507e9b1d112e07a2801e24927e267dd50.png" alt="A"/>, the observed SC, represented by
-<img class="math" src="_images/math/ad3603e644926e74e0533147f5111430c2188679.png" alt="\mathbf{L}_A(z^{\star},  a^{\star}, d^{\star}, e^{\star})"/>. Every
-variable involved in the GA process (e.g.: <img class="math" src="_images/math/9712a794fe7048acefe79b5e78e0e8f4ab4ef5f5.png" alt="N_{gen}"/>, <img class="math" src="_images/math/47cf473fcfed60404a8737e51b4369497ed3d7db.png" alt="N_{pop}"/>,
-<img class="math" src="_images/math/b8a013774ea7f069fbacbbfc18fc408e78c18f57.png" alt="N_{ei}"/>, etc.) can be modified via <strong>ASteCA</strong>&#8216;s input data file.</p>
+model found for <span class="math">\(A\)</span>, the observed SC, represented by
+<span class="math">\(\mathbf{L}_A(z^{\star},  a^{\star}, d^{\star}, e^{\star})\)</span>. Every
+variable involved in the GA process (e.g.: <span class="math">\(N_{gen}\)</span>, <span class="math">\(N_{pop}\)</span>,
+<span class="math">\(N_{ei}\)</span>, etc.) can be modified via <strong>ASteCA</strong>&#8216;s input data file.</p>
 </div>
 
 
@@ -253,6 +253,7 @@ variable involved in the GA process (e.g.: <img class="math" src="_images/math/9
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

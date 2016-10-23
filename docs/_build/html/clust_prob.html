@@ -168,9 +168,9 @@ the test statistic.</em></p>
 </div></blockquote>
 <p>A strict mathematical derivation of the method can be found in <a class="reference external" href="http://dx.doi.org/10.1073/pnas.1117796109">Duong et al.
 (2012)</a>.</p>
-<p>The null hypothesis, <img class="math" src="_images/math/abf2a495924d423bfae0ffb1047b51a2f576e405.png" alt="H_0"/>, is that both PDs were drawn from the same
+<p>The null hypothesis, <span class="math">\(H_0\)</span>, is that both PDs were drawn from the same
 underlying distribution, where a lower p-value indicates a lower probability
-of <img class="math" src="_images/math/abf2a495924d423bfae0ffb1047b51a2f576e405.png" alt="H_0"/> being true.
+of <span class="math">\(H_0\)</span> being true.
 The function is used to compare the cluster region&#8217;s PD with the PD of every
 defined field region, and the PD of each field region with that of the remaining
 field regions. This results in two sets of p-values: one for the <em>cluster vs
@@ -187,8 +187,8 @@ stars when compared whit the PDs of surrounding field regions.</p>
 <div class="figure align-center" id="id1">
 <span id="fig-clust-prob"></span><img alt="_images/kde-pvalue.png" src="_images/kde-pvalue.png" />
 <p class="caption"><span class="caption-number">Fig. 10.1 </span><span class="caption-text"><em>Left</em>: Function applied on a synthetic cluster, the curves are clearly
-separated with the blue one (<img class="math" src="_images/math/a94e5e402e10029a5bddc9f97f146dc63b05a182.png" alt="KDE_{cl}"/>, <em>cluster vs field regions</em> PD
-analysis) showing much lower values than the red curve (<img class="math" src="_images/math/62c1c3a0a298f110630fc50fb9b8931650bf0be3.png" alt="KDE_{fl}"/>,
+separated with the blue one (<span class="math">\(KDE_{cl}\)</span>, <em>cluster vs field regions</em> PD
+analysis) showing much lower values than the red curve (<span class="math">\(KDE_{fl}\)</span>,
 <em>field vs field region</em> PD analysis). The final probability value obtained
 is close to 1 (or 100%).
 <em>Right</em>: same analysis performed on a field region where no cluster is
@@ -206,8 +206,8 @@ a very low probability of the overdensity being a true cluster; the opposite
 is true for lower overlap values. We thus obtain the probability that the
 overdensity is a real cluster as:</p>
 <div class="math">
-<p><img src="_images/math/826dc8fa3fe136381d65835dee91903f464a1687.png" alt="P_{cl}^{KDE} = 1-overlap"/></p>
-</div><p>These values are shown in <a class="reference internal" href="#fig-clust-prob"><span class="std std-numref">Fig. 10.1</span></a> in the upper left corner.</p>
+\[P_{cl}^{KDE} = 1-overlap\]</div>
+<p>These values are shown in <a class="reference internal" href="#fig-clust-prob"><span class="std std-numref">Fig. 10.1</span></a> in the upper left corner.</p>
 </div>
 
 
@@ -260,6 +260,7 @@ overdensity is a real cluster as:</p>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

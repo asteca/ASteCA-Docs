@@ -196,7 +196,7 @@ this analysis is skipped and only the passed value is presented in the plot.</p>
 <p>Once the approximate center coordinates have been obtained, <strong>ASteCA</strong> proceeds
 to refine this result. To this end, the code employs the approximate center
 coordinates obtained in the previous step using the smallest bandwidth value
-(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><span class="std std-numref">Fig. 6.1</span></a>), or <img class="math" src="_images/math/e937201e5d475fb5332d07376663816232346829.png" alt="center_{bw-min}"/>.</p>
+(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><span class="std std-numref">Fig. 6.1</span></a>), or <span class="math">\(center_{bw-min}\)</span>.</p>
 <p>These coordinates serve as initial values for the cluster&#8217;s center. The final
 <em>precise</em> values are determined as the maximum spatial density of a
 two-dimensional Gaussian kernel, generated on a reduced square area of the
@@ -207,7 +207,7 @@ positional diagram of the cluster; see <a class="reference internal" href="#fig-
 KDE. Blue lines are contour curves, the center found is marked with a cross.</span></p>
 </div>
 <p>The square area where the final center coordinates are searched is centered on
-the <img class="math" src="_images/math/e937201e5d475fb5332d07376663816232346829.png" alt="center_{bw-min}"/> values, with a side length that spans 50% of the
+the <span class="math">\(center_{bw-min}\)</span> values, with a side length that spans 50% of the
 minimum x,y range.
 The bandwidth of the fitted kernel is automatically defined via Scott&#8217;s rule
 (<a class="reference external" href="http://onlinelibrary.wiley.com/book/10.1002/9780470316849">Scott 1992</a>).</p>
@@ -285,6 +285,7 @@ either x or y, is larger than 10% of the final center coordinates.</li>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
