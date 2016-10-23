@@ -32,6 +32,9 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="ASteCA v0.1.9.5 documentation" href="index.html"/>
         <link rel="up" title="12. Best fit model" href="best_fit.html"/>
         <link rel="next" title="12.2. Likelihood" href="likelihood.html"/>
@@ -219,7 +222,7 @@ and distance modulus values.</span></p>
 for a population of stars. For a population of <img class="math" src="_images/math/f4170ed8938b79490d8923857962695514a8e4cb.png" alt="N"/> stars with
 masses <img class="math" src="_images/math/a9850fd3cf70d5ac90a474d257041fe9dcf965e7.png" alt="m_i"/> and a total mass of <img class="math" src="_images/math/1dbdb876c5086a0dcc9f3e42ada5eb8e2f180db2.png" alt="M_T"/>:</p>
 <div class="math">
-<p><img src="_images/math/6129ffb72e2346ab11b49dd24144c82b6b674f2f.png" alt="IMF \, &amp;\rightarrow \, \xi(m)=\frac{dn}{dm} \, \rightarrow \,dn = \xi(m)dm \\
+<p><img src="_images/math/7a1e90b70db0fa29c2e34d460a93a1d2b1e09a7d.png" alt="IMF \, &amp;\rightarrow \, \xi(m)=\frac{dn}{dm} \, \rightarrow \,dn = \xi(m)dm \\
 M_T &amp;= \sum_{i=1}^N m_i \, \rightarrow \, M_T = C\int_{m_l}^{m_h} m(n)dn = \\
 &amp;= C\int_{m_l}^{m_h} m\xi(m)dm"/></p>
 </div><p>where <img class="math" src="_images/math/949f2cbed1ff84f572f3d233f36abf5fd5d38c17.png" alt="m_l"/> and <img class="math" src="_images/math/9bea08915c3cac48af1c6ea47df9d5372efabca5.png" alt="m_h"/> are the mass limits for the IMF
@@ -228,10 +231,10 @@ M_T &amp;= \sum_{i=1}^N m_i \, \rightarrow \, M_T = C\int_{m_l}^{m_h} m(n)dn = \
 <img class="math" src="_images/math/0adaf57a413208ff358f13dea7b16ec65b9af72a.png" alt="M_T=1 M_{\odot}"/>, allows us to obtain the normalization constant
 <img class="math" src="_images/math/92f1ac1f62d4f5af721784de8310b6d7acece911.png" alt="C_1"/> and treat the normalized IMF as a PDF:</p>
 <div class="math">
-<p><img src="_images/math/4eb77f8e0255f4bcbada015dacfefd0a4968f5bd.png" alt="M_T=1M_{\odot}\, \rightarrow \, C_1 = \frac{1}{\int_{m_l}^{m_h} m\xi(m)dm}"/></p>
+<p><img src="_images/math/e7e7cff962401be6f33e74d48e62867369204149.png" alt="M_T=1M_{\odot}\, \rightarrow \, C_1 = \frac{1}{\int_{m_l}^{m_h} m\xi(m)dm}"/></p>
 </div><p>and thus the normalized IMF can be written as:</p>
 <div class="math">
-<p><img src="_images/math/5ecaa877d6d886e971938c804889adb406c3bf4e.png" alt="PDF(m) = \xi(m)_{norm} = C_1 \xi(m)"/></p>
+<p><img src="_images/math/dc724cef583ac0031f1549b12e7b01757aafeb1f.png" alt="PDF(m) = \xi(m)_{norm} = C_1 \xi(m)"/></p>
 </div><p>This is the first step, performed by the <code class="docutils literal"><span class="pre">get-IMF-PDF</span></code> function for
 a given selected IMF (Chabrier 2001, Kroupa et al. 1993, Kroupa 2002)</p>
 <p>Once the PDF is generated, every time a new synthetic cluster is created

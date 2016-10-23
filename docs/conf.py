@@ -16,20 +16,31 @@ import sys
 import os
 
 
-# Added by me ######
-# on_rtd checks whether we are on readthedocs.org
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+# # Added by me ######
+# # on_rtd checks whether we are on readthedocs.org
+# on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
-# Only import and set the theme if we're building docs locally.
-if not on_rtd:
-    import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-else:
-    # Otherwise, readthedocs.org uses their theme by default, so no need to
-    # specify it
-    html_theme = 'default'
-# Added by me ######
+# # Only import and set the theme if we're building docs locally.
+# if not on_rtd:
+#     import sphinx_rtd_theme
+#     html_theme = 'sphinx_rtd_theme'
+#     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# else:
+#     # Otherwise, readthedocs.org uses their theme by default, so no need to
+#     # specify it
+#     html_theme = 'default'
+# # Added by me ######
+
+html_theme = 'sphinx_rtd_theme'
+
+# html_theme = 'alabaster'
+# html_theme_options = {
+#     'github_button': 'true',
+#     'github_user': 'Gabriel-p',
+#     'github_repo': 'ASteCA',
+#     'description': 'A package for automatic star cluster processing.',
+#     'github_banner': 'true'
+# }
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the

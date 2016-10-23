@@ -32,6 +32,9 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="ASteCA v0.1.9.5 documentation" href="index.html"/>
         <link rel="next" title="10. Cluster probability" href="clust_prob.html"/>
         <link rel="prev" title="8. Cluster radius estimation" href="radius.html"/> 
@@ -151,19 +154,19 @@
 field stars contamination, the following equations are used.</p>
 <p>First, assume:</p>
 <div class="math" id="equation-integ-cl-fl">
-<p><span class="eqno">(1)</span><img src="_images/math/b3e481e69ad49d762b23108fbfdcfa8bc32dc74d.png" alt="I_{cl+fl} = I_{cl} + I_{fl}"/></p>
+<p><span class="eqno">(1)</span><img src="_images/math/cb5494b038f0dd27359505c93055c7ae55fccf69.png" alt="I_{cl+fl} = I_{cl} + I_{fl}"/></p>
 </div><p>then:</p>
 <div class="math">
-<p><img src="_images/math/cba6abe07b109043a34ef3ba68c6ff8fee8334c8.png" alt="V^*_{cl} - V^*_{cl+fl} = -2.5 \log(I_{cl}/I_{cl+fl})"/></p>
+<p><img src="_images/math/ec2955a321774556994e807340fe6ae09e02e2fd.png" alt="V^*_{cl} - V^*_{cl+fl} = -2.5 \log(I_{cl}/I_{cl+fl})"/></p>
 </div><p>using Eq. <a href="#equation-integ-cl-fl">(1)</a> we have:</p>
 <div class="math" id="equation-integ-cl-fl2">
-<p><span class="eqno">(2)</span><img src="_images/math/5e76b9dda8fb158e45817639c7453a11afe17db6.png" alt="V^*_{cl} - V^*_{cl+fl} = -2.5 \log(1 - I_{fl}/I_{cl+fl})"/></p>
+<p><span class="eqno">(2)</span><img src="_images/math/28a3ab908b4df963c34c8cc3bd56e695efdc6f31.png" alt="V^*_{cl} - V^*_{cl+fl} = -2.5 \log(1 - I_{fl}/I_{cl+fl})"/></p>
 </div><p>and given:</p>
 <div class="math" id="equation-integ-cl-fl3">
-<p><span class="eqno">(3)</span><img src="_images/math/60d98ff569265988854081163f9a90108b782adf.png" alt="V^*_{fl} - V^*_{cl+fl} = -2.5 \log(I_{fl}/I_{cl+fl}) \Rightarrow \frac{I_{fl}}{I_{cl+fl}} = 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}"/></p>
+<p><span class="eqno">(3)</span><img src="_images/math/9f5ddf420e8cef2e51032e16568204edd4c46f67.png" alt="V^*_{fl} - V^*_{cl+fl} = -2.5 \log(I_{fl}/I_{cl+fl}) \Rightarrow \frac{I_{fl}}{I_{cl+fl}} = 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}"/></p>
 </div><p>we can combine now Eqs. <a href="#equation-integ-cl-fl2">(2)</a> and <a href="#equation-integ-cl-fl3">(3)</a> to obtain:</p>
 <div class="math">
-<p><img src="_images/math/b3b3b60b98dbe93ebff58cca66791ee8a059505f.png" alt="V^*_{cl} = -2.5 \log(1 - 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}) + V^*_{cl+fl}"/></p>
+<p><img src="_images/math/1f266046df02b463890e0cd9883b0b7d8d4ab0a6.png" alt="V^*_{cl} = -2.5 \log(1 - 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}) + V^*_{cl+fl}"/></p>
 </div></div>
 
 
