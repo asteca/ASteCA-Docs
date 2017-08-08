@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Input data file &mdash; ASteCA v0.1.9.5 documentation</title>
+  <title>3. Input data file &mdash; ASteCA v0.1.9.5 documentation</title>
   
 
+  
+  
   
   
 
@@ -36,8 +38,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="ASteCA v0.1.9.5 documentation" href="index.html"/>
-        <link rel="next" title="5. Running" href="running.html"/>
-        <link rel="prev" title="3. Requirements" href="requirements.html"/> 
+        <link rel="next" title="4. Running" href="running.html"/>
+        <link rel="prev" title="2. Installing" href="install.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -46,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -86,20 +89,22 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">3. Requirements</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Input data file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running.html">5. Running</a></li>
-<li class="toctree-l1"><a class="reference internal" href="center.html">6. Center determination</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="best_fit.html">12. Best fit model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Installing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Input data file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">9. Cluster probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best_fit.html">11. Best fit model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
 </ul>
 
             
@@ -112,8 +117,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ASteCA</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASteCA</a>
+        
       </nav>
 
 
@@ -122,32 +129,49 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>4. Input data file</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>3. Input data file</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/input_data.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="input-data-file">
-<h1>4. Input data file<a class="headerlink" href="#input-data-file" title="Permalink to this headline">¶</a></h1>
-<p>The data file that contains the IDs  identifying each star, the star&#8217;s coordinates and
-their full photometric data must follow certain rules.</p>
+<h1>3. Input data file<a class="headerlink" href="#input-data-file" title="Permalink to this headline">¶</a></h1>
+<p>The data file that contains the IDs  identifying each star, the star&#8217;s
+coordinates and their full photometric data must follow certain rules.</p>
 <ol class="arabic simple">
 <li>Data must be arranged into columns using points as decimal separators.</li>
 <li>All lines which are not part of the data columns <strong>must</strong> be commented
@@ -156,26 +180,25 @@ out using a <cite>#</cite> symbol at the beginning.</li>
 <li>All photometric values (either magnitudes or colors) outside the range
 <cite>[-50., 50.]</cite> will be considered as <em>bad photometry</em> and any star showing
 such a value for <em>any</em> of its magnitudes/colors will be discarded.</li>
-<li>All photometric columns <strong>must</strong> have an associated error column. <em>The same
-error column can be assigned to as many magnitudes/colors as needed</em>. If no
-error column is present, a mock photometric error <strong>must</strong> be created and
-added to the file. Errors are assigned to magnitudes/colors via the input
-parameters file.</li>
+<li>All photometric columns <strong>must</strong> have an associated error column.</li>
 <li>At least <em>one</em> magnitude column <strong>must</strong> be defined.</li>
 </ol>
 </div>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="running.html" class="btn btn-neutral float-right" title="5. Running" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="running.html" class="btn btn-neutral float-right" title="4. Running" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="requirements.html" class="btn btn-neutral" title="3. Requirements" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral" title="2. Installing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -209,7 +232,8 @@ parameters file.</li>
             VERSION:'v0.1.9.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

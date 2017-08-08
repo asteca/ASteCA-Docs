@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -45,6 +47,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,20 +88,22 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">3. Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="input_data.html">4. Input data file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running.html">5. Running</a></li>
-<li class="toctree-l1"><a class="reference internal" href="center.html">6. Center determination</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="best_fit.html">12. Best fit model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">9. Cluster probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best_fit.html">11. Best fit model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
 </ul>
 
             
@@ -111,8 +116,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">ASteCA</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ASteCA</a>
+        
       </nav>
 
 
@@ -121,23 +128,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
-      
-    <li>ASteCA</li>
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>ASteCA</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/index.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -161,12 +185,13 @@
 </tbody>
 </table>
 <p>This is the manual of operation for the Automated Stellar
-Cluster Analysis (<strong>ASteCA</strong>) package.</p>
+Cluster Analysis (<strong>ASteCA</strong>) package.
+If you encounter any problems please <a class="reference external" href="mailto:gabrielperren&#37;&#52;&#48;gmail&#46;com">contact me</a> or <a class="reference external" href="https://github.com/Gabriel-p/asteca/issues/new">open a new issue</a>.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This documentation is in the process of being written and is
 <strong>not yet finished</strong>. Updates will be made as versions are released.
-Last updated: Aug 07, 2016.</p>
+Last updated: Aug 08, 2017.</p>
 </div>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
@@ -177,37 +202,32 @@ Last updated: Aug 07, 2016.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="download.html#cloning-the-repository">2.1. Cloning the repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Installing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#working-environment">2.1. Working environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#download">2.2. Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#running">2.3. Running</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">3. Requirements</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#r-software">3.1. R software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#python-pip">3.2. Python-pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#python-dependencies">3.3. Python dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#troubleshooting">3.4. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">4.1. Theoretical isochrones</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="input_data.html">4. Input data file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running.html">5. Running</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="running.html#theoretical-isochrones">5.1. Theoretical isochrones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="center.html#approximate-center-values">5.1. Approximate center values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="center.html#precise-center-value">5.2. Precise center value</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="center.html">6. Center determination</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="center.html#approximate-center-values">6.1. Approximate center values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="center.html#precise-center-value">6.2. Precise center value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">9. Cluster probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">10.1. Reduced membership</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="decont_algor.html#reduced-membership">11.1. Reduced membership</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="best_fit.html">12. Best fit model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best_fit.html">11. Best fit model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
 </ul>
 </div>
 </div>
@@ -223,12 +243,15 @@ Last updated: Aug 07, 2016.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="about.html" class="btn btn-neutral float-right" title="1. About" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="about.html" class="btn btn-neutral float-right" title="1. About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -263,7 +286,8 @@ Last updated: Aug 07, 2016.</p>
             VERSION:'v0.1.9.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

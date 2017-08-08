@@ -16,11 +16,12 @@ ASteCA
 
 This is the manual of operation for the Automated Stellar
 Cluster Analysis (**ASteCA**) package.
+If you encounter any problems please `contact me`_ or `open a new issue`_.
 
 .. warning::
    This documentation is in the process of being written and is
    **not yet finished**. Updates will be made as versions are released.
-   Last updated: Aug 07, 2016.
+   Last updated: Aug 08, 2017.
 
 .. important::
    A PDF version of this manual can be downloaded `here`__.
@@ -33,8 +34,7 @@ Table of Contents
    :maxdepth: 2
 
    about
-   download
-   requirements
+   install
    input_data
    running
    center
@@ -54,4 +54,6 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+.. _contact me: mailto:gabrielperren@gmail.com
+.. _open a new issue: https://github.com/Gabriel-p/asteca/issues/new
 .. __: https://readthedocs.org/projects/asteca/downloads/pdf/latest/

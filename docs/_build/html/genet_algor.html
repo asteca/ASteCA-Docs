@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12.3. Genetic algorithm &mdash; ASteCA v0.1.9.5 documentation</title>
+  <title>11.3. Genetic algorithm &mdash; ASteCA v0.1.9.5 documentation</title>
   
 
+  
+  
   
   
 
@@ -36,9 +38,9 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="ASteCA v0.1.9.5 documentation" href="index.html"/>
-        <link rel="up" title="12. Best fit model" href="best_fit.html"/>
-        <link rel="next" title="12.4. Bootstrap" href="bootstrap.html"/>
-        <link rel="prev" title="12.2. Likelihood" href="likelihood.html"/> 
+        <link rel="up" title="11. Best fit model" href="best_fit.html"/>
+        <link rel="next" title="11.4. Bootstrap" href="bootstrap.html"/>
+        <link rel="prev" title="11.2. Likelihood" href="likelihood.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -47,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -87,26 +90,28 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">3. Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="input_data.html">4. Input data file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running.html">5. Running</a></li>
-<li class="toctree-l1"><a class="reference internal" href="center.html">6. Center determination</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="best_fit.html">12. Best fit model</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">12.1. Synthetic clusters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="likelihood.html">12.2. Likelihood</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">12.3. Genetic algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">12.4. Bootstrap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">9. Cluster probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="best_fit.html">11. Best fit model</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="synth_clust.html">11.1. Synthetic clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="likelihood.html">11.2. Likelihood</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.3. Genetic algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">11.4. Bootstrap</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
 </ul>
 
             
@@ -119,8 +124,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ASteCA</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASteCA</a>
+        
       </nav>
 
 
@@ -129,41 +136,58 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="best_fit.html">12. Best fit model</a> &raquo;</li>
-      
-    <li>12.3. Genetic algorithm</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="best_fit.html">11. Best fit model</a> &raquo;</li>
+        
+      <li>11.3. Genetic algorithm</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/genet_algor.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="genetic-algorithm">
-<span id="genetic-algor"></span><h1>12.3. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
+<span id="genetic-algor"></span><h1>11.3. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">Not finished.</p>
 </div>
 <p>The implementation of the GA can be divided into several blocks composed of
-operators, as shown in <a class="reference internal" href="#fig-ga-tree"><span class="std std-numref">Fig. 12.5</span></a>.</p>
+operators, as shown in <a class="reference internal" href="#fig-ga-tree"><span class="std std-numref">Fig. 11.5</span></a>.</p>
 <div class="figure align-center" id="id1">
 <span id="fig-ga-tree"></span><img alt="_images/ga-tree.png" src="_images/ga-tree.png" />
-<p class="caption"><span class="caption-number">Fig. 12.5 </span><span class="caption-text">Genetic algorithm work tree.</span></p>
+<p class="caption"><span class="caption-number">Fig. 11.5 </span><span class="caption-text">Genetic algorithm work tree.</span></p>
 </div>
 <p>The first step consists in drawing a random initial population, that is a set of
 <span class="math">\(N_{pop}\)</span> random models taken from <span class="math">\(B\)</span>. This set is evaluated to
@@ -205,15 +229,18 @@ variable involved in the GA process (e.g.: <span class="math">\(N_{gen}\)</span>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="bootstrap.html" class="btn btn-neutral float-right" title="12.4. Bootstrap" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="bootstrap.html" class="btn btn-neutral float-right" title="11.4. Bootstrap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="likelihood.html" class="btn btn-neutral" title="12.2. Likelihood" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="likelihood.html" class="btn btn-neutral" title="11.2. Likelihood" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -247,7 +274,8 @@ variable involved in the GA process (e.g.: <span class="math">\(N_{gen}\)</span>
             VERSION:'v0.1.9.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

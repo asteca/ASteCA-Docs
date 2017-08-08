@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -36,7 +38,7 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="ASteCA v0.1.9.5 documentation" href="index.html"/>
-        <link rel="next" title="2. Download" href="download.html"/>
+        <link rel="next" title="2. Installing" href="install.html"/>
         <link rel="prev" title="ASteCA" href="index.html"/> 
 
   
@@ -46,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -86,20 +89,22 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">3. Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="input_data.html">4. Input data file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running.html">5. Running</a></li>
-<li class="toctree-l1"><a class="reference internal" href="center.html">6. Center determination</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdp.html">7. Radial density profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radius.html">8. Cluster radius estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="int_mags.html">9. Integrated magnitudes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">10. Cluster probability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">11. Decontamination algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="best_fit.html">12. Best fit model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performance.html">13. Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_data.html">3. Input data file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="center.html">5. Center determination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">6. Radial density profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radius.html">7. Cluster radius estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_mags.html">8. Integrated magnitudes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clust_prob.html">9. Cluster probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decont_algor.html">10. Decontamination algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best_fit.html">11. Best fit model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">12. Performance</a></li>
 </ul>
 
             
@@ -112,8 +117,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ASteCA</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASteCA</a>
+        
       </nav>
 
 
@@ -122,23 +129,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>1. About</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>1. About</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/about.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -146,22 +170,14 @@
             
   <div class="section" id="about">
 <h1>1. About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
-<p><strong>ASteCA</strong> is an open source code
-developed entirely in <strong>python</strong> designed to fully automatize the usual tests
-applied to stellar clusters (SC) in order to determine their characteristics:
-center, radius, stars&#8217; membership probabilities and associated
-intrinsic/extrinsic parameters: metallicity, age, extinction, distance
-and eventually total mass.</p>
+<p><strong>ASteCA</strong> is an open source code developed entirely in Python, designed to
+fully automatize the usual tests applied to stellar clusters (SC) in order to
+determine their characteristics: center, radius, stars&#8217; membership probabilities
+and associated intrinsic/extrinsic parameters: metallicity, age, extinction,
+distance, binarity, and total mass.</p>
 <p>The code is designed modularly thus allowing the user to select which
 tests to run and which to skip, all managed through a simple input data
-file. Thanks to this modularity functions can even be swapped, added or
-removed so, for example, more than one decontamination algorithm can be
-made available for the user to choose.</p>
-<p>In its current version <strong>ASteCA</strong> can be applied to a number of color
-magnitude diagrams (CMD) in the systems of Johnson, Washington and 2MASS
-but it can be easily extended to work on any number of CMDs. Eventually
-the code can be generalized to work with an arbitrary nubmer of colors
-instead of being limited to a single color, like it is when using a CMD.</p>
+file.</p>
 <p><strong>ASteCA</strong> is intended to run without the need for user intervention but
 both a semi-automatic and a manual mode are made available in case user
 input is necessary or required.</p>
@@ -169,15 +185,18 @@ input is necessary or required.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="download.html" class="btn btn-neutral float-right" title="2. Download" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="install.html" class="btn btn-neutral float-right" title="2. Installing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="ASteCA" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="ASteCA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -211,7 +230,8 @@ input is necessary or required.</p>
             VERSION:'v0.1.9.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

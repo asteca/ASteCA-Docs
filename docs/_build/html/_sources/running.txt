@@ -18,13 +18,10 @@ modified, the code can be executed with the command:
 
 .. code-block:: bash
 
-    $ python asteca.py
+    (asteca27) $ python asteca.py
 
 This should work both in Linux based systems and OS X (Mac), but I've
 only tested it with Linux (since that's what I use).
-
-If you run into any issues, please check first the troubleshooting section
-Sect :ref:`sect-trouble`.
 
 The ``CLUSTER.DAT`` file located in the ``input/`` folder contains
 a synthetic open cluster generated via the `MASSCLEAN`_ package with the
