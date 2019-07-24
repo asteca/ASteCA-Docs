@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="author" title="About these documents"
-              href="about.html"/>
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ASteCA v0.2.4 documentation" href="index.html"/>
-        <link rel="up" title="11. Best fit model" href="best_fit.html"/>
-        <link rel="next" title="11.4. Bootstrap" href="bootstrap.html"/>
-        <link rel="prev" title="11.2. Likelihood" href="likelihood.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="11.4. Bootstrap" href="bootstrap.html" />
+    <link rel="prev" title="11.2. Likelihood" href="likelihood.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -123,7 +116,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ASteCA</a>
@@ -131,9 +124,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -164,7 +158,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/genet_algor.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/genet_algor.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -179,59 +173,57 @@
             
   <div class="section" id="genetic-algorithm">
 <span id="genetic-algor"></span><h1>11.3. Genetic algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Not finished.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Not finished.</p>
 </div>
 <p>The implementation of the GA can be divided into several blocks composed of
 operators, as shown in <a class="reference internal" href="#fig-ga-tree"><span class="std std-numref">Fig. 11.5</span></a>.</p>
-<div class="figure align-center" id="id1">
+<div class="figure align-center" id="id2">
 <span id="fig-ga-tree"></span><img alt="_images/ga-tree.png" src="_images/ga-tree.png" />
-<p class="caption"><span class="caption-number">Fig. 11.5 </span><span class="caption-text">Genetic algorithm work tree.</span></p>
+<p class="caption"><span class="caption-number">Fig. 11.5 </span><span class="caption-text">Genetic algorithm work tree.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The first step consists in drawing a random initial population, that is a set of
-<span class="math">\(N_{pop}\)</span> random models taken from <span class="math">\(B\)</span>. This set is evaluated to
-obtain the <span class="math">\(L_i\)</span> likelihood for each <span class="math">\(B_i\)</span> model via Eq. ?? and fed
+<span class="math notranslate nohighlight">\(N_{pop}\)</span> random models taken from <span class="math notranslate nohighlight">\(B\)</span>. This set is evaluated to
+obtain the <span class="math notranslate nohighlight">\(L_i\)</span> likelihood for each <span class="math notranslate nohighlight">\(B_i\)</span> model via Eq. ?? and fed
 to the GA loop as the starting generation.</p>
 <p>The <em>selection</em> block (in gray) contains the selection operator that picks
 models to reproduce from the generation pool with a breeding probability given
 by their ranked fitness (the rank-based fitness function associates higher
-<span class="math">\(L_i\)</span> values with higher probabilities) and the encode operator which
+<span class="math notranslate nohighlight">\(L_i\)</span> values with higher probabilities) and the encode operator which
 translates the parameter values that define each chosen model into a binary
 chromosome .</p>
 <p>The <em>breeding</em> block (in green) pairs chromosomes randomly and produces a new
 generation via the crossover and mutation operators that combine each pair of
 parent chromosomes into two (theoretically fitter) offsprings.</p>
 <p>The <em>evaluation</em> block (in red) is finally applied where each offspring
-chromosome is decoded into a <span class="math">\(B_i\)</span> model, the best solutions from the
+chromosome is decoded into a <span class="math notranslate nohighlight">\(B_i\)</span> model, the best solutions from the
 previous iteration added into this new generation by the elitism operator (to
 ensure the fittest chromosomes are not lost) and the evaluation operator which
-obtains the <span class="math">\(L_i^{\ast}\)</span> values associated with this generation. Every
+obtains the <span class="math notranslate nohighlight">\(L_i^{\ast}\)</span> values associated with this generation. Every
 generation produces a “best solution” or fittest chromosome/model; we count the
 number of times this solution remains unchanged throughout generations and store
-it as <span class="math">\(N_{bs}\)</span>. If <span class="math">\(N_{bs}\)</span> reaches a fixed value <span class="math">\(N_{ei}\)</span>,
+it as <span class="math notranslate nohighlight">\(N_{bs}\)</span>. If <span class="math notranslate nohighlight">\(N_{bs}\)</span> reaches a fixed value <span class="math notranslate nohighlight">\(N_{ei}\)</span>,
 the extinction/immigration operator is applied . This operator prevents the GA
 from getting stuck in a local minima by discarding every chromosome but the
-fittest one (extinction) and introducing <span class="math">\(N_{pop}-1\)</span> new random
+fittest one (extinction) and introducing <span class="math notranslate nohighlight">\(N_{pop}-1\)</span> new random
 chromosomes into the generation pool (immigration); the number of times this
-operator is run consecutively is stored in <span class="math">\(N_{ct}^{ei}\)</span>.</p>
+operator is run consecutively is stored in <span class="math notranslate nohighlight">\(N_{ct}^{ei}\)</span>.</p>
 <p>An <em>exit switch</em> is put in place to terminate the GA if no improvement on the
-best solution found happened after <span class="math">\(N_{es}\)</span> consecutive applications of
-the extinction/immigration operator, i.e.: when <span class="math">\(N_{ct}^{ei}=N_{es}\)</span>, in
+best solution found happened after <span class="math notranslate nohighlight">\(N_{es}\)</span> consecutive applications of
+the extinction/immigration operator, i.e.: when <span class="math notranslate nohighlight">\(N_{ct}^{ei}=N_{es}\)</span>, in
 which case the GA is forced to halt.</p>
-<p>The GA iterates for a maximum of <span class="math">\(N_{gen}\)</span> generations unless the exit
+<p>The GA iterates for a maximum of <span class="math notranslate nohighlight">\(N_{gen}\)</span> generations unless the exit
 switch forces a premature termination, in either case the result is the best fit
-model found for <span class="math">\(A\)</span>, the observed SC, represented by
-<span class="math">\(\mathbf{L}_A(z^{\star},  a^{\star}, d^{\star}, e^{\star})\)</span>. Every
-variable involved in the GA process (e.g.: <span class="math">\(N_{gen}\)</span>, <span class="math">\(N_{pop}\)</span>,
-<span class="math">\(N_{ei}\)</span>, etc.) can be modified via <strong>ASteCA</strong>&#8216;s input data file.</p>
+model found for <span class="math notranslate nohighlight">\(A\)</span>, the observed SC, represented by
+<span class="math notranslate nohighlight">\(\mathbf{L}_A(z^{\star},  a^{\star}, d^{\star}, e^{\star})\)</span>. Every
+variable involved in the GA process (e.g.: <span class="math notranslate nohighlight">\(N_{gen}\)</span>, <span class="math notranslate nohighlight">\(N_{pop}\)</span>,
+<span class="math notranslate nohighlight">\(N_{ei}\)</span>, etc.) can be modified via <strong>ASteCA</strong>’s input data file.</p>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -240,7 +232,7 @@ variable involved in the GA process (e.g.: <span class="math">\(N_{gen}\)</span>
         <a href="bootstrap.html" class="btn btn-neutral float-right" title="11.4. Bootstrap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="likelihood.html" class="btn btn-neutral" title="11.2. Likelihood" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="likelihood.html" class="btn btn-neutral float-left" title="11.2. Likelihood" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -249,11 +241,11 @@ variable involved in the GA process (e.g.: <span class="math">\(N_{gen}\)</span>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Gabriel I Perren.
+        &copy; Copyright 2015, Gabriel I Perren
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -266,37 +258,15 @@ variable involved in the GA process (e.g.: <span class="math">\(N_{gen}\)</span>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'v0.2.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

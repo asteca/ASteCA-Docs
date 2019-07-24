@@ -18,7 +18,7 @@ modified, the code can be executed with the command:
 
 .. code-block:: bash
 
-    (asteca27) $ python asteca.py
+    (asteca) $ python asteca.py
 
 This should work both in Linux based systems and OS X (Mac), but I've
 only tested it with Linux (since that's what I use).
@@ -55,17 +55,8 @@ can be used to automatically fetch them from the site. I describe both
 possibilities below.
 
 .. important::
-   The current version of the code only recognizes a handful of photometric
-   systems from those available at CMD, but an upcoming version (v0.2.0) will
-   extend **ASteCA** to support all systems present in the CMD service.
-   
-   The systems supported are:
-
-   * UBVRIJHK (cf. Maiz-Apellaniz 2006 + Bessell 1990)
-   * 2MASS JHK_s
-   * Washington CMT1T2
-   * SDSS ugriz
-   * HST/ACS WFC
+   The current version of the code supports all the photometric
+   systems from available at the CMD service.
 
 
 Manual download
@@ -90,7 +81,7 @@ This means that the file name can contain either a point or an underscore
 separating the decimal portion of the metallicity value. The number of zeros
 at the end of the value in the name does not matter.
 This is necessary because the code takes the metallicity value directly from
-the file name (which I plan to `simplify`_ sometime).
+the file name.
 
 3. The theoretical isochrones files must be stored in a sub-folder of
 ``isochrones/``, with the naming convention: ``parsecXX_YYY`` (if PARSEC
@@ -110,7 +101,7 @@ Automatic download
 To avoid having to download each isochrone file by hand, I've written the
 ezPADOVA-2 code [#]_ which can downloaded from:
 
-    https://github.com/Gabriel-p/ezpadova
+    https://github.com/asteca/ezpadova-2
 
 This code takes care of downloading the isochrones for a given range of
 metallicities, storing them in files named following the above mentioned
@@ -123,6 +114,5 @@ paste it inside the ``isochrones/`` folder in **ASteCA**.
 .. _MASSCLEAN: http://www.physics.uc.edu/~bogdan/massclean/
 .. _CMD service: http://stev.oapd.inaf.it/cgi-bin/cmd
 .. _Girardi et al. 2002: http://www.aanda.org/articles/aa/abs/2002/31/aah3268/aah3268.html
-.. _ezPadova-2: https://github.com/Gabriel-p/ezpadova
-.. _simplify: https://github.com/asteca/asteca/issues/161
+.. _ezPadova-2: https://github.com/asteca/ezpadova-2
 .. [#] Fork of original ezpadova code by Morgan Fouesneau (https://github.com/mfouesneau/ezpadova).

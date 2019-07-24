@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="author" title="About these documents"
-              href="about.html"/>
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ASteCA v0.2.4 documentation" href="index.html"/>
-        <link rel="next" title="10. Decontamination algorithm" href="decont_algor.html"/>
-        <link rel="prev" title="8. Integrated magnitudes" href="int_mags.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="10. Decontamination algorithm" href="decont_algor.html" />
+    <link rel="prev" title="8. Integrated magnitudes" href="int_mags.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -116,7 +110,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ASteCA</a>
@@ -124,9 +118,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -155,7 +150,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/clust_prob.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/clust_prob.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -170,13 +165,13 @@
             
   <div class="section" id="cluster-probability">
 <span id="sect-clust-prob"></span><h1>9. Cluster probability<a class="headerlink" href="#cluster-probability" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Not finished.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Not finished.</p>
 </div>
 <p><strong>ASteCA</strong> evaluates the probability that a spatial overdensity is a true
 stellar cluster, rather than a random aggregate of field stars.</p>
-<p>This is done via the <code class="docutils literal"><span class="pre">kde.test</span></code> <a class="reference external" href="http://www.inside-r.org/packages/cran/ks/docs/kde.test">function</a> provided by the <code class="docutils literal"><span class="pre">ks</span></code> <a class="reference external" href="https://cran.r-project.org/web/packages/ks/ks.pdf">package</a>,
+<p>This is done via the <code class="docutils literal notranslate"><span class="pre">kde.test</span></code> <a class="reference external" href="http://www.inside-r.org/packages/cran/ks/docs/kde.test">function</a> provided by the <code class="docutils literal notranslate"><span class="pre">ks</span></code> <a class="reference external" href="https://cran.r-project.org/web/packages/ks/ks.pdf">package</a>,
 written for the <strong>R</strong> statistical software.
 The function applies an N-dimensional kernel density estimator (KDE) based
 algorithm, to asses the similarity between two N-dimensional arrangements of
@@ -188,14 +183,14 @@ The result of this comparison is quantified by a p-value.</p>
 <div><p><em>The p-value of a hypothesis test is the probability, assuming the null
 hypothesis is true, of observing a result at least as extreme as the value of
 the test statistic.</em></p>
-<p class="attribution">&mdash;<a class="reference external" href="http://dx.doi.org/10.1017/CBO9781139015653">Modern Statistical Methods for Astronomy</a> - Feigelson &amp; Babu (2012)</p>
+<p class="attribution">—<a class="reference external" href="http://dx.doi.org/10.1017/CBO9781139015653">Modern Statistical Methods for Astronomy</a> - Feigelson &amp; Babu (2012)</p>
 </div></blockquote>
 <p>A strict mathematical derivation of the method can be found in <a class="reference external" href="http://dx.doi.org/10.1073/pnas.1117796109">Duong et al.
 (2012)</a>.</p>
-<p>The null hypothesis, <span class="math">\(H_0\)</span>, is that both PDs were drawn from the same
+<p>The null hypothesis, <span class="math notranslate nohighlight">\(H_0\)</span>, is that both PDs were drawn from the same
 underlying distribution, where a lower p-value indicates a lower probability
-of <span class="math">\(H_0\)</span> being true.
-The function is used to compare the cluster region&#8217;s PD with the PD of every
+of <span class="math notranslate nohighlight">\(H_0\)</span> being true.
+The function is used to compare the cluster region’s PD with the PD of every
 defined field region, and the PD of each field region with that of the remaining
 field regions. This results in two sets of p-values: one for the <em>cluster vs
 field region</em> analysis, and another for the <em>field vs field region</em> analysis.</p>
@@ -208,16 +203,16 @@ the <em>cluster vs field region</em> and <em>field vs field region</em> PD analy
 For a real star cluster we expect the blue curve to show lower p-values than
 the red curve, meaning that the cluster region PD has a different arrangement of
 stars when compared whit the PDs of surrounding field regions.</p>
-<div class="figure align-center" id="id1">
+<div class="figure align-center" id="id2">
 <span id="fig-clust-prob"></span><img alt="_images/kde-pvalue.png" src="_images/kde-pvalue.png" />
 <p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text"><em>Left</em>: Function applied on a synthetic cluster, the curves are clearly
-separated with the blue one (<span class="math">\(KDE_{cl}\)</span>, <em>cluster vs field regions</em> PD
-analysis) showing much lower values than the red curve (<span class="math">\(KDE_{fl}\)</span>,
+separated with the blue one (<span class="math notranslate nohighlight">\(KDE_{cl}\)</span>, <em>cluster vs field regions</em> PD
+analysis) showing much lower values than the red curve (<span class="math notranslate nohighlight">\(KDE_{fl}\)</span>,
 <em>field vs field region</em> PD analysis). The final probability value obtained
 is close to 1 (or 100%).
 <em>Right</em>: same analysis performed on a field region where no cluster is
 present. The curves are now very similar resulting in a very low probability
-of the region containing a true star cluster.</span></p>
+of the region containing a true star cluster.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Both curves represent probability density functions, which means their total
 area is unity. Their domains are restricted between [0,1] with a small drift
@@ -229,16 +224,14 @@ proportional to the probability that the analyzed region holds a true cluster.</
 a very low probability of the overdensity being a true cluster; the opposite
 is true for lower overlap values. We thus obtain the probability that the
 overdensity is a real cluster as:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[P_{cl}^{KDE} = 1-overlap\]</div>
 <p>These values are shown in <a class="reference internal" href="#fig-clust-prob"><span class="std std-numref">Fig. 9.1</span></a> in the upper left corner.</p>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -247,7 +240,7 @@ overdensity is a real cluster as:</p>
         <a href="decont_algor.html" class="btn btn-neutral float-right" title="10. Decontamination algorithm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="int_mags.html" class="btn btn-neutral" title="8. Integrated magnitudes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="int_mags.html" class="btn btn-neutral float-left" title="8. Integrated magnitudes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -256,11 +249,11 @@ overdensity is a real cluster as:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Gabriel I Perren.
+        &copy; Copyright 2015, Gabriel I Perren
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -273,37 +266,15 @@ overdensity is a real cluster as:</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'v0.2.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="author" title="About these documents"
-              href="about.html"/>
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ASteCA v0.2.4 documentation" href="index.html"/>
-        <link rel="next" title="3. Input data file" href="input_data.html"/>
-        <link rel="prev" title="1. About" href="about.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Input data file" href="input_data.html" />
+    <link rel="prev" title="1. About" href="about.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -121,7 +115,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ASteCA</a>
@@ -129,9 +123,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -160,7 +155,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/install.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -175,106 +170,84 @@
             
   <div class="section" id="installing">
 <span id="sect-requirements"></span><h1>2. Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
-<p>The code has been tested with the December 2016 release of <strong>Python</strong>:</p>
+<p>The code has been tested with the March 2019 release of <strong>Python</strong>:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://www.python.org/downloads/release/python-2713/">Python - 2.7.13</a></li>
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Python - 3.7.3</a></p></li>
 </ul>
 <p>The packages listed below are required to run <strong>ASteCA</strong>.</p>
 <ul class="simple">
-<li><a class="reference external" href="http://www.astropy.org/">astropy</a></li>
-<li><a class="reference external" href="http://www.scipy.org/">sciPy</a></li>
-<li><a class="reference external" href="http://matplotlib.org/">matplotlib</a></li>
-<li><a class="reference external" href="http://www.numpy.org/">numpy</a> (installed along with matplotlib)</li>
-<li>(optional) <a class="reference external" href="http://www.r-project.org/">R</a>, <a class="reference external" href="https://cran.r-project.org/web/packages/ks/index.html">ks</a>,  and <a class="reference external" href="http://rpy.sourceforge.net/">rpy2</a></li>
+<li><p><a class="reference external" href="http://www.astropy.org/">astropy</a></p></li>
+<li><p><a class="reference external" href="http://www.scipy.org/">sciPy</a></p></li>
+<li><p><a class="reference external" href="http://matplotlib.org/">matplotlib</a></p></li>
+<li><p><a class="reference external" href="http://www.numpy.org/">numpy</a></p></li>
 </ul>
-<div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">If you want to use the function that obtains the cluster probability
-of being a true cluster (see Sect. <a class="reference internal" href="clust_prob.html#sect-clust-prob"><span class="std std-ref">9</span></a>), the
-<strong>ks</strong> statistical package is needed. This package needs <code class="docutils literal"><span class="pre">R</span></code> and <code class="docutils literal"><span class="pre">rpy2</span></code>.
-These are <em>not mandatory</em> and <strong>ASteCA</strong> will still run without them, except
-of course the above mentioned function.</p>
-</div>
+<p>The code also uses the packages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/dfm/emcee/releases/tag/v3.0rc2">emcee 3.0rc2</a></p></li>
+<li><p><a class="reference external" href="https://corner.readthedocs.io/en/latest/">corner.py 2.0.0</a></p></li>
+</ul>
+<p>but these two are included in the <strong>ASteCA</strong> download.</p>
 <div class="section" id="working-environment">
 <span id="sect-anaconda"></span><h2>2.1. Working environment<a class="headerlink" href="#working-environment" title="Permalink to this headline">¶</a></h2>
 <p>We use the <a class="reference external" href="https://conda.io/docs/index.html">conda</a> package and environment manager to install all the necessary
 dependencies to run <strong>ASteCA</strong> in an isolated <strong>Python</strong> environment. To install
 it:</p>
 <ol class="arabic">
-<li><p class="first">Go to <a class="reference external" href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a> and download the appropriate version
-for your system. I recommend using the <strong>Python 3.6</strong> version and will assume
-in what follows that you are running a 64 bit Linux system.</p>
-</li>
-<li><p class="first">Install with</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ bash Miniconda3-latest-Linux-x86_64.sh
+<li><p>Go to <a class="reference external" href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a> and download the appropriate version
+for your system. I recommend using the <strong>Python 3.x</strong> version and will assume
+in what follows that you are running a 64 bit Linux system.</p></li>
+<li><p>Install with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ bash Miniconda3-latest-Linux-x86_64.sh
 </pre></div>
 </div>
 <p>Select yes when asked: <em>Do you whish the installer to prepend the Miniconda3
 install location to PATH in your ~/path?</em></p>
 </li>
-<li><p class="first">Close and re-open your terminal window for the changes to take effect. Move
-inside the directory where you extracted the <strong>ASteCA</strong> package.</p>
-</li>
-<li><p class="first">Create a virtual environment with</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ conda create --name asteca27 <span class="nv">python</span><span class="o">=</span>2.7.14 <span class="nv">matplotlib</span><span class="o">=</span>2.2.0 <span class="nv">numpy</span><span class="o">=</span>1.14.1 <span class="nv">scipy</span><span class="o">=</span>1.0.0 <span class="nv">astropy</span><span class="o">=</span>2.0.4
+<li><p>Close and re-open your terminal window for the changes to take effect. Move
+inside the directory where you extracted the <strong>ASteCA</strong> package.</p></li>
+<li><p>Create a virtual environment with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create --name asteca <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7.3 <span class="nv">matplotlib</span><span class="o">=</span><span class="m">3</span>.1.0 <span class="nv">numpy</span><span class="o">=</span><span class="m">1</span>.16.14 <span class="nv">scipy</span><span class="o">=</span><span class="m">1</span>.2.1 <span class="nv">astropy</span><span class="o">=</span><span class="m">3</span>.1.2
 </pre></div>
 </div>
 </li>
-<li><p class="first">Activate the environment</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> activate asteca27
+<li><p>Activate the environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate asteca
 </pre></div>
 </div>
-<p>(for Windows users the command is <code class="docutils literal"><span class="pre">$</span> <span class="pre">activate</span> <span class="pre">asteca27</span></code>)</p>
+<p>(for Windows users the command is <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">activate</span> <span class="pre">asteca</span></code>)</p>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
+<p class="admonition-title">Important</p>
 <p>You can tell that the environment is activated because its name is now
-shown in the terminal before the <code class="docutils literal"><span class="pre">$</span></code> symbol as:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="o">(</span>asteca27<span class="o">)</span> $
+shown in the terminal before the <code class="docutils literal notranslate"><span class="pre">$</span></code> symbol as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>asteca<span class="o">)</span> $
 </pre></div>
 </div>
-<p class="last">You need to activate this environment each time <strong>before</strong> attempting to
+<p>You need to activate this environment each time <strong>before</strong> attempting to
 run <strong>ASteCA</strong>, otherwise no installed packages will be detected.</p>
 </div>
 </li>
-<li><p class="first">Finally (optionally), you can install the dependencies needed for the
-<strong>ks</strong> package with:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ conda install -c bioconda r-ks
-$ conda install rpy2
-</pre></div>
-</div>
-</li>
 </ol>
-<p>Currently the <code class="docutils literal"><span class="pre">r-ks</span></code> package is not available for Windows systems.</p>
-<p>If you are a Fedora user, you&#8217;ll probably need to install a few extra libraries
-for the <code class="docutils literal"><span class="pre">rpy2</span></code> package to work. In the case of Fedora 26, I had to install
-the following libraries:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ dnf install mesa-libGLU-9.0.0-11.fc26.x86_64
-$ dnf install ncurses-compat-libs-6.0-8.20170212.fc26.x86_64
-</pre></div>
-</div>
-<p>but these can change for different Fedora versions. No extra libraries where
-needed in any of the Ubuntu-based systems I tested.</p>
 </div>
 <div class="section" id="download">
 <h2>2.2. Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
 <p>The latest packaged release (zip or tarball) can be downloaded from:</p>
 <ul class="simple">
-<li><strong>ASteCA</strong> <a class="reference external" href="https://github.com/Gabriel-p/asteca/releases">.zip</a></li>
-<li><strong>ASteCA</strong> <a class="reference external" href="https://github.com/Gabriel-p/asteca/releases">.tar.gz</a></li>
+<li><p><strong>ASteCA</strong> <a class="reference external" href="https://github.com/Gabriel-p/asteca/releases">.zip</a></p></li>
+<li><p><strong>ASteCA</strong> <a class="reference external" href="https://github.com/Gabriel-p/asteca/releases">.tar.gz</a></p></li>
 </ul>
 <p>After downloading, extract the compressed file wherever you want
 the code to exist. Alternatively the entire project can be cloned via <a class="reference external" href="http://git-scm.com/">git</a>
 with (Linux command):</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ git clone https://github.com/asteca/ASteCA.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/asteca/ASteCA.git
 </pre></div>
 </div>
-<p>which will create a sub-folder named <code class="docutils literal"><span class="pre">/ASteCA</span></code>.</p>
+<p>which will create a sub-folder named <code class="docutils literal notranslate"><span class="pre">/ASteCA</span></code>.</p>
 </div>
 <div class="section" id="running">
 <h2>2.3. Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
 <p>With the environment properly created (and activated) and the code downloaded,
 you can run <strong>ASteCA</strong> with:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="o">(</span>asteca27<span class="o">)</span> $ python asteca.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>asteca<span class="o">)</span> $ python asteca.py
 </pre></div>
 </div>
 </div>
@@ -282,9 +255,7 @@ you can run <strong>ASteCA</strong> with:</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -293,7 +264,7 @@ you can run <strong>ASteCA</strong> with:</p>
         <a href="input_data.html" class="btn btn-neutral float-right" title="3. Input data file" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="about.html" class="btn btn-neutral" title="1. About" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="about.html" class="btn btn-neutral float-left" title="1. About" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -302,11 +273,11 @@ you can run <strong>ASteCA</strong> with:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Gabriel I Perren.
+        &copy; Copyright 2015, Gabriel I Perren
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -319,37 +290,15 @@ you can run <strong>ASteCA</strong> with:</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'v0.2.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="author" title="About these documents"
-              href="about.html"/>
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ASteCA v0.2.4 documentation" href="index.html"/>
-        <link rel="next" title="4. Running" href="running.html"/>
-        <link rel="prev" title="2. Installing" href="install.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Running" href="running.html" />
+    <link rel="prev" title="2. Installing" href="install.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -116,7 +110,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ASteCA</a>
@@ -124,9 +118,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -155,7 +150,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/input_data.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/input_data.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -170,26 +165,24 @@
             
   <div class="section" id="input-data-file">
 <h1>3. Input data file<a class="headerlink" href="#input-data-file" title="Permalink to this headline">¶</a></h1>
-<p>The data file that contains the IDs  identifying each star, the star&#8217;s
+<p>The data file that contains the IDs  identifying each star, the star’s
 coordinates and their full photometric data must follow certain rules.</p>
 <ol class="arabic simple">
-<li>Data must be arranged into columns using points as decimal separators.</li>
-<li>All lines which are not part of the data columns <strong>must</strong> be commented
-out using a <cite>#</cite> symbol at the beginning.</li>
-<li>ID strings <strong>must</strong> be unique, ie: no two stars should have the same ID.</li>
-<li>All photometric values (either magnitudes or colors) outside the range
+<li><p>Data must be arranged into columns using points as decimal separators.</p></li>
+<li><p>All lines which are not part of the data columns <strong>must</strong> be commented
+out using a <cite>#</cite> symbol at the beginning.</p></li>
+<li><p>ID strings <strong>must</strong> be unique, ie: no two stars should have the same ID.</p></li>
+<li><p>All photometric values (either magnitudes or colors) outside the range
 <cite>[-50., 50.]</cite> will be considered as <em>bad photometry</em> and any star showing
-such a value for <em>any</em> of its magnitudes/colors will be discarded.</li>
-<li>All photometric columns <strong>must</strong> have an associated error column.</li>
-<li>At least <em>one</em> magnitude column <strong>must</strong> be defined.</li>
+such a value for <em>any</em> of its magnitudes/colors will be discarded.</p></li>
+<li><p>All photometric columns <strong>must</strong> have an associated error column.</p></li>
+<li><p>At least <em>one</em> magnitude column <strong>must</strong> be defined.</p></li>
 </ol>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -198,7 +191,7 @@ such a value for <em>any</em> of its magnitudes/colors will be discarded.</li>
         <a href="running.html" class="btn btn-neutral float-right" title="4. Running" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install.html" class="btn btn-neutral" title="2. Installing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-left" title="2. Installing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -207,11 +200,11 @@ such a value for <em>any</em> of its magnitudes/colors will be discarded.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Gabriel I Perren.
+        &copy; Copyright 2015, Gabriel I Perren
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -224,37 +217,15 @@ such a value for <em>any</em> of its magnitudes/colors will be discarded.</li>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'v0.2.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="author" title="About these documents"
-              href="about.html"/>
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ASteCA v0.2.4 documentation" href="index.html"/>
-        <link rel="next" title="9. Cluster probability" href="clust_prob.html"/>
-        <link rel="prev" title="7. Cluster radius estimation" href="radius.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Cluster probability" href="clust_prob.html" />
+    <link rel="prev" title="7. Cluster radius estimation" href="radius.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -116,7 +110,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ASteCA</a>
@@ -124,9 +118,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -155,7 +150,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/int_mags.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/int_mags.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -170,34 +165,32 @@
             
   <div class="section" id="integrated-magnitudes">
 <h1>8. Integrated magnitudes<a class="headerlink" href="#integrated-magnitudes" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Not finished.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Not finished.</p>
 </div>
 <p>To obtain the integrated magnitude for the cluster region <em>cleaned</em> from
 field stars contamination, the following equations are used.</p>
 <p>First, assume:</p>
-<div class="math" id="equation-integ-cl-fl">
-<span class="eqno">(1)</span>\[I_{cl+fl} = I_{cl} + I_{fl}\]</div>
+<div class="math notranslate nohighlight" id="equation-integ-cl-fl">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-integ-cl-fl" title="Permalink to this equation">¶</a></span>\[I_{cl+fl} = I_{cl} + I_{fl}\]</div>
 <p>then:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[V^*_{cl} - V^*_{cl+fl} = -2.5 \log(I_{cl}/I_{cl+fl})\]</div>
-<p>using Eq. <a href="#equation-integ-cl-fl">(1)</a> we have:</p>
-<div class="math" id="equation-integ-cl-fl2">
-<span class="eqno">(2)</span>\[V^*_{cl} - V^*_{cl+fl} = -2.5 \log(1 - I_{fl}/I_{cl+fl})\]</div>
+<p>using Eq. <a class="reference internal" href="#equation-integ-cl-fl">(8.1)</a> we have:</p>
+<div class="math notranslate nohighlight" id="equation-integ-cl-fl2">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-integ-cl-fl2" title="Permalink to this equation">¶</a></span>\[V^*_{cl} - V^*_{cl+fl} = -2.5 \log(1 - I_{fl}/I_{cl+fl})\]</div>
 <p>and given:</p>
-<div class="math" id="equation-integ-cl-fl3">
-<span class="eqno">(3)</span>\[V^*_{fl} - V^*_{cl+fl} = -2.5 \log(I_{fl}/I_{cl+fl}) \Rightarrow \frac{I_{fl}}{I_{cl+fl}} = 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}\]</div>
-<p>we can combine now Eqs. <a href="#equation-integ-cl-fl2">(2)</a> and <a href="#equation-integ-cl-fl3">(3)</a> to obtain:</p>
-<div class="math">
+<div class="math notranslate nohighlight" id="equation-integ-cl-fl3">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-integ-cl-fl3" title="Permalink to this equation">¶</a></span>\[V^*_{fl} - V^*_{cl+fl} = -2.5 \log(I_{fl}/I_{cl+fl}) \Rightarrow \frac{I_{fl}}{I_{cl+fl}} = 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}\]</div>
+<p>we can combine now Eqs. <a class="reference internal" href="#equation-integ-cl-fl2">(8.2)</a> and <a class="reference internal" href="#equation-integ-cl-fl3">(8.3)</a> to obtain:</p>
+<div class="math notranslate nohighlight">
 \[V^*_{cl} = -2.5 \log(1 - 10^{(V^*_{fl} - V^*_{cl+fl})/-2.5}) + V^*_{cl+fl}\]</div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -206,7 +199,7 @@ field stars contamination, the following equations are used.</p>
         <a href="clust_prob.html" class="btn btn-neutral float-right" title="9. Cluster probability" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="radius.html" class="btn btn-neutral" title="7. Cluster radius estimation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="radius.html" class="btn btn-neutral float-left" title="7. Cluster radius estimation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -215,11 +208,11 @@ field stars contamination, the following equations are used.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Gabriel I Perren.
+        &copy; Copyright 2015, Gabriel I Perren
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -232,37 +225,15 @@ field stars contamination, the following equations are used.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'v0.2.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

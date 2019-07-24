@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="author" title="About these documents"
-              href="about.html"/>
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ASteCA v0.2.4 documentation" href="index.html"/>
-        <link rel="next" title="6. Radial density profile" href="rdp.html"/>
-        <link rel="prev" title="4. Running" href="running.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Radial density profile" href="rdp.html" />
+    <link rel="prev" title="4. Running" href="running.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -120,7 +114,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ASteCA</a>
@@ -128,9 +122,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -159,7 +154,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/center.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/center.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -176,7 +171,7 @@
 <h1>5. Center determination<a class="headerlink" href="#center-determination" title="Permalink to this headline">¶</a></h1>
 <p>Determining the central coordinates of a SC with accuracy is of utmost
 importance, since this parameter directly affects the generation of the radial
-density profile, and thus also the estimation of the SC&#8217;s radius.</p>
+density profile, and thus also the estimation of the SC’s radius.</p>
 <p><strong>ASteCA</strong> determines the center value in two steps: a coarse approximation
 is done first and a Gaussian kernel density estimation (KDE) is then applied to
 obtain precise final coordinates.</p>
@@ -186,13 +181,13 @@ applied to positional data stored in pixels or degrees.</p>
 <span id="approx-center"></span><h2>5.1. Approximate center values<a class="headerlink" href="#approximate-center-values" title="Permalink to this headline">¶</a></h2>
 <p>The positional data is first binned in a 2D histogram. The bin width is either
 automatically calculated as 1% of the minimum range in either coordinate
-(x, y), or set manually via the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file in the <strong>Structure
-functions parameters</strong> block, by setting the <code class="docutils literal"><span class="pre">bin_width</span></code> parameter (<code class="docutils literal"><span class="pre">CH</span></code>
+(x, y), or set manually via the <code class="docutils literal notranslate"><span class="pre">params_input.dat</span></code> file in the <strong>Structure
+functions parameters</strong> block, by setting the <code class="docutils literal notranslate"><span class="pre">bin_width</span></code> parameter (<code class="docutils literal notranslate"><span class="pre">CH</span></code>
 ID line).</p>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">Unless there is a specific reason to use the <code class="docutils literal"><span class="pre">manual</span></code> mode to set the bin
-width, it is recommended to use the <em>1% range</em> <code class="docutils literal"><span class="pre">auto</span></code> value. This figure has
+<p class="admonition-title">Important</p>
+<p>Unless there is a specific reason to use the <code class="docutils literal notranslate"><span class="pre">manual</span></code> mode to set the bin
+width, it is recommended to use the <em>1% range</em> <code class="docutils literal notranslate"><span class="pre">auto</span></code> value. This figure has
 proven to be a very good heuristic value in a large number of situations.</p>
 </div>
 <p>This 2D histogram is processed with a Gaussian filter to smooth it out, using
@@ -208,11 +203,11 @@ values in the bottom right corner are the bandwidth values used in the
 Gaussian filter.
 The box in the top left corner contains the averaged coordinate values and
 their standard deviations (shown in the plot as continuous and dashed lines
-respectively).</span></p>
+respectively).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>Each one of these values represents an approximation to the final center
 coordinates obtained in the next step (see section below).</p>
-<p>If the <code class="docutils literal"><span class="pre">semi_input.dat</span></code> file is used to pass approximate center coordinates,
+<p>If the <code class="docutils literal notranslate"><span class="pre">semi_input.dat</span></code> file is used to pass approximate center coordinates,
 this analysis is skipped and only the passed value is presented in the plot.</p>
 </div>
 <div class="section" id="precise-center-value">
@@ -220,20 +215,20 @@ this analysis is skipped and only the passed value is presented in the plot.</p>
 <p>Once the approximate center coordinates have been obtained, <strong>ASteCA</strong> proceeds
 to refine this result. To this end, the code employs the approximate center
 coordinates obtained in the previous step using the smallest bandwidth value
-(<code class="docutils literal"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><span class="std std-numref">Fig. 5.1</span></a>), or <span class="math">\(center_{bw-min}\)</span>.</p>
-<p>These coordinates serve as initial values for the cluster&#8217;s center. The final
+(<code class="docutils literal notranslate"><span class="pre">St</span> <span class="pre">dev:</span> <span class="pre">2.0</span></code> in <a class="reference internal" href="#fig-2dhisto"><span class="std std-numref">Fig. 5.1</span></a>), or <span class="math notranslate nohighlight">\(center_{bw-min}\)</span>.</p>
+<p>These coordinates serve as initial values for the cluster’s center. The final
 <em>precise</em> values are determined as the maximum spatial density of a
 two-dimensional Gaussian kernel, generated on a reduced square area of the
 positional diagram of the cluster; see <a class="reference internal" href="#fig-center-area"><span class="std std-numref">Fig. 5.2</span></a>.</p>
 <div class="figure align-center" id="id2">
 <span id="fig-center-area"></span><a class="reference internal image-reference" href="_images/center-area-search.png"><img alt="_images/center-area-search.png" src="_images/center-area-search.png" style="width: 562.4px; height: 521.6px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">In yellow, area where the center coordinates are searched via the
-KDE. Blue lines are contour curves, the center found is marked with a cross.</span></p>
+KDE. Blue lines are contour curves, the center found is marked with a cross.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The square area where the final center coordinates are searched is centered on
-the <span class="math">\(center_{bw-min}\)</span> values, with a side length that spans 50% of the
+the <span class="math notranslate nohighlight">\(center_{bw-min}\)</span> values, with a side length that spans 50% of the
 minimum x,y range.
-The bandwidth of the fitted kernel is automatically defined via Scott&#8217;s rule
+The bandwidth of the fitted kernel is automatically defined via Scott’s rule
 (<a class="reference external" href="http://onlinelibrary.wiley.com/book/10.1002/9780470316849">Scott 1992</a>).</p>
 <p>In <a class="reference internal" href="#fig-center"><span class="std std-numref">Fig. 5.3</span></a> we can see the final center coordinates (equivalently:
 the maximum value of the positional KDE) plotted over the Gaussian filtered 2D
@@ -241,29 +236,27 @@ histogram obtained using the minimum bandwidth, as defined in Sect.
 <a class="reference internal" href="#approx-center"><span class="std std-ref">5.1</span></a>.</p>
 <div class="figure align-center" id="id3">
 <span id="fig-center"></span><a class="reference internal image-reference" href="_images/center.png"><img alt="_images/center.png" src="_images/center.png" style="width: 508.8px; height: 503.20000000000005px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Cluster&#8217;s center found via the KDE analysis. The <code class="docutils literal"><span class="pre">Bin</span></code> value
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Cluster’s center found via the KDE analysis. The <code class="docutils literal notranslate"><span class="pre">Bin</span></code> value
 in the top right corner is the bin width of the 2D histogram mentioned
-in the previous section, used to obtain the approximate center coordinates.</span></p>
+in the previous section, used to obtain the approximate center coordinates.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>After this analysis is completed, the final center coordinates are compared
 with the approximate values obtained in the previous section. Two flags are
 raised warning the user about large deviations that could require careful
-revision, and stored in the output file <code class="docutils literal"><span class="pre">asteca_output.dat</span></code>.</p>
+revision, and stored in the output file <code class="docutils literal notranslate"><span class="pre">asteca_output.dat</span></code>.</p>
 <p>The flags must meet the following conditions in order to be raised:</p>
 <ul class="simple">
-<li><strong>f1</strong>: The median value for the approximate center coordinates in either x or
-y, is more than 10% away from the final center coordinates.</li>
-<li><strong>f2</strong>: The standard deviation for the approximate center coordinates in
-either x or y, is larger than 10% of the final center coordinates.</li>
+<li><p><strong>f1</strong>: The median value for the approximate center coordinates in either x or
+y, is more than 10% away from the final center coordinates.</p></li>
+<li><p><strong>f2</strong>: The standard deviation for the approximate center coordinates in
+either x or y, is larger than 10% of the final center coordinates.</p></li>
 </ul>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -272,7 +265,7 @@ either x or y, is larger than 10% of the final center coordinates.</li>
         <a href="rdp.html" class="btn btn-neutral float-right" title="6. Radial density profile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="running.html" class="btn btn-neutral" title="4. Running" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="running.html" class="btn btn-neutral float-left" title="4. Running" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -281,11 +274,11 @@ either x or y, is larger than 10% of the final center coordinates.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Gabriel I Perren.
+        &copy; Copyright 2015, Gabriel I Perren
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -298,37 +291,15 @@ either x or y, is larger than 10% of the final center coordinates.</li>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'v0.2.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -8,11 +8,10 @@ ASteCA
 
 .. image:: _static/centers.png
 
-:Article: `ASteCA: Automated Stellar Cluster Analysis (A&A, 2015)
-   <http://www.aanda.org/articles/aa/abs/2015/04/aa24946-14/aa24946-14.html>`_
-:Site: `asteca.github.io <http://asteca.github.io/>`_
-:Source: `github.com/asteca <https://github.com/asteca>`_
-:Documentation: `asteca.rtfd.org <http://asteca.readthedocs.org/en/latest/>`_
+* Article:       `ASteCA: Automated Stellar Cluster Analysis (A&A, 2015) <http://www.aanda.org/articles/aa/abs/2015/04/aa24946-14/aa24946-14.html>`_
+* Site:          `asteca.github.io <http://asteca.github.io/>`_
+* Source:        `github.com/asteca <https://github.com/asteca>`_
+* Documentation: `asteca.rtfd.org <http://asteca.readthedocs.org/en/latest/>`_
 
 This is the manual of operation for the Automated Stellar
 Cluster Analysis (**ASteCA**) package.
@@ -21,7 +20,7 @@ If you encounter any problems please `contact me`_ or `open a new issue`_.
 .. warning::
    This documentation is in the process of being written and is
    **not yet finished**. Updates will be made as versions are released.
-   Last updated: Mar 16, 2018.
+   Last updated: July 24, 2019.
 
 .. important::
    A PDF version of this manual can be downloaded `here`__.

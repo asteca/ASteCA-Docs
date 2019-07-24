@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="author" title="About these documents"
-              href="about.html"/>
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ASteCA v0.2.4 documentation" href="index.html"/>
-        <link rel="next" title="5. Center determination" href="center.html"/>
-        <link rel="prev" title="3. Input data file" href="input_data.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Center determination" href="center.html" />
+    <link rel="prev" title="3. Input data file" href="input_data.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -123,7 +117,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ASteCA</a>
@@ -131,9 +125,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -162,7 +157,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/running.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/running.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,26 +173,26 @@
   <div class="section" id="running">
 <h1>4. Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h1>
 <p>To run the code simply position a cluster’s photometric data file in the
-<code class="docutils literal"><span class="pre">input/</span></code> folder, modify the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file to both
+<code class="docutils literal notranslate"><span class="pre">input/</span></code> folder, modify the <code class="docutils literal notranslate"><span class="pre">params_input.dat</span></code> file to both
 inform the code of the distribution of columns in your photometric file
 and set the values for each function within the code.
-Photometric files can also be stored in <code class="docutils literal"><span class="pre">input/</span></code> inside a
+Photometric files can also be stored in <code class="docutils literal notranslate"><span class="pre">input/</span></code> inside a
 sub-folder.</p>
-<p><strong>Every</strong> file inside the <code class="docutils literal"><span class="pre">input/</span></code> folder (inside or outside a
+<p><strong>Every</strong> file inside the <code class="docutils literal notranslate"><span class="pre">input/</span></code> folder (inside or outside a
 sub-folder) will be processed by <strong>ASteCA</strong>, with the exception of the
-membership probabilities files that end with a <code class="docutils literal"><span class="pre">_memb.dat</span></code> extension
+membership probabilities files that end with a <code class="docutils literal notranslate"><span class="pre">_memb.dat</span></code> extension
 (see Sect. <a class="reference internal" href="decont_algor.html#decont-algor"><span class="std std-ref">10</span></a>).</p>
-<p>Once the file(s) are in place and the <code class="docutils literal"><span class="pre">params_input.dat</span></code> file correctly
+<p>Once the file(s) are in place and the <code class="docutils literal notranslate"><span class="pre">params_input.dat</span></code> file correctly
 modified, the code can be executed with the command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="o">(</span>asteca27<span class="o">)</span> $ python asteca.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>asteca<span class="o">)</span> $ python asteca.py
 </pre></div>
 </div>
-<p>This should work both in Linux based systems and OS X (Mac), but I&#8217;ve
-only tested it with Linux (since that&#8217;s what I use).</p>
-<p>The <code class="docutils literal"><span class="pre">CLUSTER.DAT</span></code> file located in the <code class="docutils literal"><span class="pre">input/</span></code> folder contains
+<p>This should work both in Linux based systems and OS X (Mac), but I’ve
+only tested it with Linux (since that’s what I use).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">CLUSTER.DAT</span></code> file located in the <code class="docutils literal notranslate"><span class="pre">input/</span></code> folder contains
 a synthetic open cluster generated via the <a class="reference external" href="http://www.physics.uc.edu/~bogdan/massclean/">MASSCLEAN</a> package with the
 following parameter values:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="mi">500</span> <span class="n">Mo</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="mi">500</span> <span class="n">Mo</span>
 <span class="n">z</span> <span class="o">=</span> <span class="mf">0.008</span>
 <span class="n">log</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">=</span> <span class="mf">8.0</span>
 <span class="n">E</span><span class="p">(</span><span class="n">B</span><span class="o">-</span><span class="n">V</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.32</span> <span class="p">(</span><span class="n">Av</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span>
@@ -208,34 +203,25 @@ following parameter values:</p>
 <div class="section" id="theoretical-isochrones">
 <h2>4.1. Theoretical isochrones<a class="headerlink" href="#theoretical-isochrones" title="Permalink to this headline">¶</a></h2>
 <p><strong>ASteCA</strong> needs at least one set of theoretical isochrones stored in the
-<code class="docutils literal"><span class="pre">isochrones/</span></code> folder, to be able to apply the <em>best-fit</em> function that
+<code class="docutils literal notranslate"><span class="pre">isochrones/</span></code> folder, to be able to apply the <em>best-fit</em> function that
 estimates the clusters’ parameters.
 Currently, the only isochrone files supported are those obtained via the
 <a class="reference external" href="http://stev.oapd.inaf.it/cgi-bin/cmd">CMD service</a> (<a class="reference external" href="http://www.aanda.org/articles/aa/abs/2002/31/aah3268/aah3268.html">Girardi et al. 2002</a>), but any set can in theory be used
 (with some changes made to the code).
 Please <a class="reference external" href="mailto:gabrielperren&#37;&#52;&#48;gmail&#46;com">contact me</a> if you wish to use a different
 set of theoretical isochrones.</p>
-<p>The isochrones can be downloaded manually or the package <a class="reference external" href="https://github.com/Gabriel-p/ezpadova">ezPadova-2</a>
+<p>The isochrones can be downloaded manually or the package <a class="reference external" href="https://github.com/asteca/ezpadova-2">ezPadova-2</a>
 can be used to automatically fetch them from the site. I describe both
 possibilities below.</p>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p>The current version of the code only recognizes a handful of photometric
-systems from those available at CMD, but an upcoming version (v0.2.0) will
-extend <strong>ASteCA</strong> to support all systems present in the CMD service.</p>
-<p>The systems supported are:</p>
-<ul class="last simple">
-<li>UBVRIJHK (cf. Maiz-Apellaniz 2006 + Bessell 1990)</li>
-<li>2MASS JHK_s</li>
-<li>Washington CMT1T2</li>
-<li>SDSS ugriz</li>
-<li>HST/ACS WFC</li>
-</ul>
+<p class="admonition-title">Important</p>
+<p>The current version of the code supports all the photometric
+systems from available at the CMD service.</p>
 </div>
 <div class="section" id="manual-download">
 <h3>4.1.1. Manual download<a class="headerlink" href="#manual-download" title="Permalink to this headline">¶</a></h3>
 <p>They isochrone files must follow a naming convention and be stored in a
-sub-folder inside the  <code class="docutils literal"><span class="pre">isohrones/</span></code> folder, also named according to a
+sub-folder inside the  <code class="docutils literal notranslate"><span class="pre">isohrones/</span></code> folder, also named according to a
 convention that makes them readable and identifiable to the code.</p>
 <p>The steps to manually download and store the files are:</p>
 <p>1. The CMD isochrones files must be downloaded using the <em>Sequence of
@@ -243,49 +229,47 @@ isochrones of constant metallicity, Z</em> option. That is, isochrones of the sa
 metallicity must all be stored in the same file.</p>
 <p>2. Each file must have the name of the metallicity that characterizes it.
 For example, if you download a sequence of isochrones with metallicity
-<code class="docutils literal"><span class="pre">z=0.019</span></code>, then the file should be called <code class="docutils literal"><span class="pre">0.019.dat</span></code>, or <code class="docutils literal"><span class="pre">0_019.dat</span></code>,
-or <code class="docutils literal"><span class="pre">0.0190.dat</span></code>, or <code class="docutils literal"><span class="pre">0_019000.dat</span></code>, etc.</p>
+<code class="docutils literal notranslate"><span class="pre">z=0.019</span></code>, then the file should be called <code class="docutils literal notranslate"><span class="pre">0.019.dat</span></code>, or <code class="docutils literal notranslate"><span class="pre">0_019.dat</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">0.0190.dat</span></code>, or <code class="docutils literal notranslate"><span class="pre">0_019000.dat</span></code>, etc.</p>
 <p>This means that the file name can contain either a point or an underscore
 separating the decimal portion of the metallicity value. The number of zeros
 at the end of the value in the name does not matter.
 This is necessary because the code takes the metallicity value directly from
-the file name (which I plan to <a class="reference external" href="https://github.com/asteca/asteca/issues/161">simplify</a> sometime).</p>
+the file name.</p>
 <p>3. The theoretical isochrones files must be stored in a sub-folder of
-<code class="docutils literal"><span class="pre">isochrones/</span></code>, with the naming convention: <code class="docutils literal"><span class="pre">parsecXX_YYY</span></code> (if PARSEC
-isochrones are used). In this name, <code class="docutils literal"><span class="pre">XX</span></code> is 10, 11 or 12
+<code class="docutils literal notranslate"><span class="pre">isochrones/</span></code>, with the naming convention: <code class="docutils literal notranslate"><span class="pre">parsecXX_YYY</span></code> (if PARSEC
+isochrones are used). In this name, <code class="docutils literal notranslate"><span class="pre">XX</span></code> is 10, 11 or 12
 depending on the version of PARSEC used (1.0, 1.1 or 1.2S, respectively) and
-&#8216;YYYY&#8217; is <code class="docutils literal"><span class="pre">ubvi</span></code>, <code class="docutils literal"><span class="pre">wash</span></code> or <code class="docutils literal"><span class="pre">2MASS</span></code>, depending on the system chosen to
+‘YYYY’ is <code class="docutils literal notranslate"><span class="pre">ubvi</span></code>, <code class="docutils literal notranslate"><span class="pre">wash</span></code> or <code class="docutils literal notranslate"><span class="pre">2MASS</span></code>, depending on the system chosen to
 generate the isochrones.</p>
 <p>For example, if the PARSEC v1.2S tracks and the <em>UBVRIJHK (cf. Maiz-Apellaniz
 2006 + Bessell 1990)</em> system is selected, the name of the sub-folder where
-the isochrones must be stored would be: <code class="docutils literal"><span class="pre">parsec12_ubvi</span></code>.</p>
+the isochrones must be stored would be: <code class="docutils literal notranslate"><span class="pre">parsec12_ubvi</span></code>.</p>
 </div>
 <div class="section" id="automatic-download">
 <h3>4.1.2. Automatic download<a class="headerlink" href="#automatic-download" title="Permalink to this headline">¶</a></h3>
-<p>To avoid having to download each isochrone file by hand, I&#8217;ve written the
-ezPADOVA-2 code <a class="footnote-reference" href="#id2" id="id1"><sup>1</sup></a> which can downloaded from:</p>
+<p>To avoid having to download each isochrone file by hand, I’ve written the
+ezPADOVA-2 code <a class="footnote-reference superscript" href="#id2" id="id1">1</a> which can downloaded from:</p>
 <blockquote>
-<div><a class="reference external" href="https://github.com/Gabriel-p/ezpadova">https://github.com/Gabriel-p/ezpadova</a></div></blockquote>
+<div><p><a class="reference external" href="https://github.com/asteca/ezpadova-2">https://github.com/asteca/ezpadova-2</a></p>
+</div></blockquote>
 <p>This code takes care of downloading the isochrones for a given range of
 metallicities, storing them in files named following the above mentioned
 naming convention, and place them inside a folder also with the correct name.</p>
 <p>This way, once this code finishes you can just cut the generated folder and
-paste it inside the <code class="docutils literal"><span class="pre">isochrones/</span></code> folder in <strong>ASteCA</strong>.</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Fork of original ezpadova code by Morgan Fouesneau (<a class="reference external" href="https://github.com/mfouesneau/ezpadova">https://github.com/mfouesneau/ezpadova</a>).</td></tr>
-</tbody>
-</table>
+paste it inside the <code class="docutils literal notranslate"><span class="pre">isochrones/</span></code> folder in <strong>ASteCA</strong>.</p>
+<dl class="footnote superscript">
+<dt class="label" id="id2"><span class="superscript"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Fork of original ezpadova code by Morgan Fouesneau (<a class="reference external" href="https://github.com/mfouesneau/ezpadova">https://github.com/mfouesneau/ezpadova</a>).</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -294,7 +278,7 @@ paste it inside the <code class="docutils literal"><span class="pre">isochrones/
         <a href="center.html" class="btn btn-neutral float-right" title="5. Center determination" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="input_data.html" class="btn btn-neutral" title="3. Input data file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="input_data.html" class="btn btn-neutral float-left" title="3. Input data file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -303,11 +287,11 @@ paste it inside the <code class="docutils literal"><span class="pre">isochrones/
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Gabriel I Perren.
+        &copy; Copyright 2015, Gabriel I Perren
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -320,37 +304,15 @@ paste it inside the <code class="docutils literal"><span class="pre">isochrones/
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'v0.2.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

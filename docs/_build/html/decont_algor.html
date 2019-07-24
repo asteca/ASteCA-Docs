@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="author" title="About these documents"
-              href="about.html"/>
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ASteCA v0.2.4 documentation" href="index.html"/>
-        <link rel="next" title="11. Best fit model" href="best_fit.html"/>
-        <link rel="prev" title="9. Cluster probability" href="clust_prob.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="11. Best fit model" href="best_fit.html" />
+    <link rel="prev" title="9. Cluster probability" href="clust_prob.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -119,7 +113,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ASteCA</a>
@@ -127,9 +121,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -158,7 +153,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/decont_algor.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/decont_algor.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -173,14 +168,14 @@
             
   <div class="section" id="decontamination-algorithm">
 <span id="decont-algor"></span><h1>10. Decontamination algorithm<a class="headerlink" href="#decontamination-algorithm" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Not finished.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Not finished.</p>
 </div>
 <p>A correct determination of the most probable true cluster members, allows to
-recover a much clearer picture of a cluster&#8217;s photometric structure. It is also
+recover a much clearer picture of a cluster’s photometric structure. It is also
 essential to ensure a more accurate and all around better estimation of the
-cluster&#8217;s fundamental parameters.</p>
+cluster’s fundamental parameters.</p>
 <p>Since it is not possible to <em>unequivocally</em> discriminate between true members
 and field region stars from photometry alone (even when proper motions or
 radial velocities are available), the decontamination algorithms (DA, also
@@ -189,61 +184,59 @@ each star in the cluster region a <em>probability of being a true member</em>.</
 <p>The process by which these membership probabilities (MP) are assigned by the
 code, is explained in detail in the article where <strong>ASteCA</strong> was introduced. The
 algorithm is based basically on a Bayesian scheme, and the repeated estimation
-of a &#8216;clean&#8217; cluster region by means of a random removal of stars.</p>
+of a ‘clean’ cluster region by means of a random removal of stars.</p>
 <p>The first four binning schemes that can be used by the DA are taken from the
 <a class="reference external" href="http://www.astroml.org/user_guide/density_estimation.html">astroML</a> package; the rest are well known rules:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">blocks</span></code>: <a class="reference external" href="http://adsabs.harvard.edu/abs/2012arXiv1207.5578S">Bayesian Blocks</a>.</li>
-<li><code class="docutils literal"><span class="pre">knuth</span></code>: <a class="reference external" href="http://adsabs.harvard.edu/abs/2006physics...5197K">Knuth&#8217;s rule</a>.</li>
-<li><code class="docutils literal"><span class="pre">scott</span></code>: <a class="reference external" href="http://biomet.oxfordjournals.org/content/66/3/605">Scott&#8217;s rule</a>.</li>
-<li><code class="docutils literal"><span class="pre">freedman</span></code>: <a class="reference external" href="http://www.springerlink.com/content/mp364022824748n3/">Freedman-Diaconis rule</a>.</li>
-<li><code class="docutils literal"><span class="pre">sturges</span></code>: <a class="reference external" href="http://www.jstor.org/stable/2965501">Sturge&#8217;s rule</a>.</li>
-<li><code class="docutils literal"><span class="pre">sqrt</span></code>:</li>
-<li><code class="docutils literal"><span class="pre">bb</span></code>:</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blocks</span></code>: <a class="reference external" href="http://adsabs.harvard.edu/abs/2012arXiv1207.5578S">Bayesian Blocks</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">knuth</span></code>: <a class="reference external" href="http://adsabs.harvard.edu/abs/2006physics...5197K">Knuth’s rule</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scott</span></code>: <a class="reference external" href="http://biomet.oxfordjournals.org/content/66/3/605">Scott’s rule</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">freedman</span></code>: <a class="reference external" href="http://www.springerlink.com/content/mp364022824748n3/">Freedman-Diaconis rule</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sturges</span></code>: <a class="reference external" href="http://www.jstor.org/stable/2965501">Sturge’s rule</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqrt</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bb</span></code>:</p></li>
 </ul>
 <p>These same binning methods are made available to the Dolphin likelihood equation
 in the <em>Best fit</em> block, see Sect. <a class="reference internal" href="likelihood.html#sect-likelihood"><span class="std std-ref">11.2</span></a>.</p>
 <p>Once the DA process has finished, every star inside the cluster region will
 have a MP associated to it. These MPs are stored, along with the data on each
-star in the cluster region, in a file named <code class="docutils literal"><span class="pre">XXXX_memb.dat</span></code> (where <code class="docutils literal"><span class="pre">XXXX</span></code>
+star in the cluster region, in a file named <code class="docutils literal notranslate"><span class="pre">XXXX_memb.dat</span></code> (where <code class="docutils literal notranslate"><span class="pre">XXXX</span></code>
 is the name of the analyzed cluster).</p>
 <div class="section" id="reduced-membership">
 <h2>10.1. Reduced membership<a class="headerlink" href="#reduced-membership" title="Permalink to this headline">¶</a></h2>
 <p>After MPs have been assigned to all the stars within the cluster region,
-what follows is the <em>selection criteria</em>, referred here as the &#8220;Reduced
-membership&#8221; algorithm. This process determines which stars, among all those
+what follows is the <em>selection criteria</em>, referred here as the “Reduced
+membership” algorithm. This process determines which stars, among all those
 located within the cluster region, will be used by the best fit
 process (see Sect. <a class="reference internal" href="best_fit.html#best-fit"><span class="std std-ref">11</span></a>).</p>
 <p>Several options are available in <strong>ASteCA</strong>, associated to this function. These
-options are handled by the <code class="docutils literal"><span class="pre">Reduced</span> <span class="pre">membership</span></code> block in the
-<code class="docutils literal"><span class="pre">params_input.dat</span></code> file.</p>
+options are handled by the <code class="docutils literal notranslate"><span class="pre">Reduced</span> <span class="pre">membership</span></code> block in the
+<code class="docutils literal notranslate"><span class="pre">params_input.dat</span></code> file.</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">local</span></code>: combines the assigned MPs with a cell by cell removal of stars in
+<li><p><code class="docutils literal notranslate"><span class="pre">local</span></code>: combines the assigned MPs with a cell by cell removal of stars in
 the photometric diagram. The stars discarded are those with lower MPs and
-the number is equal to the excess of field stars present in each cell.</li>
-<li><code class="docutils literal"><span class="pre">n_memb</span></code>: use the N stars with the highest MPs, where N is the approximate
+the number is equal to the excess of field stars present in each cell.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n_memb</span></code>: use the N stars with the highest MPs, where N is the approximate
 number of members found via the cluster region vs field region star
-density comparison.</li>
-<li><code class="docutils literal"><span class="pre">mp_05</span></code>: selects only those stars with MP&gt;=0.5, i.e.: stars with higher
-probability of being a cluster member than a field star.</li>
-<li><code class="docutils literal"><span class="pre">top_h</span></code>: selects the top half of all stars in the cluster region with the
-highest MPs.</li>
-<li><code class="docutils literal"><span class="pre">man</span></code>: the minimum probability value has to be set manually via
-the <code class="docutils literal"><span class="pre">prob_min</span></code> parameter (0, 1).</li>
-<li><code class="docutils literal"><span class="pre">mag</span></code>: switches the <code class="docutils literal"><span class="pre">prob_min</span></code> value to a <code class="docutils literal"><span class="pre">mag_min</span></code> value so the user
+density comparison.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mp_05</span></code>: selects only those stars with MP&gt;=0.5, i.e.: stars with higher
+probability of being a cluster member than a field star.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">top_h</span></code>: selects the top half of all stars in the cluster region with the
+highest MPs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">man</span></code>: the minimum probability value has to be set manually via
+the <code class="docutils literal notranslate"><span class="pre">prob_min</span></code> parameter (0, 1).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mag</span></code>: switches the <code class="docutils literal notranslate"><span class="pre">prob_min</span></code> value to a <code class="docutils literal notranslate"><span class="pre">mag_min</span></code> value so the user
 can select a minimum magnitude to be used in the best fit function, instead
-of a minimum probability (the &#8220;minimum magnitude&#8221; value is the value of
-the dimmest star wished to be taken into account in the fitting process).</li>
-<li><code class="docutils literal"><span class="pre">skip</span></code>: use all stars in the cluster region.</li>
+of a minimum probability (the “minimum magnitude” value is the value of
+the dimmest star wished to be taken into account in the fitting process).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skip</span></code>: use all stars in the cluster region.</p></li>
 </ul>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -252,7 +245,7 @@ the dimmest star wished to be taken into account in the fitting process).</li>
         <a href="best_fit.html" class="btn btn-neutral float-right" title="11. Best fit model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="clust_prob.html" class="btn btn-neutral" title="9. Cluster probability" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="clust_prob.html" class="btn btn-neutral float-left" title="9. Cluster probability" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -261,11 +254,11 @@ the dimmest star wished to be taken into account in the fitting process).</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Gabriel I Perren.
+        &copy; Copyright 2015, Gabriel I Perren
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -278,37 +271,15 @@ the dimmest star wished to be taken into account in the fitting process).</li>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'v0.2.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="author" title="About these documents"
-              href="about.html"/>
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ASteCA v0.2.4 documentation" href="index.html"/>
-        <link rel="next" title="8. Integrated magnitudes" href="int_mags.html"/>
-        <link rel="prev" title="6. Radial density profile" href="rdp.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8. Integrated magnitudes" href="int_mags.html" />
+    <link rel="prev" title="6. Radial density profile" href="rdp.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -116,7 +110,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ASteCA</a>
@@ -124,9 +118,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -155,7 +150,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/radius.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/radius.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,30 +166,28 @@
   <div class="section" id="cluster-radius-estimation">
 <h1>7. Cluster radius estimation<a class="headerlink" href="#cluster-radius-estimation" title="Permalink to this headline">¶</a></h1>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">This section is outdated.</p>
+<p class="admonition-title">Important</p>
+<p>This section is outdated.</p>
 </div>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Not finished.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Not finished.</p>
 </div>
 <p>We begin by counting the number of RDP points that fall below a given maximum
-tolerance interval above <span class="math">\(d_{field}\)</span>. When the number of these points
-reaches a fixed value, <span class="math">\(n_{fixed}\)</span>, the point closest to
-<span class="math">\(d_{field}\)</span> is stored as the most probable radius for this iteration.
-This process is repeated increasing the tolerance around <span class="math">\(d_{field}\)</span>
+tolerance interval above <span class="math notranslate nohighlight">\(d_{field}\)</span>. When the number of these points
+reaches a fixed value, <span class="math notranslate nohighlight">\(n_{fixed}\)</span>, the point closest to
+<span class="math notranslate nohighlight">\(d_{field}\)</span> is stored as the most probable radius for this iteration.
+This process is repeated increasing the tolerance around <span class="math notranslate nohighlight">\(d_{field}\)</span>
 which results in another probable radius being stored, not necessarily the
 same found in the previous iteration.
-The final estimation for <span class="math">\(r_{cl}\)</span> and its associated error comes from
+The final estimation for <span class="math notranslate nohighlight">\(r_{cl}\)</span> and its associated error comes from
 averaging the set of radius values stored this way and taking its standard
 deviation, respectively.</p>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -203,7 +196,7 @@ deviation, respectively.</p>
         <a href="int_mags.html" class="btn btn-neutral float-right" title="8. Integrated magnitudes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rdp.html" class="btn btn-neutral" title="6. Radial density profile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rdp.html" class="btn btn-neutral float-left" title="6. Radial density profile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -212,11 +205,11 @@ deviation, respectively.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Gabriel I Perren.
+        &copy; Copyright 2015, Gabriel I Perren
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -229,37 +222,15 @@ deviation, respectively.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'v0.2.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -3,25 +3,23 @@
 Installing
 ==========
 
-The code has been tested with the December 2016 release of **Python**:
+The code has been tested with the March 2019 release of **Python**:
 
--  `Python - 2.7.13`_
+-  `Python - 3.7.3`_
 
 The packages listed below are required to run **ASteCA**.
 
 -  `astropy`_
 -  `sciPy`_
 -  `matplotlib`_
--  `numpy`_ (installed along with matplotlib)
--  (optional) `R`_, `ks`_,  and `rpy2`_
+-  `numpy`_
 
-.. important::
+The code also uses the packages:
 
-  If you want to use the function that obtains the cluster probability
-  of being a true cluster (see Sect. :ref:`sect-clust-prob`), the
-  **ks** statistical package is needed. This package needs ``R`` and ``rpy2``.
-  These are *not mandatory* and **ASteCA** will still run without them, except
-  of course the above mentioned function.
+- `emcee 3.0rc2`_
+- `corner.py 2.0.0`_
+
+but these two are included in the **ASteCA** download.
 
 
 .. _sect-anaconda:
@@ -34,7 +32,7 @@ dependencies to run **ASteCA** in an isolated **Python** environment. To install
 it:
 
 1. Go to https://conda.io/miniconda.html and download the appropriate version
-   for your system. I recommend using the **Python 3.6** version and will assume
+   for your system. I recommend using the **Python 3.x** version and will assume
    in what follows that you are running a 64 bit Linux system.
 2. Install with 
 
@@ -50,15 +48,15 @@ it:
 
    .. code-block:: bash
 
-     $ conda create --name asteca27 python=2.7.14 matplotlib=2.2.0 numpy=1.14.1 scipy=1.0.0 astropy=2.0.4
+     $ conda create --name asteca python=3.7.3 matplotlib=3.1.0 numpy=1.16.14 scipy=1.2.1 astropy=3.1.2
 
 5. Activate the environment
 
    .. code-block:: bash
 
-    $ source activate asteca27
+    $ conda activate asteca
 
-   (for Windows users the command is ``$ activate asteca27``)
+   (for Windows users the command is ``$ activate asteca``)
 
    .. important::
 
@@ -67,32 +65,10 @@ it:
 
      .. code-block:: bash
 
-      (asteca27) $
+      (asteca) $
 
      You need to activate this environment each time **before** attempting to
      run **ASteCA**, otherwise no installed packages will be detected.
-
-6. Finally (optionally), you can install the dependencies needed for the
-   **ks** package with:
-
-   .. code-block:: bash
-
-     $ conda install -c bioconda r-ks
-     $ conda install rpy2
-
-Currently the ``r-ks`` package is not available for Windows systems.
-
-If you are a Fedora user, you'll probably need to install a few extra libraries
-for the ``rpy2`` package to work. In the case of Fedora 26, I had to install
-the following libraries:
-
-.. code-block:: bash
-
- $ dnf install mesa-libGLU-9.0.0-11.fc26.x86_64
- $ dnf install ncurses-compat-libs-6.0-8.20170212.fc26.x86_64
-
-but these can change for different Fedora versions. No extra libraries where
-needed in any of the Ubuntu-based systems I tested.
 
 
 Download
@@ -122,14 +98,11 @@ you can run **ASteCA** with:
 
 .. code-block:: bash
 
- (asteca27) $ python asteca.py
+ (asteca) $ python asteca.py
 
 
-.. _Python - 2.7.13: https://www.python.org/downloads/release/python-2713/
+.. _Python - 3.7.3: https://www.python.org/downloads/
 .. _conda: https://conda.io/docs/index.html
-.. _R: http://www.r-project.org/
-.. _ks: https://cran.r-project.org/web/packages/ks/index.html
-.. _rpy2: http://rpy.sourceforge.net/
 .. _numpy: http://www.numpy.org/
 .. _matplotlib: http://matplotlib.org/
 .. _sciPy: http://www.scipy.org/
@@ -137,3 +110,5 @@ you can run **ASteCA** with:
 .. _.zip: https://github.com/Gabriel-p/asteca/releases
 .. _.tar.gz: https://github.com/Gabriel-p/asteca/releases
 .. _git: http://git-scm.com/
+.. _emcee 3.0rc2: https://github.com/dfm/emcee/releases/tag/v3.0rc2
+.. _corner.py 2.0.0: https://corner.readthedocs.io/en/latest/
