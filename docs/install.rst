@@ -74,11 +74,7 @@ it:
 Download
 --------
 
-The latest packaged release (zip or tarball) can be downloaded from:
-
--  **ASteCA** `.zip`_
--  **ASteCA** `.tar.gz`_
-
+The latest packaged release (zip or tarball) can be downloaded `from Github`_.
 After downloading, extract the compressed file wherever you want
 the code to exist. Alternatively the entire project can be cloned via `git`_
 with (Linux command):
@@ -107,8 +103,7 @@ you can run **ASteCA** with:
 .. _matplotlib: http://matplotlib.org/
 .. _sciPy: http://www.scipy.org/
 .. _astropy: http://www.astropy.org/
-.. _.zip: https://github.com/Gabriel-p/asteca/releases
-.. _.tar.gz: https://github.com/Gabriel-p/asteca/releases
+.. _from Github: https://github.com/Gabriel-p/asteca/releases
 .. _git: http://git-scm.com/
 .. _emcee 3.0rc2: https://github.com/dfm/emcee/releases/tag/v3.0rc2
 .. _corner.py 2.0.0: https://corner.readthedocs.io/en/latest/

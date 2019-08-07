@@ -20,7 +20,7 @@ If you encounter any problems please `contact me`_ or `open a new issue`_.
 .. warning::
    This documentation is in the process of being written and is
    **not yet finished**. Updates will be made as versions are released.
-   Last updated: July 24, 2019.
+   Last updated: August 07, 2019.
 
 .. important::
    A PDF version of this manual can be downloaded `here`__.
