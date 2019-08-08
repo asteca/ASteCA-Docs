@@ -47,5 +47,6 @@ def doctree_resolved(app, doctree, docname):
                         child.parent.replace(child, nodes.Text(linktext))
 
 def setup(app):
-    app.override_domain(CustomStandardDomain)
+    # app.override_domain(CustomStandardDomain)
+    app.add_domain(CustomStandardDomain, override=True)
     app.connect('doctree-resolved', doctree_resolved)
