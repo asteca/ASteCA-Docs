@@ -48,7 +48,7 @@ it:
 
    .. code-block:: bash
 
-     $ conda create --name asteca python=3.7.3 matplotlib=3.1.0 numpy=1.16.14 scipy=1.2.1 astropy=3.1.2
+     $ conda create --name asteca python=3.7.3 matplotlib=3.1.0 numpy=1.16.4 scipy=1.2.1 astropy=3.1.2
 
 5. Activate the environment
 
