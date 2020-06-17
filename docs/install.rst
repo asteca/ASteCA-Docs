@@ -3,23 +3,29 @@
 Installing
 ==========
 
-The code has been tested with the March 2019 release of **Python**:
+The code has been tested with the following release of **Python**:
 
--  `Python - 3.7.3`_
+-  `Python - 3.8.2`_
 
-The packages listed below are required to run **ASteCA**.
+These packages are required to run **ASteCA**:
 
 -  `astropy`_
 -  `sciPy`_
 -  `matplotlib`_
 -  `numpy`_
 
+The package:
+
+- `ptemcee 1.0.0`_
+
+is required to run the Bayesian fundamental parameters estimation analysis.
+
 The code also uses the packages:
 
-- `emcee 3.0rc2`_
+- `emcee 3.0.2`_
 - `corner.py 2.0.0`_
 
-but these two are included in the **ASteCA** download.
+Both `ptemcee` and `corner.py` are included in the **ASteCA** download.
 
 
 .. _sect-anaconda:
@@ -48,7 +54,7 @@ it:
 
    .. code-block:: bash
 
-     $ conda create --name asteca python=3.7.3 matplotlib=3.1.0 numpy=1.16.4 scipy=1.2.1 astropy=3.1.2
+     $ conda create --name asteca python=3.8.2 matplotlib=3.1.3 numpy=1.18.1 scipy=1.4.1 astropy=4.0
 
 5. Activate the environment
 
@@ -69,6 +75,12 @@ it:
 
      You need to activate this environment each time **before** attempting to
      run **ASteCA**, otherwise no installed packages will be detected.
+
+6. Install the `emcee` package with:
+
+   .. code-block:: bash
+
+     $ conda install -c conda-forge emcee
 
 
 Download
@@ -97,7 +109,7 @@ you can run **ASteCA** with:
  (asteca) $ python asteca.py
 
 
-.. _Python - 3.7.3: https://www.python.org/downloads/
+.. _Python - 3.8.2: https://www.python.org/downloads/
 .. _conda: https://conda.io/docs/index.html
 .. _numpy: http://www.numpy.org/
 .. _matplotlib: http://matplotlib.org/
@@ -105,5 +117,6 @@ you can run **ASteCA** with:
 .. _astropy: http://www.astropy.org/
 .. _from Github: https://github.com/Gabriel-p/asteca/releases
 .. _git: http://git-scm.com/
-.. _emcee 3.0rc2: https://github.com/dfm/emcee/releases/tag/v3.0rc2
+.. _ptemcee 1.0.0: https://github.com/willvousden/ptemcee
+.. _emcee 3.0.2: https://github.com/dfm/emcee/
 .. _corner.py 2.0.0: https://corner.readthedocs.io/en/latest/
