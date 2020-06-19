@@ -18,7 +18,7 @@ If you encounter any problems please `contact me`_ or `open a new issue`_.
    This documentation is in the process of being written and it is
    **very much outdated**. Please contact me if you want to use
    **ASteCA** in your research, and I will gladly assist you.
-   Last updated: April 22, 2020.
+   Last updated: June 19, 2020.
 
 .. important::
    A PDF version of this manual can be downloaded `here`__.
