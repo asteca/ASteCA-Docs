@@ -5,7 +5,7 @@ Installing
 
 The code has been tested with the following release of **Python**:
 
--  `Python - 3.8.2`_
+-  `Python - 3.9.4`_
 
 These packages are required to run **ASteCA**:
 
@@ -13,6 +13,7 @@ These packages are required to run **ASteCA**:
 -  `sciPy`_
 -  `matplotlib`_
 -  `numpy`_
+-  `emcee`_
 
 The package:
 
@@ -20,9 +21,8 @@ The package:
 
 is required to run the Bayesian fundamental parameters estimation analysis.
 
-The code also uses the packages:
+The code also uses the package:
 
-- `emcee 3.0.2`_
 - `corner.py 2.0.0`_
 
 Both `ptemcee` and `corner.py` are included in the **ASteCA** download.
@@ -54,7 +54,7 @@ it:
 
    .. code-block:: bash
 
-     $ conda create --name asteca python=3.8.2 matplotlib=3.1.3 numpy=1.18.1 scipy=1.4.1 astropy=4.0
+     $ conda create --name asteca python=3.9.4 matplotlib=3.3.4 numpy=1.20.1 scipy=1.6.2 astropy=4.2.1
 
 5. Activate the environment
 
@@ -109,14 +109,14 @@ you can run **ASteCA** with:
  (asteca) $ python asteca.py
 
 
-.. _Python - 3.8.2: https://www.python.org/downloads/
+.. _Python - 3.9.4: https://www.python.org/downloads/
 .. _conda: https://conda.io/docs/index.html
 .. _numpy: http://www.numpy.org/
 .. _matplotlib: http://matplotlib.org/
 .. _sciPy: http://www.scipy.org/
 .. _astropy: http://www.astropy.org/
+.. _emcee: https://github.com/dfm/emcee/
 .. _from Github: https://github.com/Gabriel-p/asteca/releases
 .. _git: http://git-scm.com/
 .. _ptemcee 1.0.0: https://github.com/willvousden/ptemcee
-.. _emcee 3.0.2: https://github.com/dfm/emcee/
 .. _corner.py 2.0.0: https://corner.readthedocs.io/en/latest/
