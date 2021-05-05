@@ -9,8 +9,6 @@ density profile, and thus also the estimation of the SC's radius.
 is done first and a Gaussian kernel density estimation (KDE) is then applied to
 obtain precise final coordinates.
 
-The process is independent of the system of coordinates used and can be equally 
-applied to positional data stored in pixels or degrees.
 
 
 .. _approx-center:

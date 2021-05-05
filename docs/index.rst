@@ -34,11 +34,7 @@ Table of Contents
    install
    input_data
    running
-   center
-   radius
-   decont_algor
-   best_fit
-   performance
+
 
 
 Indices and tables

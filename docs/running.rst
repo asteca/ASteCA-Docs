@@ -24,16 +24,17 @@ This should work both in Linux based systems and OS X (Mac), but I've
 only tested it with Linux (since that's what I use).
 
 The ``CLUSTER.DAT`` file located in the ``input/`` folder contains
-a synthetic open cluster generated via the `MASSCLEAN`_ package with the
+a synthetic open cluster generated with Gaia EDR3 photometry and the
 following parameter values:
 
 ::
 
-	M = 500 Mo
-	z = 0.008
-	log(age) = 8.0
-	E(B-V) = 0.32 (Av = 1.0)
-	(m-M)o = 12.32 (d = 3 kpc)
+	z = 0.0151
+	log(age) = 8.5
+	E(B-V) = 0.5
+	(m-M)o = 12.0
+	M = 2000 Mo
+        b_fr = 0.3
 
 and serves as an example cluster to be analyzed with **ASteCA**.
 
@@ -50,68 +51,15 @@ Currently, the only isochrone files supported are those obtained via the
 Please `contact me <gabrielperren@gmail.com>`_ if you wish to use a different
 set of theoretical isochrones.
 
-The isochrones can be downloaded manually or the package `ezPadova-2`_
-can be used to automatically fetch them from the site. I describe both
-possibilities below.
-
-.. important::
-   The current version of the code supports all the photometric
-   systems from available at the CMD service.
-
-
-Manual download
-...............
-
-They isochrone files must follow a naming convention and be stored in a
-sub-folder inside the  ``isohrones/`` folder, also named according to a
-convention that makes them readable and identifiable to the code.
-
-The steps to manually download and store the files are:
-
-1. The CMD isochrones files must be downloaded using the *Sequence of
-isochrones of constant metallicity, Z* option. That is, isochrones of the same
-metallicity must all be stored in the same file.
-
-2. Each file must have the name of the metallicity that characterizes it.
-For example, if you download a sequence of isochrones with metallicity
-``z=0.019``, then the file should be called ``0.019.dat``, or ``0_019.dat``,
-or ``0.0190.dat``, or ``0_019000.dat``, etc.
-
-This means that the file name can contain either a point or an underscore
-separating the decimal portion of the metallicity value. The number of zeros
-at the end of the value in the name does not matter.
-This is necessary because the code takes the metallicity value directly from
-the file name.
-
-3. The theoretical isochrones files must be stored in a sub-folder of
-``isochrones/``, with the naming convention: ``parsecXX_YYY`` (if PARSEC
-isochrones are used). In this name, ``XX`` is 10, 11 or 12
-depending on the version of PARSEC used (1.0, 1.1 or 1.2S, respectively) and
-'YYYY' is ``ubvi``, ``wash`` or ``2MASS``, depending on the system chosen to
-generate the isochrones.
-
-For example, if the PARSEC v1.2S tracks and the *UBVRIJHK (cf. Maiz-Apellaniz
-2006 + Bessell 1990)* system is selected, the name of the sub-folder where
-the isochrones must be stored would be: ``parsec12_ubvi``.
-
-
-Automatic download
-..................
-
-To avoid having to download each isochrone file by hand, I've written the
-ezPADOVA-2 code [#]_ which can downloaded from:
-
-    https://github.com/asteca/ezpadova-2
-
+The isochrones must be downloaded with the package `ezPadova-2`_.
 This code takes care of downloading the isochrones for a given range of
-metallicities, storing them in files named following the above mentioned
+metallicities, storing them in files named following the proper
 naming convention, and place them inside a folder also with the correct name.
 
 This way, once this code finishes you can just cut the generated folder and
 paste it inside the ``isochrones/`` folder in **ASteCA**.
 
 
-.. _MASSCLEAN: http://www.physics.uc.edu/~bogdan/massclean/
 .. _CMD service: http://stev.oapd.inaf.it/cgi-bin/cmd
 .. _Girardi et al. 2002: http://www.aanda.org/articles/aa/abs/2002/31/aah3268/aah3268.html
 .. _ezPadova-2: https://github.com/asteca/ezpadova-2
