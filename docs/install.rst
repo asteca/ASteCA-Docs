@@ -98,15 +98,18 @@ with (Linux command):
 which will create a sub-folder named ``/ASteCA``.
 
 
-Running
--------
+First run
+---------
 
-With the environment properly created (and activated) and the code downloaded,
+With the environment activated and the code uncompressed into its folder,
 you can run **ASteCA** with:
 
 .. code-block:: bash
 
  (asteca) $ python asteca.py
+
+This will produce a first run of the code that should finish successfully in
+a few minutes.
 
 
 .. _Python - 3.9.4: https://www.python.org/downloads/
