@@ -8,11 +8,25 @@
 * Article:       `ASteCA: Automated Stellar Cluster Analysis (A&A, 2015) <http://www.aanda.org/articles/aa/abs/2015/04/aa24946-14/aa24946-14.html>`_
 * Site:          `asteca.github.io <http://asteca.github.io/>`_
 * Source:        `github.com/asteca <https://github.com/asteca>`_
-* Documentation: `asteca.rtfd.org <http://asteca.readthedocs.org/en/latest/>`_
 
 This is the manual of operation for the Automated Stellar
 Cluster Analysis (**ASteCA**) package.
 If you encounter any problems please `contact me`_ or `open a new issue`_.
+
+**ASteCA** is an open source code developed entirely in Python, designed to
+fully automatize the usual tests applied to stellar clusters (SC) in order to
+determine their characteristics: center, radius, stars' membership probabilities
+and associated intrinsic/extrinsic parameters: metallicity, age, extinction,
+distance, binarity, and total mass.
+
+The code is designed modularly thus allowing the user to select which
+tests to run and which to skip, all managed through a simple input data
+file.
+
+**ASteCA** is intended to run without the need for user intervention but
+both a semi-automatic and a manual mode are made available in case user
+input is necessary or required.
+
 
 .. warning::
    This documentation is in the process of being written and it is
@@ -30,7 +44,6 @@ Table of Contents
    :numbered:
    :maxdepth: 2
 
-   about
    install
    input_data
    running
