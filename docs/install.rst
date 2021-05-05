@@ -14,18 +14,11 @@ These packages are required to run **ASteCA**:
 -  `matplotlib`_
 -  `numpy`_
 -  `emcee`_
+-  `ptemcee 1.0.0`_
+-  `corner.py 2.0.0`_
 
-The package:
-
-- `ptemcee 1.0.0`_
-
-is required to run the Bayesian fundamental parameters estimation analysis.
-
-The code also uses the package:
-
-- `corner.py 2.0.0`_
-
-Both `ptemcee` and `corner.py` are included in the **ASteCA** download.
+The last two packages are included in the **ASteCA** download and do not be to
+be installed in the environment.
 
 
 .. _sect-anaconda:
