@@ -73,7 +73,7 @@ it:
 
    .. code-block:: bash
 
-     $ conda install -c conda-forge emcee
+     $ conda install -c conda-forge emcee=3.1.1
 
 
 Download
